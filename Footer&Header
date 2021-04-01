@@ -1,0 +1,220 @@
+Header------------------------------------------------------------
+//copy after this
+<header>
+  <a href="#" class="LogoName"><img class="logo" src="Image/barebear.png" alt="logo"><span>Bare Bear</span></a>
+  <nav>
+    <ul class="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Fees</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Browse</a></li>
+    </ul>
+  </nav>
+  <a href="#" class="contact"> <button type="button" name="button">Contact</button></a>
+  <a href="#"><img class="myAcount" src="Image/user.png" alt=""></a>
+</header>
+
+//Css---------------------------------------------------------------------
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+header{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10%;
+  background-color: #212121;
+}
+header li,a,button{
+font-family: courier,arial,helvetica;
+color: #d1d4d5;
+font-size: 17px;
+text-decoration: none;
+}
+.logo{
+  margin-top: 12px;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  float:left;
+}
+.LogoName span{
+  padding: 25px;
+  font-size: 35px;
+  display: inline-block;
+
+
+}
+.navLinks{
+  list-style: none;
+}
+.navLinks li{
+  display: inline-block;
+  padding: 15px 20px;
+}
+.navLinks li a{
+  transition: all 0.3s ease 0s;
+  padding:25px 0px;
+}
+.navLinks li  a:hover{
+  border-bottom: 1px solid #aaa;
+}
+header button{
+  padding: 9px 25px;
+  background-color: #313131;
+  border:none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .3s ease 0s;
+}
+header button:hover{
+  padding: 9px 40px;
+  background-color: #2a2a29;
+  color:#e9ebeb;
+}
+.myAcount{
+  width: 27px;
+  height: 27px;
+  padding: 3px;
+  transition: all 0.3s ease 0s;
+  border-radius: 50%;
+  background-color: #d1d4d5;
+}
+.myAcount:hover{
+  width: 35px;
+  height: 35px;
+  padding: 10px  ;
+background-color: #43484d;
+}
+Footer-----------------------------------------------------------------
+<footer>
+<div class="UpperBar">
+<div class="logoText">Bare Bear <p>The bodacious bookshop</p></div>
+<div class="shop"><h1>Shop</h1>
+  <li>Comic-Manga</li>
+  <li>Light Novel</li>
+  <li>Literature</li>
+  <li>Science Fiction & Fantasy</li>
+  <li>Biographies & Memois</li>
+  <li>Mystery & Thriller</li>
+  <li>Romance</li>
+  <li>Children's books</li>
+</div>
+<div class="Support"><h1>Support</h1>
+
+  <li>Order Status</li>
+  <li>FAQs</li>
+  <li>Contact Us</li>
+  <li>Fees</li>
+  <li>Order Status</li>
+  <li>Shipping Information</li>
+</div>
+<div class="Language"><h1>Language</h1>
+  <br>
+  🌎
+  <select class="language" name="language">
+
+      <option value="English"> English</option>
+      <option value="Vietnamese">Vietnamese</option>
+      <option value="Korean">Korean</option>
+  </select>
+</div>
+</div>
+<div class="LowerBar">
+<section class="CopyRight">
+Copyright© Bare Bear 2021
+</section>
+<section class="Policy">
+<li>Term Of Service</li>
+<li>Privacy Policy</li>
+</section>
+</div>
+</footer>
+
+Css----------------------------------------------
+footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+footer .UpperBar{
+  margin-top:40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 15% 90px 15%;
+  background-color: #2a2a2a;
+}
+footer .UpperBar div{
+  height: 300px;
+}
+footer .logoText p{
+  position: relative;
+  letter-spacing: 1.5px;
+  color: #e1ebba;
+  top: -20px;
+  font-size: 12px;
+  text-align: center;
+}
+footer .UpperBar div h1{
+  font-family: courier,arial,helvetica;
+  color: #686868;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+footer .UpperBar li{
+    font-family: courier,arial,helvetica;
+      font-size: 17px;
+  color: #eee;
+  list-style: none;
+  line-height: 1.75;
+}
+footer div .logoText{
+  font-size: 45px;
+    font-family: courier,arial,helvetica;
+  display: inline-block;
+  color: #d1d4d5;
+}
+footer .Language .language{
+  margin-left: 4px;
+  font-family: courier,arial,helvetica;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 20px;
+  width: 100px;
+  background-color: inherit;
+}
+footer .LowerBar{
+
+  background-image: linear-gradient(to right, #3a3a3a , #1b1b1b);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0px 15%;
+  color:#eee;
+  -webkit-box-shadow: 0px -3px 6px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px -3px 6px 2px rgba(0,0,0,0.2);
+}
+footer .LowerBar .CopyRight{
+
+font-size: 12px;
+letter-spacing: 2.3px;
+font-family: 'Enriqueta', arial, serif;
+}
+footer .LowerBar .Policy li{
+    font-family: courier,arial,helvetica;
+    font-size: 17px;
+display: inline-flex;
+list-style: none;
+padding:15px 20px;
+}

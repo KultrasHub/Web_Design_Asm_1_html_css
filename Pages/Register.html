@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register</title>
+  <link rel="stylesheet" href="RegisterStyle.css">
+    <link rel="stylesheet" href="BareBearsStyle.css">
+</head>
+<body>
+  <header>
+    <a href="Home.html" class="LogoName"><img class="logo" src="../../Image/barebear.png" alt="logo"><span>Bare Bears</span></a>
+    <nav>
+      <ul class="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Fees.html">Fees</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li class="Browse">
+          <k class="BrowseText">Browse</k>
+          <ul class="DropDown">
+            <li class="DropDownContent">Browse Stores by Name</li>
+            <li class="DropDownContentd DropDownEnd">Browse Stores by Category</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+    <a href="MyAccount-Login.html"><img class="myAcount" src="../../Image/user.png" alt=""></a>
+  </header>
+  <div class="background">
+    <div>
+<svg viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L34.3,256C68.6,224,137,160,206,160C274.3,160,343,224,411,245.3C480,267,549,245,617,202.7C685.7,160,754,96,823,85.3C891.4,75,960,117,1029,117.3C1097.1,117,1166,75,1234,74.7C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+    </div>
+  </div>
+  <div class="LoginForm">
+    <form action="Register_Image.html" method="get">
+      <div class="FormHeader">
+      <img src="../../Image/barebear.png" alt=""class="logo">
+      <h2>Bare Bears</h2>
+      </div>
+      <div class="SignUp">
+        <span>Fill up the form</span>
+<span>to create your account.</span>
+<br>
+<span>or you already have an acccount?</span>
+<a href="MyAccount-Login.html"><span>Log in</span></a>
+      </div>
+      <div class="NameBoxes">
+        <div class="inputBox">
+          <input type="text" name="firstName" placeholder=" " required />
+          <span>First Name</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="lastName" placeholder=" " required />
+          <span>Last Name</span>
+        </div>
+      </div>
+
+      <div class="inputBox">
+        <input type="tel" name="phoneNumber" placeholder=" " required />
+        <span>Phone Number</span>
+      </div>
+      <div class="inputBox">
+        <input type="email" name="email" placeholder=" " required />
+        <span>User Email</span>
+      </div>
+      <div class="inputBox">
+        <input type="password" name="password" placeholder=" " required />
+        <span>Password</span>
+      </div>
+      <div class="inputBox">
+        <input type="password" name="cpassword" placeholder=" " required />
+        <span>Confirm Password</span>
+      </div>
+      <div class="inputBox">
+        <input type="address" name="address" placeholder=" " required />
+        <span>Address</span>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="city" placeholder=" " required />
+        <span>City</span>
+      </div>
+      <div class="inputBox">
+        <input type="tel" name="Zipcode" pattern="[0-9]*"placeholder=" " title="Please enter a Zip Code" max="999999" required/>
+        <span>Zipcode</span>
+      </div>
+      <div class="SelectBox">
+        <span>Country</span>
+        <br>
+        <select class="country" name="contry">
+          <option value="VN">Viet Nam VN</option>
+          <option value="US">United States US</option>
+          <option value="KR">Korean KR</option>
+        </select>
+      </div>
+      <div class="RadioBox">
+        <span>Account Type</span>
+        <br>
+        <input type="radio" id='ShopOwner' name="accountType" value ="shopOwner" onclick="ShowHideDiv()"><label for="ShopOwner">Shop Owner</label>
+        <input type="radio" id='Shopper' name="accountType" value="shopper" onclick="ShowHideDiv()"><label for="Shopper">Shopper</label>
+      </div>
+      <div id="shopOwnerStuff" style="display:none">
+      <div class="inputBox">
+        <input type="text" name="businessName" placeholder=" " required />
+        <span>Business Name</span>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="storeName" placeholder=" " required />
+        <span>Store Name</span>
+      </div>
+      <div class="SelectBox">
+        <span>Store Category</span>
+        <br>
+        <select class="storeCategory" name="storeCategory">
+          <option value="DepartmentStore">Department Store</option>
+          <option value="GroceryStore">Grocery Store</option>
+          <option value="Restautant">Restaurant</option>
+          <option value="ClothingStore">Clothing Store</option>
+          <option value="AccessoryStore">Accessory Store</option>
+          <option value="Pharmacy">Pharmacy</option>
+          <option value="Technology Store">Technology Store</option>
+          <option value="Pet Store"> Pet Store</option>
+          <option value="Toy Store"> Toy Store</option>
+          <option value="Specialty Store">Specialty Store</option>
+          <option value=" Thrift Store"> Thrift Store</option>
+          <option value="Services">Services</option>
+          <option value="Kiosks">Kiosks</option>
+
+
+        </select>
+      </div>
+      </div>
+      <div class="SendBut">
+        <input type="submit" name="send" value="Next">
+      </div>
+    </form>
+  </div>
+  <script>
+    function ShowHideDiv() {
+            var chkYes = document.getElementById("ShopOwner");
+            var dvtext = document.getElementById("shopOwnerStuff");
+            shopOwnerStuff.style.display = chkYes.checked ? "block" : "none";
+        };
+    </script>
+  <footer>
+<div class="UpperBar">
+  <div class="logoText">Bare Bears <p>with barely best brands</p></div>
+  <div class="shop"><h1>Top Category</h1>
+    <li>Pet Stores</li>
+    <li>Book Stores</li>
+    <li>Toy Stores</li>
+  </div>
+  <div class="Support"><h1>Support</h1>
+
+    <li>Order Status</li>
+    <li>FAQs</li>
+    <li>Contact Us</li>
+    <li>Fees</li>
+    <li>Order Status</li>
+    <li>Shipping Information</li>
+  </div>
+  <div class="Language"><h1>Language</h1>
+    <br>
+    🌎
+    <select class="language" name="language">
+
+        <option value="English"> English</option>
+        <option value="Vietnamese">Vietnamese</option>
+        <option value="Korean">Korean</option>
+    </select>
+  </div>
+</div>
+<div class="LowerBar">
+<section class="CopyRight">
+  Copyright© Bare Bears 2021
+</section>
+<section class="Policy">
+  <li>Term Of Service</li>
+  <li>Privacy Policy</li>
+</section>
+</div>
+  </footer>
+</body>
+</html>

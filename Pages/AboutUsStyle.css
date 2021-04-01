@@ -1,0 +1,21 @@
+body {
+  box-sizing: border-box;
+}
+h1{
+  font-family: courier,arial,helvetica;
+  text-align: center;
+}
+p{
+  font-size: 20px;
+}
+.column {
+  float: left;
+  width: 31.33%;
+  padding: 10px;
+  height: 300px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,65 @@
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.Title{
+  margin-top:10%;
+  color:#212121;
+  margin-left: 10%;
+  font-family: courier,arial,helvetica;
+  font-size: 50px;
+}
+.feesTable{
+  display: block;
+  font-family: courier,arial,helvetica;
+   border-radius: 25px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  font-size: 17px;
+  min-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
+  margin-top: 5%;
+  overflow: hidden;
+}
+.feesTable thead tr{
+  background-color: #4a4a4a;
+  color: #d1d4d5;
+  text-align: left;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.feesTable th,
+.feesTable td{
+  padding: 12px 15px;
+
+}
+.feesTable tbody tr td:nth-child(2),
+.feesTable tbody tr td:nth-child(3)
+{
+  color:#8c8c8c;
+}
+.feesTable tbody tr td:nth-child(5),
+.feesTable tbody tr td:nth-child(6),
+.feesTable tbody tr td:nth-child(7)
+{
+  color:#8c8c8c;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+}
+.feesTable tbody tr{
+  font-size: 14px;
+  color:#393939;
+  border-bottom: 1px solid #ddd;
+}
+.feesTable tbody tr:nth-of-type(even){
+  background-color: #fafafa;
+}
+.feesTable tbody tr:nth-of-type(odd){
+  background-color: #f3f3f3;
+}

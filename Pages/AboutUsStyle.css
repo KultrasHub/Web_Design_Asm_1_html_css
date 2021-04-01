@@ -1,21 +1,109 @@
 body {
   box-sizing: border-box;
+  font-family: courier, arial, helvetica;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-h1{
-  font-family: courier,arial,helvetica;
+.AboutUs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Starter{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Starter h1 {
+  position: relative;
+  width: 100%;
+  margin-top: 20vh;
+  font-size: 30px;
+  font-family: courier, arial, helvetica;
   text-align: center;
+  font-weight: 300;
 }
-p{
-  font-size: 20px;
-}
-.column {
-  float: left;
-  width: 31.33%;
-  padding: 10px;
-  height: 300px;
-}
-.row:after {
+
+.Starter h1::after {
   content: "";
-  display: table;
-  clear: both;
+  height: 2px;
+  width: 60%;
+  background-image: linear-gradient(to right, #333, #fff);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left:60%;
+}
+.Starter p{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 100;
+}
+.display{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.display .box{
+  margin: 40px;
+  width: 300px;
+  height: 500px;
+  padding:20px;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
+}
+.display .box img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.display .box .name{
+  position: relative;
+  font-size: 20px;
+  font-weight: 550;
+}
+.display .box .name::before{
+  position: absolute;
+  top: -15px;
+  left:-15px;
+  font-size: 24px;
+  font-weight: 100;
+  color:#00aaff;
+content: "o";
+}
+.display .box .id{
+  font-size: 15px;
+  font-weight: 100;
+  color:#777;
+}
+.display .box .Hobby{
+  width: inherit;
+}
+.display .box .Hobby h3{
+  font-size: 16px;
+}
+.display .box .Hobby li::before{
+  content: "➤"
+}
+.display .box .Hobby li{
+  width: 90%;
+   list-style: none;
+   font-size: 16px;
+   color: #777;
 }

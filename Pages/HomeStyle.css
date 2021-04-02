@@ -1,0 +1,229 @@
+body{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+  font-family:courier,arial,helvetica;
+}
+.Banner{
+  position:relative;
+  width: 100%;
+  height: auto;
+
+  text-align: center;
+}
+.Banner img{
+  width: 100%;
+}
+
+.Banner h1{
+  line-height: 0;
+  color: rgba(255,255,255,0.50);
+  position: absolute;
+  top: 25px;
+  left: 16px;
+  font-size: 20vw;
+}
+.Banner h3{
+  position: absolute;
+  top:65px;
+  left:40px;
+  line-height: 1;
+  color:#f4fbfe;
+  font-size: 7vw;
+  width: 40%;
+  font-family: "Great Vibes", cursive;
+}
+.Banner h2{
+  position: absolute;
+  left: 30%;
+    top: 55%;
+  transform: translate(-50%, -50%);
+  font-family: 'Rouge Script', cursive;
+  font-weight:  lighter;
+  font-style: italic;
+  color: #000ec0;
+  font-size: 1.5vw;
+}
+.Banner h4{
+  color:#000;
+  position: absolute;
+  line-height: 1;
+  font-size: 2vw;
+  top: 60%;
+  font-weight: 100;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.Banner div{
+  position: absolute;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    font-weight: 100;
+    left: 50%;
+    color: #fff;
+    padding: 20px 40px;
+    background-color: #222;
+    border-radius: 30px;
+}
+.Banner div:hover{
+  background-color: #666;
+}
+.containerIntro{
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 25px;
+}
+.containerIntro .intro{
+  position: relative;
+    text-transform: uppercase;
+    color:#5b5b5b;
+}
+.containerIntro .intro::after
+{
+  position: absolute;
+  bottom:-10px;
+left: 50px;
+  content: "";
+  height: 2px;
+  width: 400px;
+  background-image: linear-gradient(to right,#000,#fff);
+}
+.container
+{
+  margin-left: -40px;
+width: 100%;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+padding: 20px 0;
+flex-wrap: wrap;
+}
+.container .box{
+  margin-top: 20px;
+  position: relative;
+  margin-left: 40px;
+  margin-right: 40px;
+width: 450px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+padding: 20px 40px;
+border-radius: 30px;
+-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28);
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28);
+}
+.container .box .shop{
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 10px;
+}
+.container .box .shop h3{
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 550;
+  font-size: 24px;
+}
+.container .box .shop p{
+  font-weight: 100;
+  font-size: 15px;
+  color:#aaa;
+}
+.container .box .bestSeller{
+  margin-left: 10px;
+}
+.container .box .shop img{
+  width: 200px;
+  height: 200px;
+}
+.container .box .bestSeller{
+  justify-content: space-between;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.container .box .bestSeller h3{
+  font-weight: 100;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: -10px;
+}
+.container .box .bestSeller img{
+  width: 100px;
+  height: 100px;
+}
+.container .box .bestSeller .product{
+
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.container .box .bestSeller .product .productDetail{
+  margin-left: 10px;
+  justify-content: center;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.container .box .bestSeller .product .productDetail h4{
+  max-width: 60%;
+  font-size: 20px;
+}
+.container .box .bestSeller .product .productDetail .CurrentPrice::before{
+  content:'$';
+}
+.container .box .bestSeller .product .productDetail .CurrentPrice{
+color: #ec8d26;
+font-weight: 550;
+font-size: 25px;
+}
+.container .box .bestSeller .product .productDetail .OriginalPrice::before{
+  content: '$'
+}
+.container .box .bestSeller .product .productDetail .OriginalPrice{
+color:#aaa;
+text-decoration: line-through;
+font-size: 16px;
+}
+.container .box .HoverEffect{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(99, 123, 255, 0.5);
+  border-radius: 30px;
+  transition: all 300ms ease-in-out 0s;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+display: flex;
+opacity: 0;
+}
+.container .box .HoverEffect a{
+  text-decoration: none;
+}
+.container .box .HoverEffect .HoverButton{
+color: #000;
+font-weight: 300;
+border-radius: 50px;
+background-color: #fff;
+padding:20px 20px;
+  transition: all 300ms ease-in-out 0s;
+  opacity: 0;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+.container .box:hover >.HoverEffect{
+opacity: 1;
+}
+.container .box:hover >.HoverEffect .HoverButton{
+  opacity: 1;
+}
+.container .box .HoverEffect .HoverButton:hover{
+  background-color: #109bef;
+  color:#fff;
+  padding:20px 30px;
+}

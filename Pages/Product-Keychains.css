@@ -1,0 +1,42 @@
+body{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #dddddd;
+  font-family: courier,arial,helvetica;
+
+}
+.background{
+  position: absolute;
+  background-color: #7b7a7c;
+  height: 70vh;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  transform: rotateZ(-35deg)translateX(-30%)translateY(-50vh);
+
+}
+
+img.productImg{
+  height: 30%;
+  width:30%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.productTile{
+  margin-top: 10%;
+  text-align:center;
+
+}
+
+.orderButton{
+  margin:0;
+  position: absolute;
+  top:85%;
+  left:46%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}

@@ -16,3 +16,18 @@ background-color: #dddddd;
   transform: rotateZ(-35deg)translateX(-30%)translateY(-50vh);
 
 }
+
+img.productImg{
+  height: 30%;
+  width:30%;
+  display:block;
+  margin-left: 10%;
+  margin-right: 90%;
+}
+
+.productTile{
+  margin-top: 10%;
+  margin-bottom: 90%;
+  text-align:center;
+
+}

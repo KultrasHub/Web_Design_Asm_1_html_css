@@ -1,8 +1,8 @@
 body{
   width: 100%;
-padding: 0;
-margin: 0;
-background-color: #dddddd;
+  padding: 0;
+  margin: 0;
+  background-color: #dddddd;
   font-family: courier,arial,helvetica;
 
 }
@@ -21,13 +21,22 @@ img.productImg{
   height: 30%;
   width:30%;
   display:block;
-  margin-left: 10%;
-  margin-right: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .productTile{
   margin-top: 10%;
-  margin-bottom: 90%;
   text-align:center;
 
+}
+
+.orderButton{
+  margin:0;
+  position: absolute;
+  top:85%;
+  left:46%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
 }

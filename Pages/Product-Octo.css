@@ -41,7 +41,8 @@ body{
   cursor:pointer;
   border: 2px solid black;
   max-width: 610px;
-  max-height: 8000px
+  max-height: 800px;
+  
 }
 .gallery{
   object-fit:cover;

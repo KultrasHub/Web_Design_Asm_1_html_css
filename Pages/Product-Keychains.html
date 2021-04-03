@@ -31,16 +31,29 @@
     <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
     <a href="MyAccount-Login.html"><img class="myAcount" src="../Image/user.png" alt=""></a>
   </header>
-  <div class="background">
-  </div>
 
+    <img id="mainFeature" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage">
+    <br>
+    <img class="gallery active" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage1">
+    <img class="gallery" src="../Image/Octoplushies/Octo2.jpg" alt="octoImage2">
+    <img class="gallery" src="../Image/Octoplushies/Octo3.jpg" alt="octoImage3">
+    <img class="gallery" src="../Image/Octoplushies/Octo4.jpg" alt="octoImage4">
 
-  <img class ="productImg" src="../Image/wbbkeychain.png" alt="wbbkeychain">
-  <div class="orderButton">
-  <button>Order now!</button>
-  </div>
+    <script ="text/javascript">
+      let gallery = document.getElementsByClassName("gallery")
+      let hoveredImg = document.getElementsByClassName("active")
 
-  <div class="productTile">
+      for(var i = 0; i < gallery.length; i++){
+        gallery[i].addEventListener("mouseover", function(){
+          if (hoveredImg.length > 0){
+            hoveredImg[0].classList.remove("active")
+          }
+          this.classList.add("active")
+          document.getElementById("mainFeature").src =this.src
+        })
+      }
+    </script>
+    <div class="productTile">
   <h1>We Bare Bears Keychains</h1>
   <p>This cute octopus will make expressing your emotions towards friends and love ones easier and cuter!</p>
   <br>
@@ -52,8 +65,6 @@
   <br>
   <p>Right now I am too tired to wring stuffs here, I think I will redecorate the color button tomorrow and maybe mordenize the layout better.</p>
   </div>
-
-
   <footer>
 <div class="UpperBar">
   <div class="logoText">Bare Bears <p>with barely best brands</p></div>

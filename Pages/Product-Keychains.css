@@ -40,3 +40,27 @@ img.productImg{
   -ms-transform: translateY(-50%);
   transform: translateY(-50%)
 }
+
+#mainFeature{
+  object-fit:cover;
+  cursor:pointer;
+  border: 2px solid black;
+  max-width: 610px;
+  max-height: 8000px
+}
+.gallery{
+  object-fit:cover;
+  max-width: 180px;
+  max-height: 100px;
+  cursor: pointer;
+  opacity: 0.5;
+  margin: 5px;
+  border: 2px solid black;
+}
+
+.gallery:hover{
+  opacity: 1.0;
+}
+.active{
+  opacity: 1.0;
+}

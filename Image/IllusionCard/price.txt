@@ -1,0 +1,2 @@
+before discount: $29.99
+after discount: $24.99

@@ -23,6 +23,7 @@ body{
   justify-content: center;
   align-items: center;
   margin:5px;
+  margin-top: 80px;
 }
 
 .productTile{
@@ -34,14 +35,29 @@ body{
 #headerCus{
   text-align:center;
 }
-
+#container .columns .mainDisplay{
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background-color: #ccc;
+}
+#container .columns .mainDisplay #backgroundImage{
+  width: 600px;
+  height: 600px;
+  /* Add the blur effect */
+  filter: blur(6px);
+  -webkit-filter: blur(6px) brightness(50%) sepia(50%);
+}
 #mainFeature{
-  margin-top: 15%;
+position: absolute;
   object-fit:cover;
   cursor:pointer;
-  border: 2px solid black;
-  max-width: 610px;
-  max-height: 8000px
+  border: 2px solid RGBA(255,255,255,.1);
+  max-width: 450px;
+  max-height: 450px;
+  top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
 }
 .gallery{
   object-fit:cover;
@@ -50,7 +66,7 @@ body{
   cursor: pointer;
   opacity: 0.5;
   margin: 5px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .gallery:hover{
@@ -65,7 +81,24 @@ body{
   width:650px;
   padding: 10px
 }
-
+.columns .prices span::before{
+  content: "$";
+}
+.columns .prices{
+display: flex;
+justify-content: left;
+}
+.columns .prices .originalPrice{
+  color:#aaa;
+  text-decoration: line-through;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.columns .prices .currentPrice{
+  font-size: 18px;
+  font-weight: 550;
+  margin-left: 5px;
+}
 .proButt{
   background-color: black;
   color:white;

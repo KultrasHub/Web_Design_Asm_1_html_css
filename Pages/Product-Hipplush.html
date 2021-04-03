@@ -39,7 +39,10 @@
 
     <div class="columns">
 
-      <img id="mainFeature" src="../Image/Hipplush/hipplush1.jpg" alt="cardImage">
+      <div class="mainDisplay">
+        <img id="backgroundImage" src="../Image/Hipplush/hipplush1.jpg">
+        <img id="mainFeature" src="../Image/Hipplush/hipplush1.jpg" alt="octoImage">
+        </div>
       <br>
       <img class="gallery active" src="../Image/Hipplush/hipplush1.jpg" alt="cardImage1">
       <img class="gallery" src="../Image/Hipplush/hipplush2.jpg" alt="cardImage2">
@@ -52,7 +55,10 @@
       <h1>Hipplush</h1>
       <hr>
       <p>Admire the outstanding cuteness of this adorable plushy!</p>
-      <h2>$39.99</h2>
+      <div class="prices">
+        <span class="originalPrice">10.99</span>
+        <span class="currentPrice">4.99</span>
+      </div>
       <input id="inp" value = 1 type="number">
       <a class ="proButt" href="#">Order Now!</a>
     </div>
@@ -67,7 +73,8 @@
             hoveredImg[0].classList.remove("active")
           }
           this.classList.add("active")
-          document.getElementById("mainFeature").src =this.src
+          document.getElementById("mainFeature").src =this.src;
+                    document.getElementById("backgroundImage").src =this.src;
         })
       }
     </script>

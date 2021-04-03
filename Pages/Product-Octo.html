@@ -39,7 +39,10 @@
 
     <div class="columns">
 
+    <div class="mainDisplay">
+      <img id="backgroundImage" src="../Image/Octoplushies/Octo1.jpg">
       <img id="mainFeature" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage">
+      </div>
       <br>
       <img class="gallery active" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage1">
       <img class="gallery" src="../Image/Octoplushies/Octo2.jpg" alt="octoImage2">
@@ -52,7 +55,10 @@
       <h1>Cute Emotional Octopus</h1>
       <hr>
       <p>Happily Angry...all in one!</p>
-      <h2>$4.99</h2>
+      <div class="prices">
+        <span class="originalPrice">10.99</span>
+        <span class="currentPrice">4.99</span>
+      </div>
       <input id="inp" value = 1 type="number">
       <a class ="proButt" href="#">Order Now!</a>
     </div>
@@ -68,6 +74,7 @@
           }
           this.classList.add("active")
           document.getElementById("mainFeature").src =this.src
+          document.getElementById("backgroundImage").src =this.src
         })
       }
     </script>

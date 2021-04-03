@@ -1,23 +1,88 @@
 body{
    background: white;
    box-sizing: border-box;
+      font-family: courier,arial,helvetica;
+      padding: 0;
+      margin: 0;
+ }
+ .background{
+   position: absolute;
+   background-color: #7b7a7c;
+   height: 100vh;
+   width: 150%;
+   top: 0;
+   z-index: -1;
+ }
+ .background div{
+   position: relative;
+   height: inherit;
+ }
+ .background svg{
+   position: absolute;
+   bottom: -1px;
  }
 
+.content{
+  margin-top: 80px;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+max-width: 100%;
+text-align: center;
+}
+.content .starter{
+  position: relative;
+}
+.content .starter h1{
+font-size: 70px;
+text-align: center;
+font-family: courier, arial, helvetica;
+color:#fff;
+}
+.content .starter p{
+  line-height: 1s;
+  max-width: 60%;
+  color: #aaa;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content .starter::after{
+  position: absolute;
+  content:'';
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right:0;
+  width: 50%;
+height: 1px;
+  bottom: -5  px;
+  background-image: linear-gradient(to right,#fff,#ccc,#fff);
+}
+.row{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .box{
-   width: 320px;
-   margin: 100px auto;
+
+  position: relative;
+   width: 400px;
+   margin: 10px 10px;
    background: #fff;
    border-radius: 7px;
    box-shadow: 1px 2px 4px rgba(0,0,0,.3);
 }
-
 .box .heading{
+  margin-top: -5px;
    background: black;
    border-radius: 7px 7px 0px 0px;
    padding: 10px;
    color: #fff;
    text-align: center;
-   font-family: "Rubik";
+
 }
 
 .faqs{
@@ -35,17 +100,20 @@ details{
    border-radius: 7px;
    margin-top: 20px;
    font-family: "Rubik";
-   font-size: 14px;
+   font-size: 16px;
    letter-spacing: 1px;
    cursor: pointer;
 }
 
 details summary{
    outline: none;
+   font-size: 18px;
+   font-weight: 500;
 }
-h1{
-text-align: center;
-font-family: courier, arial, helvetica;
+details .text{
+  text-align: left;
+  color:#777;
+  font-size: 16px;
 }
 
 

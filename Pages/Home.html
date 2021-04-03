@@ -8,9 +8,31 @@
   <title>Home</title>
   <link rel="stylesheet" href="HomeStyle.css">
   <link rel="stylesheet" href="Slider.css">
+  <link rel="stylesheet" href="BareBearsStyle.css">
 </head>
 
 <body>
+  <header>
+    <a href="Home.html" class="LogoName"><img class="logo" src="../Image/Essen/barebear.png" alt="logo"><span>Bare Bears</span></a>
+    <nav>
+      <ul class="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Fees.html">Fees</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li class="Browse">
+          <k class="BrowseText">Browse</k>
+          <ul class="DropDown">
+            <li class="DropDownContent">Browse Stores by Name</li>
+            <li class="DropDownContentd DropDownEnd">Browse Stores by Category</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+    <a href="MyAccount-Login.html"><img class="myAcount" src="../Image/Profolio/user.png" alt=""></a>
+  </header>
+  <!--banner-->
   <div class="Banner">
     <img src="../Image/WeatheringWithYouBanner.png" alt="">
     <h1>2020</h1>
@@ -159,7 +181,7 @@
          <!--3----------------------------------->
         <div class="swiper-slide">
             <!--box/!-->
-            <div class="ProductBox" onclick="location.href=''">
+            <div class="ProductBox" onclick="location.href='Product-Octo.html'">
               <img src="../Image/Octoplushies/Octo1.jpg" alt="">
               <h3 class="ProTitle">Octoplushies</h3>
               <h3 class="Author"></h3>
@@ -181,7 +203,7 @@
           <!--4 ----------------------------------->
          <div class="swiper-slide">
              <!--box/!-->
-             <div class="ProductBox" onclick="location.href=''">
+             <div class="ProductBox" onclick="location.href='Product-IllusionCard.html'">
                <img src="../Image/IllusionCard/card2.jpg" alt="">
                <h3 class="ProTitle">Illusion Card</h3>
                <h3 class="Author"></h3>
@@ -209,25 +231,262 @@
   <div class= "display">
     <div class="timeDisplay">
       <div class="box">
-        <h4 class="timeName">Days:</h4>
-        <p class="time">12</p>
+        <h4 class="time">12</h4>
+        <p class="timeName">days</p>
       </div>
       <div class="box">
-        <h4 class="timeName">Hours:</h4>
-        <p class="time">22</p>
+        <h4 class="time">12</h4>
+        <p class="timeName">hours</p>
       </div>
       <div class="box">
-        <h4 class="timeName">Minutes:</h4>
-        <p class="time">61</p>
+        <h4 class="time">12</h4>
+        <p class="timeName">minutes</p>
       </div>
       <div class="box">
-        <h4 class="timeName">Seconds:</h4>
-        <p class="time">19</p>
+        <h4 class="time">12</h4>
+        <p class="timeName">seconds</p>
       </div>
+
     </div>
     <img src="../Image/KentSneaker/Jordan1LowSmokeGrey.jpg" alt="">
   </div>
-</div>
-</body>
+  <div class="Desciption">
+    <h4 class="DiscountTitle"> Jordan Low Smoke Grey</h4>
+    <p class="DiscountDetail">Now it appears that the colorway will be receiving an alternate low-cut edition, this time capped with striking red accents among other minor tweaks. Like the Mid, this Air Jordan 1 Low “Light Smoke Grey” gears-up in a white leather upper, and comes overlayed by the titular shade at the toe, eyestay and heel. Swooshes, liners, and laces all remain a stark black, while minor changes to the tongue (from grey to black), collar (white to grey), and outsole (grey to white) are a little less noticeable than the inclusion of the punchy red brand embroidery and insoles.</p>
+    <div class="prices">
+      <span class="original">4.99</span>
+      <br>
+      <span class="current">3.99</span>
+    </div>
+    <a href="#" class="checkBut">
+    Check Now
+    </a>
+  </div>
 
+</div>
+<!--End of advertisement-->
+
+<!--Featured shop/!-->
+<div class="containerIntro">
+  <h1 class="intro"> Featured Stores</h1>
+      <p class="introContent">Check the stores has been featured by developers.</p>
+  <div class="container" id="newShop">
+     <!--1 ----------------------------------->
+    <div class="swiper-slide">
+        <!--box/!-->
+        <div class="box">
+          <!--Shop/!-->
+          <div class="shop">
+            <img src="../Image/BookCafe.png" alt="">
+            <h3>Book World</h3>
+            <p>Book World</p>
+          </div>
+          <div class="bestSeller">
+            <h3>Best Seller</h3>
+            <!--Best seller on the right/!-->
+            <div class="product">
+              <img src="../Image/Books/WeatheringWithYou.jpg" alt="">
+              <div class="productDetail">
+                <h4>Weathering With You</h4>
+                <span class="CurrentPrice">2.99</span>
+                <span class="OriginalPrice">4.99</span>
+              </div>
+            </div>
+            <div class="product">
+              <img src="../Image/Books/YourName.jpg" alt="">
+              <div class="productDetail">
+                <h4>Your Name</h4>
+                <span class="CurrentPrice">3.99</span>
+                <span class="OriginalPrice">4.99</span>
+              </div>
+            </div>
+          </div>
+          <!--Hover Effect/!-->
+          <div class="HoverEffect">
+            <a href="">
+              <div class="HoverButton"> Check Now</div>
+            </a>
+          </div>
+        </div>
+        <!--End Box/!-->
+    </div>
+    <!--2 ----------------------------------->
+   <div class="swiper-slide">
+       <!--box/!-->
+       <div class="box">
+         <!--Shop/!-->
+         <div class="shop">
+           <img src="../Image/BookCafe.png" alt="">
+           <h3>Book World</h3>
+           <p>Book World</p>
+         </div>
+         <div class="bestSeller">
+           <h3>Best Seller</h3>
+           <!--Best seller on the right/!-->
+           <div class="product">
+             <img src="../Image/Books/WeatheringWithYou.jpg" alt="">
+             <div class="productDetail">
+               <h4>Weathering With You</h4>
+               <span class="CurrentPrice">2.99</span>
+               <span class="OriginalPrice">4.99</span>
+             </div>
+           </div>
+           <div class="product">
+             <img src="../Image/Books/YourName.jpg" alt="">
+             <div class="productDetail">
+               <h4>Your Name</h4>
+               <span class="CurrentPrice">3.99</span>
+               <span class="OriginalPrice">4.99</span>
+             </div>
+           </div>
+         </div>
+         <!--Hover Effect/!-->
+         <div class="HoverEffect">
+           <a href="">
+             <div class="HoverButton"> Check Now</div>
+           </a>
+         </div>
+       </div>
+       <!--End Box/!-->
+  </div>
+  </div>
+  <!--End container/!-->
+</div>
+<!--End container intro/!-->
+<!--Featured products/!-->
+<div class="containerIntro">
+  <h1 class="intro"> Featured Products</h1>
+  <p class="introContent"></p>
+  <div class="container" id="newShop">
+     <!--1 ----------------------------------->
+    <div class="swiper-slide">
+        <!--box/!-->
+        <div class="ProductBox" onclick="location.href=''">
+          <img src="../Image/Books/YourName.jpg" alt="">
+          <h3 class="ProTitle">Your Name</h3>
+          <h3 class="Author">Shinkai Makoto</h3>
+          <div class="prices">
+            <span class="original">4.99</span>
+            <span class="current">3.99</span>
+          </div>
+          <!--Shop/!-->
+          <!--Hover Effect/!-->
+          <div class="HoverEffect">
+            <a href="">
+              <div class="HoverButton"> Check Now</div>
+            </a>
+          </div>
+        </div>
+        <!--End Box/!-->
+    </div>
+      <!--End slide-->
+      <!--2 ----------------------------------->
+     <div class="swiper-slide">
+         <!--box/!-->
+         <div class="ProductBox" onclick="location.href=''">
+           <img src="../Image/KentSneaker/AirForce1Para-NoiseV2.jpg" alt="">
+           <h3 class="ProTitle">Air Force 1 Para-Noise V2</h3>
+           <h3 class="Author"></h3>
+           <div class="prices">
+             <span class="original">4.99</span>
+             <span class="current">4.49</span>
+           </div>
+           <!--Shop/!-->
+           <!--Hover Effect/!-->
+           <div class="HoverEffect">
+             <a href="">
+               <div class="HoverButton"> Check Now</div>
+             </a>
+           </div>
+         </div>
+         <!--End Box/!-->
+     </div>
+       <!--End slide-->
+       <!--3----------------------------------->
+      <div class="swiper-slide">
+          <!--box/!-->
+          <div class="ProductBox" onclick="location.href=''">
+            <img src="../Image/KentSneaker/Jordan4RetroTravisScott.jpg" alt="">
+            <h3 class="ProTitle">Jordan 4 Retro Travis Scott</h3>
+            <h3 class="Author"></h3>
+            <div class="prices">
+              <span class="original">19.99</span>
+              <span class="current">10.99</span>
+            </div>
+            <!--Shop/!-->
+            <!--Hover Effect/!-->
+            <div class="HoverEffect">
+              <a href="">
+                <div class="HoverButton">Check Now</div>
+              </a>
+            </div>
+          </div>
+          <!--End Box/!-->
+      </div>
+        <!--End slide-->
+        <!--4 ----------------------------------->
+       <div class="swiper-slide">
+           <!--box/!-->
+           <div class="ProductBox" onclick="location.href='Product-IllusionCard.html'">
+             <img src="../Image/IllusionCard/card2.jpg" alt="">
+             <h3 class="ProTitle">Illusion Card</h3>
+             <h3 class="Author"></h3>
+             <div class="prices">
+               <span class="original">29.99</span>
+               <span class="current">24.99</span>
+             </div>
+             <!--Shop/!-->
+             <!--Hover Effect/!-->
+             <div class="HoverEffect">
+               <a href="Product-IllusionCard.html">
+                 <div class="HoverButton"> Check Now</div>
+               </a>
+             </div>
+           </div>
+           <!--End Box/!-->
+       </div>
+         <!--End slide-->
+  </div>
+  <!--End container/!-->
+</div>
+<!--End container intro/!-->
+<footer>
+<div class="UpperBar">
+<div class="logoText">Bare Bears <p>with barely best brands</p></div>
+<div class="shop"><h1>Top Category</h1>
+  <li>Pet Stores</li>
+  <li>Book Stores</li>
+  <li>Toy Stores</li>
+</div>
+<div class="Support"><h1>Support</h1>
+
+  <li>Order Status</li>
+  <li>FAQs</li>
+  <li>Contact Us</li>
+  <li>Fees</li>
+  <li>Order Status</li>
+  <li>Shipping Information</li>
+</div>
+<div class="Language"><h1>Language</h1>
+  <br>
+  🌎
+  <select class="language" name="language">
+
+      <option value="English"> English</option>
+      <option value="Vietnamese">Vietnamese</option>
+      <option value="Korean">Korean</option>
+  </select>
+</div>
+</div>
+<div class="LowerBar">
+<section class="CopyRight">
+Copyright© Bare Bears 2021
+</section>
+<section class="Policy">
+<li>Term Of Service</li>
+<li>Privacy Policy</li>
+</section>
+</div>
+</footer>
+</body>
 </html>

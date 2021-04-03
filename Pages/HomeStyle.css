@@ -60,6 +60,7 @@ body{
     transform: translate(-50%, -50%);
     top: 80%;
     font-weight: 100;
+    font-size: 2vw;
     left: 50%;
     color: #fff;
     padding: 20px 40px;
@@ -326,4 +327,92 @@ opacity: 1;
   background-color: #109bef;
   color:#fff;
   padding:20px 30px;
+}
+/* DiscountBar*/
+.DiscountBar{
+  width: 100%;
+  margin-top: 25px;
+  background-color: rgba(238, 248, 254, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.DiscountBar .display{
+display: flex;
+align-items:center;
+justify-content: center;
+flex-direction: row;
+}
+.DiscountBar .display img{
+  height: 300px;
+  width: 300px;
+}
+.DiscountBar .display .timeDisplay{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 0;
+}
+.DiscountBar .display .timeDisplay .box{
+  background-color: #fff;
+  width: 90px;
+  margin:2px 5px;
+  text-align: center;
+  border:1px solid #aaa;
+
+}
+.DiscountBar .display .timeDisplay .box .time{
+  color: #00b1e8;
+  font-size: 20px;
+  font-weight: 600;
+}
+.DiscountBar .display .timeDisplay .box .timeName{
+  color: #aaa;
+  font-size: 14px;
+}
+.DiscountBar .Desciption{
+  width: 60%;
+  margin-left: 25px;
+  position: relative;
+}
+.DiscountBar .Desciption .DiscountTitle{
+  font-size: 20px;
+  font-weight: 600;
+}
+.DiscountBar .Desciption .DiscountDetail{
+  font-size: 14px;
+  font-family: "Rubik";
+  color:#333;
+  line-height: 1.5;
+}
+.DiscountBar .Desciption .prices span::before{
+  content: '$';
+}
+.DiscountBar .Desciption .prices .original{
+font-size: 16px;
+color:#aaa;
+text-decoration: line-through;
+}
+.DiscountBar .Desciption .prices .current{
+  font-size: 25px;
+  color:#ec8d26;
+font-weight: 600;
+}
+/* checking button */
+.checkBut{
+  display: block;
+  font-weight: 100;
+  font-size: 16px;
+  color: #fff;
+  padding: 15px 40px;
+  background-color: #222;
+  width: 100px;
+  text-decoration: none;
+  transition: all 300ms ease 0s;
+}
+.checkBut:hover{
+    color: #333;
+      background-color: #ccc;
 }

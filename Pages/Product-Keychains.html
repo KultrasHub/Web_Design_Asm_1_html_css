@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="Product-Keychains.css">
+  <link rel="stylesheet" href="BareBearsStyle.css">
+</head>
+
+<div class="background">
+</div>
+
+<body>
+  <header>
+    <a href="Home.html" class="LogoName"><img class="logo" src="../Image/barebear.png" alt="logo"><span>Bare Bears</span></a>
+    <nav>
+      <ul class="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Fees.html">Fees</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li class="Browse">
+          <k class="BrowseText">Browse</k>
+          <ul class="DropDown">
+            <li class="DropDownContent">Browse Stores by Name</li>
+            <li class="DropDownContentd DropDownEnd">Browse Stores by Category</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+    <a href="MyAccount-Login.html"><img class="myAcount" src="../Image/user.png" alt=""></a>
+  </header>
+
+  <div id="container">
+
+    <div class="columns">
+
+      <img id="mainFeature" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage">
+      <br>
+      <img class="gallery active" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage1">
+      <img class="gallery" src="../Image/Octoplushies/Octo2.jpg" alt="octoImage2">
+      <img class="gallery" src="../Image/Octoplushies/Octo3.jpg" alt="octoImage3">
+      <img class="gallery" src="../Image/Octoplushies/Octo4.jpg" alt="octoImage4">
+
+    </div>
+
+    <div class="columns">
+      <h1>Cute Emotional Octopus</h1>
+      <hr>
+      <p>Happily Angry...all in one!</p>
+      <h2>$4.99</h2>
+      <input id="inp" value = 1 type="number">
+      <a class ="proButt" href="#">Order Now!</a>
+    </div>
+
+    <script ="text/javascript">
+      let gallery = document.getElementsByClassName("gallery")
+      let hoveredImg = document.getElementsByClassName("active")
+
+      for(var i = 0; i < gallery.length; i++){
+        gallery[i].addEventListener("mouseover", function(){
+          if (hoveredImg.length > 0){
+            hoveredImg[0].classList.remove("active")
+          }
+          this.classList.add("active")
+          document.getElementById("mainFeature").src =this.src
+        })
+      }
+    </script>
+
+    <div class="productTile">
+
+    <h1 id="headerCus">Emotional Octopus</h1>
+    <p>Made by the comfiest material that mankind can find, this emotional octopus will surely make your everyday social interaction more interesting and cute.</p>
+    <p>It is happy on the outside yet sometimes she can be very angry on the inside.</p>
+    <p>Consisting of happy and sad expression so whenever you feel happy/sad, turn that face all the way around!</p>
+    <p>Be sure to take a visit throughout our other products in the future!</p>
+    </div>
+
+  </div>
+
+
+  <footer>
+<div class="UpperBar">
+  <div class="logoText">Bare Bears <p>with barely best brands</p></div>
+  <div class="shop"><h1>Top Category</h1>
+    <li>Pet Stores</li>
+    <li>Book Stores</li>
+    <li>Toy Stores</li>
+  </div>
+  <div class="Support"><h1>Support</h1>
+
+    <li>Order Status</li>
+    <li>FAQs</li>
+    <li>Contact Us</li>
+    <li>Fees</li>
+    <li>Order Status</li>
+    <li>Shipping Information</li>
+  </div>
+  <div class="Language"><h1>Language</h1>
+    <br>
+    🌎
+    <select class="language" name="language">
+
+        <option value="English"> English</option>
+        <option value="Vietnamese">Vietnamese</option>
+        <option value="Korean">Korean</option>
+    </select>
+  </div>
+</div>
+<div class="LowerBar">
+<section class="CopyRight">
+  Copyright© Bare Bears 2021
+</section>
+<section class="Policy">
+  <li>Term Of Service</li>
+  <li>Privacy Policy</li>
+</section>
+</div>
+  </footer>
+</body>

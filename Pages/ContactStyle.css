@@ -48,6 +48,7 @@ color:#212121;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: wrap;
 }
 .contactInfo{
   width: 50%;

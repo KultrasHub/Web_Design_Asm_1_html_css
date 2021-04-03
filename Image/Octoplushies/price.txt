@@ -1,0 +1,2 @@
+Octo price before discount: $19.99
+after discount: $10.99

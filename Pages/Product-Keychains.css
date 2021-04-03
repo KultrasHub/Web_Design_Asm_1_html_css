@@ -17,31 +17,26 @@ body{
 
 }
 
-img.productImg{
-  height: 30%;
-  width:30%;
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
-
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin:5px;
 }
 
 .productTile{
-  margin-top: 10%;
-  text-align:center;
-
+  margin-top: 5px;
+  text-align:left;
+  margin-left: 5%;
 }
 
-.orderButton{
-  margin:0;
-  position: absolute;
-  top:85%;
-  left:46%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%)
+#headerCus{
+  text-align:center;
 }
 
 #mainFeature{
+  margin-top: 15%;
   object-fit:cover;
   cursor:pointer;
   border: 2px solid black;
@@ -61,6 +56,32 @@ img.productImg{
 .gallery:hover{
   opacity: 1.0;
 }
+
 .active{
   opacity: 1.0;
+}
+
+.columns{
+  width:650px;
+  padding: 10px
+}
+
+.proButt{
+  background-color: black;
+  color:white;
+  text-align: center;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 16px;
+}
+
+.proButt:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+#inp{
+  padding: 5px 16px;
 }

@@ -109,7 +109,7 @@ height: 1px;
   position: relative;
   margin-left: 40px;
   margin-right: 40px;
-width: 450px;
+width: 350px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -146,55 +146,43 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28);
   height: 200px;
 }
 .container .box .bestSeller{
-  justify-content: space-between;
+  width: 60%;
+  justify-content: center;
   display: flex;
   align-items: left;
   flex-direction: column;
+text-align: left;
 }
 .container .box .bestSeller h3{
   font-weight: 100;
   font-size: 14px;
   color: #777;
-  margin-bottom: -10px;
+  margin-bottom: 20px;
+
 }
 .container .box .bestSeller img{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 .container .box .bestSeller .product{
-
   margin-bottom: 10px;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-.container .box .bestSeller .product .productDetail{
-  margin-left: 10px;
-  justify-content: center;
+
   align-items: left;
+  justify-content: center;
   display: flex;
   flex-direction: column;
+  line-height: 0;
+}
+.container .box .bestSeller .product .productDetail{
+  width: 100%;
+text-align: center;
 }
 .container .box .bestSeller .product .productDetail h4{
   max-width: 60%;
-  font-size: 20px;
-}
-.container .box .bestSeller .product .productDetail .CurrentPrice::before{
-  content:'$';
-}
-.container .box .bestSeller .product .productDetail .CurrentPrice{
-  margin-top: -20px;
-color: #ec8d26;
-font-weight: 550;
-font-size: 25px;
-}
-.container .box .bestSeller .product .productDetail .OriginalPrice::before{
-  content: '$'
-}
-.container .box .bestSeller .product .productDetail .OriginalPrice{
-color:#aaa;
-text-decoration: line-through;
-font-size: 16px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1;
+  font-weight: 300;
 }
 .container .box .HoverEffect{
   position: absolute;

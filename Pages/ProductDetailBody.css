@@ -13,17 +13,28 @@ body{
   width: 100%;
   top: 0;
   z-index: -1;
-  transform: rotateZ(-35deg)translateX(-30%)translateY(-50vh);
 
 }
-
+.background div{
+  position: relative;
+     height: inherit;
+}
+.background div svg{
+  position: absolute;
+  bottom: -1px;
+}
 #container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin:5px;
-  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 90%;
+  border-radius: 30px;
+  -webkit-box-shadow: 4px 3px 11px 3px rgba(0,0,0,0.41);
+box-shadow: 4px 3px 11px 3px rgba(0,0,0,0.41);
 }
 
 .productTile{
@@ -37,13 +48,13 @@ body{
 }
 #container .columns .mainDisplay{
   position: relative;
-  width: 600px;
-  height: 600px;
-  background-color: #ccc;
+  width: 500px;
+  height: 500px;
 }
 #container .columns .mainDisplay #backgroundImage{
-  width: 600px;
-  height: 600px;
+  border-radius: 10px;
+  width: inherit;
+  height: inherit;
   /* Add the blur effect */
   filter: blur(6px);
   -webkit-filter: blur(6px) brightness(50%) sepia(50%);
@@ -53,16 +64,16 @@ position: absolute;
   object-fit:cover;
   cursor:pointer;
   border: 2px solid RGBA(255,255,255,.1);
-  max-width: 450px;
-  max-height: 450px;
+  max-width: 400px;
+  max-height: 400px;
   top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
 }
 .gallery{
   object-fit:cover;
-  max-width: 180px;
-  max-height: 100px;
+  max-width: 160px;
+  max-height: 80px;
   cursor: pointer;
   opacity: 0.5;
   margin: 5px;
@@ -78,23 +89,30 @@ position: absolute;
 }
 
 .columns{
-  width:650px;
-  padding: 10px
+  margin-top: 50px;
+  width:500px;
+  padding: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
-.columns .prices span::before{
+.general{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.general .prices span::before{
   content: "$";
 }
-.columns .prices{
+.general .prices{
 display: flex;
 justify-content: left;
 }
-.columns .prices .originalPrice{
+.general .prices .originalPrice{
   color:#aaa;
   text-decoration: line-through;
   font-size: 15px;
   margin-right: 5px;
 }
-.columns .prices .currentPrice{
+.general .prices .currentPrice{
   font-size: 18px;
   font-weight: 550;
   margin-left: 5px;

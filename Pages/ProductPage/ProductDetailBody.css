@@ -42,8 +42,25 @@ box-shadow: 4px 3px 11px 3px rgba(0,0,0,0.41);
   margin-top: 5px;
   text-align:left;
   color:#000;
+line-height: 0;
 }
-
+.productTile p{
+  color:#333;
+  font-size: 16px;
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+}
+.productTile h1{
+  color:#000;
+  font-size: 40px;
+  line-height: 1.8;
+}
+.productTile h2{
+color:#cd995b;
+  font-size: 16px;
+  line-height: 0;
+  font-family: 'Open Sans', sans-serif;
+}
 #headerCus{
   text-align:center;
 }
@@ -97,6 +114,7 @@ position: absolute;
     margin-left: 50px;
 }
 .general{
+  width: 40%;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -210,6 +228,7 @@ margin-top: 10px;
   font-weight: 300;
   font-family: "Rubik";
 }
+
 .container .ProductBox .Author{
   margin: 0;
   font-size: 16px;

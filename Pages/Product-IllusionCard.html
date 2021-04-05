@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="ProductDetailBody.css">
+  <link rel="stylesheet" href="BareBearsStyle.css">
+</head>
+
+<div class="background">
+</div>
+
+<body>
+  <header>
+    <a href="Home.html" class="LogoName"><img class="logo" src="../Image/Essen/barebear.png" alt="logo"><span>Bare Bears</span></a>
+    <nav>
+      <ul class="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Fees.html">Fees</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li class="Browse">
+          <k class="BrowseText">Browse</k>
+          <ul class="DropDown">
+            <li class="DropDownContent">Browse Stores by Name</li>
+            <li class="DropDownContentd DropDownEnd">Browse Stores by Category</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+    <a href="MyAccount-Login.html"><img class="myAcount" src="../Image/Profolio/user.png" alt=""></a>
+  </header>
+
+  <div id="container">
+
+    <div class="columns">
+
+      <div class="mainDisplay">
+        <img id="backgroundImage" src="../Image/IllusionCard/card1.jpg">
+        <img id="mainFeature" src="../Image/IllusionCard/card1.jpg" alt="octoImage">
+        </div>
+      <br>
+      <img class="gallery active" src="../Image/IllusionCard/card1.jpg" alt="cardImage1">
+      <img class="gallery" src="../Image/IllusionCard/card2.jpg" alt="cardImage2">
+      <img class="gallery" src="../Image/IllusionCard/card3.jpg" alt="cardImage3">
+      <img class="gallery" src="../Image/IllusionCard/card4.jpg" alt="cardImage4">
+
+    </div>
+
+    <div class="general">
+      <h1>Illusion-Patterned Card Deck</h1>
+      <hr>
+      <p>Stand out before everyone as you pull out your dazzling card deck!</p>
+      <div class="prices">
+        <span class="originalPrice">10.99</span>
+        <span class="currentPrice">4.99</span>
+      </div>
+      <input id="inp" value = 1 type="number">
+      <a class ="proButt" href="#">Order Now!</a>
+    </div>
+
+    <script ="text/javascript">
+      let gallery = document.getElementsByClassName("gallery")
+      let hoveredImg = document.getElementsByClassName("active")
+
+      for(var i = 0; i < gallery.length; i++){
+        gallery[i].addEventListener("mouseover", function(){
+          if (hoveredImg.length > 0){
+            hoveredImg[0].classList.remove("active")
+          }
+          this.classList.add("active")
+          document.getElementById("mainFeature").src =this.src;
+                    document.getElementById("backgroundImage").src =this.src;
+        })
+      }
+    </script>
+
+    <div class="productTile">
+
+    <h1 id="headerCus">Illusion-Patterned Card Deck</h1>
+    <hr>
+    <p>Designed slim but strong enough so that when you got bored of card games, you can throw them around without fearing it will damage the card when collision.</p>
+    <p>Moreoever we avoid making the face of the cards smooth since it will backfire the slimness of the cards, ultimately makes it extremely harder to pick up them from the ground.</p>
+    <p>Be sure to take a visit throughout our other products in the future!</p>
+    </div>
+
+  </div>
+
+
+  <footer>
+<div class="UpperBar">
+  <div class="logoText">Bare Bears <p>with barely best brands</p></div>
+  <div class="shop"><h1>Top Category</h1>
+    <li>Pet Stores</li>
+    <li>Book Stores</li>
+    <li>Toy Stores</li>
+  </div>
+  <div class="Support"><h1>Support</h1>
+
+    <li>Order Status</li>
+    <li>FAQs</li>
+    <li>Contact Us</li>
+    <li>Fees</li>
+    <li>Order Status</li>
+    <li>Shipping Information</li>
+  </div>
+  <div class="Language"><h1>Language</h1>
+    <br>
+    🌎
+    <select class="language" name="language">
+
+        <option value="English"> English</option>
+        <option value="Vietnamese">Vietnamese</option>
+        <option value="Korean">Korean</option>
+    </select>
+  </div>
+</div>
+<div class="LowerBar">
+<section class="CopyRight">
+  Copyright© Bare Bears 2021
+</section>
+<section class="Policy">
+  <li>Term Of Service</li>
+  <li>Privacy Policy</li>
+</section>
+</div>
+  </footer>
+</body>

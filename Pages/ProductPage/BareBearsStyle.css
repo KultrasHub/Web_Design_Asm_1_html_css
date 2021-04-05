@@ -68,28 +68,26 @@ text-decoration: none;
     display: none;
     width: fit-content;
 }
-.DropDown li{
+.DropDown .DropDownContent{
+  position: relative;
   color:#b8b8b8;
-perspective: 1000px;
   display: inline-block;
   background: #212121;
   box-sizing: border-box;
   padding: 10px 25px;
   float: left;
-clear: left;
-width: fit-content;
+    clear: left;
+  width: fit-content;
 }
 .DropDown .DropDownEnd{
   border-bottom-right-radius: 10px;
   border-bottom-left-radius:10px;
 }
 .navLinks .Browse:hover> .BrowseText{
-  font-size: 25px;
-  padding: 0px 20px;
-  letter-spacing: 3px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #93e6f1;
+  color:#93e6f1;
 }
-.navLinks .DropDown li:hover{
+.navLinks .DropDown .DropDownContent:hover{
   background-color:#4d4d4d;
 }
 .navLinks .Browse:hover .DropDown{
@@ -115,6 +113,72 @@ width: fit-content;
     opacity: 1;
     transform: translateY(0px);
   }
+}
+/* Drop Down Detail(submenu)*/
+.navLinks .DropDown .DropDownContainer{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left:70%;
+  top:0;
+  display: none;
+}
+.navLinks .DropDown .DropDownContainer .Holder{
+ display: flex;
+ justify-content: flex-start;
+ align-items:left;
+ flex-direction: column;
+ background-color: #212121;
+ padding:10px 10px 10px 10px;
+ border-radius: 10px;
+}
+.navLinks .DropDown .DropDownContainer .Holder a{
+  margin: 10px;
+  padding:0;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 3px;
+}
+.navLinks .DropDown .DropDownContainer .Holder h3{
+  letter-spacing:2px;
+  font-size: 25px;
+padding:0 15px;
+}
+.navLinks .DropDown .DropDownContainer .Holder a:hover{
+  color:#666;
+}
+/*First Holder*/
+.navLinks .Browse .DropDownDetail:hover{
+    background-color: #4d4d4d;
+}
+.navLinks .Browse .DropDownDetail{
+  background-color: #212121;
+    color:#b8b8b8;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.navLinks .Browse .DropDownDetail span{
+font-weight: 300;
+font-size: 14px;
+text-align: center;
+}
+/*Display submenu in Dropdown content*/
+.navLinks .DropDown .DropDownContent:hover .DropDownContainer{
+  display: block;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(1){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: -200ms;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(2){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 0ms;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(3){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 200ms;
 }
 /*Contact & animation*/
 header button{

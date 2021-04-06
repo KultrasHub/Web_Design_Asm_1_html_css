@@ -282,6 +282,10 @@ font-size: 12px;
 letter-spacing: 2.3px;
 font-family: 'Enriqueta', arial, serif;
 }
+footer a:hover li{
+  border-bottom: 1px solid #eee;
+  color:#777;
+}
 footer .LowerBar .Policy li{
     font-family: courier,arial,helvetica;
     font-size: 17px;

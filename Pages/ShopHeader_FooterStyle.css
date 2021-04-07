@@ -1,0 +1,251 @@
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+/*header*/
+header{
+  width: 80%;
+position: fixed;
+top: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10%;
+  background-color: #fff;
+  z-index: 2;
+
+  -webkit-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.4);
+box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.4);
+}
+header .backgroundLock{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  overflow: hidden;
+  z-index: -1;
+}
+header .background{
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top:0;
+}
+header .background div{
+  position: relative;
+  height: inherit;
+}
+header .background svg{
+  position: absolute;
+  bottom: 0;
+  margin-top: 200px;
+  display: block;
+  z-index: -1;
+}
+header li,a,button{
+font-family: courier,arial,helvetica;
+color: #333;
+font-size: 17px;
+text-decoration: none;
+}
+.logo{
+  margin-top: 12px;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  float:left;
+}
+.LogoName span{
+  padding: 25px;
+  font-size: 35px;
+  display: inline-block;
+}
+.navLinks{
+  list-style: none;
+}
+.navLinks li{
+  display: inline-block;
+  padding: 15px 20px;
+}
+.navLinks li a{
+  transition: all 0.3s ease 0s;
+  padding:25px 0px;
+}
+.navLinks li  a:hover{
+  border-bottom: 1px solid #aaa;
+}
+.navLinks .Browse .BrowseText{
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.navLinks .Browse{
+  position: relative;
+}
+/* Browse DropDown*/
+.DropDown{
+  cursor: pointer;
+    position: absolute;
+    top:100%;
+    left:0;
+    width: 100%;
+    padding: 0;
+    display: none;
+    width: fit-content;
+}
+.DropDown .DropDownContent{
+  position: relative;
+  color:#333;
+  display: inline-block;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  float: left;
+    clear: left;
+  width: fit-content;
+  -webkit-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.4);
+box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.4);
+}
+.DropDown .DropDownEnd{
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius:10px;
+}
+.navLinks .Browse:hover> .BrowseText{
+  border-bottom: 1px solid #0e626d;
+  color:#0e626d;
+}
+.navLinks .DropDown .DropDownContent:hover{
+  background-color:#ccc;
+  color:#000;
+}
+.navLinks .Browse:hover .DropDown{
+  box-sizing: border-box;
+  font-size: 16px;
+  letter-spacing: 0px;
+  display: block;
+}
+.navLinks .Browse:hover .DropDownContent:nth-child(1){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: -200ms;
+}
+.navLinks .Browse:hover .DropDownContent:nth-child(2){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 0ms;
+}
+@keyframes dropDownAnimation {
+  0%{
+    opacity: 0;
+    transform:translateY(-60px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* Drop Down Detail(submenu)*/
+.navLinks .DropDown .DropDownContainer{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left:70%;
+  top:0;
+  display: none;
+}
+
+/*First Holder*/
+.navLinks .Browse .DropDownDetail:hover{
+    background-color: #ccc;
+    color:#000;
+}
+.navLinks .Browse .DropDownDetail{
+  background-color: #fff;
+    color:#333;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.4);
+box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.4);
+}
+.navLinks .Browse .DropDownDetail span{
+font-weight: 300;
+font-size: 14px;
+text-align: center;
+}
+/*Display submenu in Dropdown content*/
+.navLinks .DropDown .DropDownContent:hover .DropDownContainer{
+  display: block;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(1){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: -200ms;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(2){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 0ms;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(3){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 100ms;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(4){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+.navLinks .Browse:hover .DropDownDetail:nth-child(5){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 300ms;
+}
+/*Contact & animation*/
+header button{
+  padding: 9px 25px;
+  background-color: #ececec;
+  border:none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .3s ease 0s;
+}
+header button:hover{
+  padding: 9px 40px;
+  background-color: #2a2a29;
+  color:#e9ebeb;
+}
+
+/*footer*/
+footer{
+  margin-top: 100px;
+  width: 100%;
+}
+
+footer .LowerBar{
+
+  background-image: linear-gradient(to right, #3a3a3a , #1b1b1b);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0px 15%;
+  color:#eee;
+  -webkit-box-shadow: 0px -3px 6px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px -3px 6px 2px rgba(0,0,0,0.2);
+}
+footer .LowerBar .CopyRight{
+
+font-size: 12px;
+letter-spacing: 2.3px;
+font-family: 'Enriqueta', arial, serif;
+}
+footer a:hover li{
+  border-bottom: 1px solid #eee;
+  color:#fff;
+}
+footer .LowerBar .Policy li{
+    font-family: courier,arial,helvetica;
+    font-size: 17px;
+display: inline-flex;
+list-style: none;
+padding:15px 20px;
+color:#ccc;
+}

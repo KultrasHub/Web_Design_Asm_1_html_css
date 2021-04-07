@@ -1,0 +1,312 @@
+body{
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding:0;
+  font-family: courier,arial,helvetica;
+}
+html {
+  scroll-behavior: smooth;
+}
+.Banner{
+  margin-top: 50px;
+  width: 100%;
+  position: relative;
+}
+.Banner img{
+width: 100%;
+}
+.Banner h1{
+  position: absolute;
+    color:#f4fbfe;
+right:-5%;
+top:15%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+}
+
+.Banner h3{
+  position: absolute;
+  color:#87e3ef;
+  right:-5%;
+  top:32%;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    font-size: 1vw;
+}
+.Banner p{
+    position: absolute;
+    color:#999;
+    right:-20%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3vw;
+    width: 40%;
+}
+.Banner a{
+  text-decoration: none;
+
+}
+.Banner a div{
+  position: absolute;
+    top: 80%;
+    font-weight: 100;
+    font-size: 1.6vw;
+    right: 20%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 1vw 2vw;
+    background-color: #333;
+    border-radius: 30px;
+    transition: all 300ms ease 0s;
+}
+.Banner a div:hover{
+  background-color: #666;
+  color:#000;
+}
+/*Top Category*/
+.TopCategories {
+  width: 100%;
+  text-align: center;
+}
+.TopCategories h3{
+  font-size: 50px;
+  font-weight: 200;
+  position: relative;
+}
+.TopCategories h3::after{
+  content:'';
+  height: 1px;
+  position: absolute;
+  width: 50vw;
+  right:0px;
+  bottom:-10px;
+  background-image: linear-gradient(to right,#000,#fff);
+}
+.TopCategories .container
+{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-wrap: wrap;
+border-radius: 50px;
+
+padding:20px 20px;
+overflow: hidden;
+}
+.TopCategories .container .box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 40px;
+  position: relative;
+  width: 125px;
+  height: 200px;
+  -webkit-box-shadow: 7px -4px 15px -4px rgba(0,0,0,0.14);
+box-shadow: 7px -4px 15px -4px rgba(0,0,0,0.14);
+cursor: pointer;
+transition: all 300ms ease 0s;
+}
+.TopCategories .container .box img{
+  width: 100px;
+border-radius: 50%;
+}
+.TopCategories .container .box span{
+  margin-top: 10px;
+}
+.TopCategories .container .box .UpperTitle{
+  font-weight:550;
+  font-size: 20px;
+}
+.TopCategories .container .box .LowerTitle{
+  font-weight:100;
+  font-size: 16px;
+  color:#777;
+}
+/*Hover Effect*/
+.container .box .HoverEffect{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(99, 123, 255, 0.5);
+  transition: all 300ms ease-in-out 0s;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+display: flex;
+opacity: 0;
+}
+.container .box .HoverEffect a{
+  text-decoration: none;
+}
+.container .box .HoverEffect .HoverButton{
+color: #000;
+font-weight: 300;
+border-radius: 50px;
+background-color: #fff;
+padding:20px 20px;
+  transition: all 300ms ease-in-out 0s;
+  opacity: 0;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+.container .box:hover >.HoverEffect{
+opacity: 1;
+}
+.container .box:hover >.HoverEffect .HoverButton{
+  opacity: 1;
+}
+.container .box .HoverEffect .HoverButton:hover{
+  background-color: #109bef;
+  color:#fff;
+  padding:20px 30px;
+}
+/*Display Featured and New*/
+.Display
+{
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.Display .background{
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top:0px;
+
+}
+.Display h3{
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: 200;
+  position: relative;
+}
+.Display h3::after{
+  content:'';
+  height: 1px;
+  position: absolute;
+  width: 50vw;
+  right:0px;
+  bottom:-10px;
+  background-image: linear-gradient(to right,#000, rgba(13, 149, 242, 0.4));
+}
+.Display .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  position: relative;
+  height: fit-content;
+}
+.Display .container .box{
+  margin: 5px;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 170px;
+  height: 250px;
+  padding:20px;
+  cursor: pointer;
+  -webkit-box-shadow: 4px 2px 6px 3px rgba(0,0,0,0.26);
+  box-shadow: 4px 2px 6px 3px rgba(0,0,0,0.26);
+}
+.Display .container .box img{
+  height: 150px;
+  width: 150px;
+}
+.Display .container .box .ProductName{
+font-weight: 300;
+}
+.Display .container .box .AuthorName{
+  margin-top: 10px;
+  color:#cd995b;
+  font-weight: 550;
+}
+.Display .container .box .prices{
+  margin-top: 10px;
+}
+.Display .container .box .prices span::before{
+  content:"$";
+}
+.Display .container .box .prices .origin{
+  color:#777;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.Display .container .box .prices .current{
+  font-weight: 600;
+  font-size: 17px;
+}
+/* Middle Banner*/
+.MiddleBanner{
+  position: relative;
+}
+.MiddleBanner img{
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.MiddleBanner .text{
+  width: fit-content;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color:#222;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  -webkit-box-shadow: 7px 6px 15px -5px rgba(0,0,0,0.61);
+  box-shadow: 7px 6px 15px -5px rgba(0,0,0,0.61);
+  padding:20px;
+}
+/* Category display*/
+.CatergoryContainer .Display{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  position: relative;
+
+}
+.CatergoryContainer .Display::after{
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 25%;
+  left:0;
+  background-image: linear-gradient(to right,#d2c9b3,#c3b698,#c3b698,#c3b698,#c3b698,#d2c9b3);
+  bottom: -20px;
+  left:40px;
+}
+.CatergoryContainer .Display h4{
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  font-family: 'Rouge Script', cursive;
+}
+.CatergoryContainer .Display h4 span{
+  position: absolute;
+  display: none;
+  font-size: 10vw;
+  font-family:  courier,arial,helvetica;
+}
+.CatergoryContainer .Display .container{
+  padding:0px 20px;
+  justify-content: flex-start;
+}

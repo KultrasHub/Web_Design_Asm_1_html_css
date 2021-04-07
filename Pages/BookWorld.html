@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BookWorld</title>
+  <link rel="stylesheet" href="StorePageStyle.css">
+  <link rel="stylesheet" href="ShopHeader_FooterStyle.css">
+</head>
+
+<body>
+  <!--Header-->
+  <header>
+    <!--change icon and name base on shop-->
+    <a class="LogoName"><img class="logo" src="../Image/Logo/BookCafe.png" alt="logo"><span>Book World</span></a>
+    <div class="backgroundLock">
+      <div class="background">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#cccccc" fill-opacity="1"
+              d="M0,320L24,298.7C48,277,96,235,144,197.3C192,160,240,128,288,149.3C336,171,384,245,432,261.3C480,277,528,235,576,218.7C624,203,672,213,720,218.7C768,224,816,224,864,218.7C912,213,960,203,1008,208C1056,213,1104,235,1152,208C1200,181,1248,107,1296,96C1344,85,1392,139,1416,165.3L1440,192L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul class="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <!--change link to one of your store-->
+        <li><a href="AboutUs_BookWorld.html">About Us</a></li>
+        <li class="Browse">
+          <k class="BrowseText">Browse</k>
+          <ul class="DropDown">
+            <li class="DropDownContent">Browse Stores by Category
+              <!--Change amount and category names-->
+              <ul class="DropDownContainer">
+                <li class="DropDownDetail" onclick="location.href='#LightNovel'">
+                  <span> Light Novel</span>
+                </li>
+                <li class="DropDownDetail" onclick="location.href='#Economy'">
+                  <span> Economy</span>
+                </li>
+                <li class="DropDownDetail" onclick="location.href='#Detective&Mysterious'">
+                  <span> Detective & Mystery</span>
+                </li>
+                <li class="DropDownDetail" onclick="location.href='#Scifi&Fantasy'">
+                  <span> Science Fiction & Fantasy</span>
+                </li>
+                <li class="DropDownDetail" onclick="location.href='#SelfImprovement'">
+                  <span> Self Improvement</span>
+                </li>
+              </ul>
+            </li>
+            <li class="DropDownContent DropDownEnd">Browse Products by Time
+              <ul class="DropDownContainer">
+                <!--change link to one of your store-->
+                <li class="DropDownDetail" onclick="location.href='BrowseProducts_BookWorld.html'">
+                  <span> Newest</span>
+                </li>
+                <!--change link to one of your store-->
+                <li class="DropDownDetail" onclick="location.href='BrowseStore_BookWorld.html'">
+                  <span> Oldest</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!--Chnage link to one of your store-->
+    <a href="Contact_BookWorld.html" class="contact"> <button type="button" name="button">Contact</button></a>
+  </header>
+  <!--Banner-->
+  <!--when duplicate the file, change your banner, shop name, subtitle and add a quotes if you want, dont forget to change Read on but-->
+  <div class="Banner">
+    <img src="../Image/BookWorldBanner.jpg" alt="">
+    <h1>Book World</h1>
+    <h3>Today a reader, Tomorrow a leader
+    </h3>
+    <p>Life is meant to live, to cherish every moment of your life. It is neither capturing photos and posing them on social media nor getting new shoes! these are temporary. The true happiness comes from your mind and so nurture with all your love
+      and care. It may be why you are here.</p>
+    <a href="#Featured">
+      <div>Read On</div>
+    </a>
+  </div>
+  <!--Top Subjects(Categories)-->
+  <div class="TopCategories" id="TopCategoriesID">
+    <h3>Top Subjects</h3><!-- Change to this depends on ur products-->
+    <div class="container">
+      <div class="box">
+        <img src="../Image/Books/WeatheringWithYou.jpg" alt="">
+        <!--an example for ur category-->
+        <span class="UpperTitle">Light Novel</span>
+        <span class="LowerTitle">Light Novel</span>
+        <div class="HoverEffect">
+          <a href="#LightNovel">
+            <div class="HoverButton"> Go to</div>
+          </a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="../Image/Books/HowMoneyWorks.jpg" alt="">
+        <!--an example for ur category-->
+        <span class="UpperTitle">Economy</span>
+        <span class="LowerTitle">Economy</span>
+        <div class="HoverEffect">
+          <a href="#Economy">
+            <div class="HoverButton"> Go to</div>
+          </a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="../Image/Books/SherlockHolmes.jpg" alt="">
+        <!--an example for ur category-->
+        <span class="UpperTitle">Detective & Mysterious</span>
+        <span class="LowerTitle">Detective & Mysterious</span>
+        <div class="HoverEffect">
+          <a href="#Detective&Mysterious">
+            <div class="HoverButton"> Go to</div>
+          </a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="../Image/Books/TheFutureOfHumanity.jpg" alt="">
+        <!--an example for ur category-->
+        <span class="UpperTitle">Scifi & Fantasy</span>
+        <span class="LowerTitle">Science Fiction & Fantasy</span>
+        <div class="HoverEffect">
+          <a href="#Scifi&Fantasy">
+            <div class="HoverButton"> Go to</div>
+          </a>
+        </div>
+      </div>
+    </div><!--End container-->
+  </div>
+
+  <!--Featured-->
+  <div class="Display" id="Featured">
+    <div class="background" style="  background-color: rgba(13, 149, 242, 0.4);"></div>
+    <h3>Featured Books</h3>
+    <div class="container">
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-WeatheringWithYou.html'"><!--change link-->
+        <img src="../Image/Books/WeatheringWithYou.jpg" alt="Weathering With You Banner">
+        <span class="ProductName">Weathering With You</span>
+        <span class="AuthorName">Shinkai Makoto</span>
+        <div class="prices">
+          <span class="origin">4.49</span>
+          <span class="current">2.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-YourName.html'">
+        <img src="../Image/Books/YourName.jpg" alt="Weathering With You Banner">
+        <span class="ProductName">Your Name</span>
+        <span class="AuthorName">Shinkai Makoto</span>
+        <div class="prices">
+          <span class="origin">4.49</span>
+          <span class="current">2.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-SherlockHolmes.Vol1.html'">
+        <img src="../Image/Books/SherlockHolmes.jpg" alt="Weathering With You Banner">
+        <span class="ProductName">SherlockHolmes Vol.1</span>
+        <span class="AuthorName">Sir Author Conan Doyle</span>
+        <div class="prices">
+          <span class="current">6.49</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-TheFutureOfHumanity.html'">
+        <img src="../Image/Books/TheFutureOfHumanity.jpg" alt="Weathering With You Banner">
+        <span class="ProductName">The Future Of Humanity</span>
+        <span class="AuthorName">Michio Kaku</span>
+        <div class="prices">
+          <span class="current">14.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+    </div><!--End Container-->
+  </div>
+  <!--EndFeatured-->
+
+  <!--Latest-->
+  <div class="Display">
+    <div class="background" style="background-color:#ccc;"></div>
+    <h3>Latest Books</h3>
+    <div class="container">
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-WeatheringWithYou.html'">
+        <img src="../Image/Books/WeatheringWithYou.jpg" alt="Weathering With You Banner">
+        <span class="ProductName">Weathering With You</span>
+        <span class="AuthorName">Shinkai Makoto</span>
+        <div class="prices">
+          <span class="origin">4.49</span>
+          <span class="current">2.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-DanMachi4.html'">
+        <img src="../Image/Books/DanMachi_4.jpg" alt="DanMachi4">
+        <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.4</span>
+        <span class="AuthorName">Fujino Omori</span>
+        <div class="prices">
+          <span class="origin">4.99</span>
+          <span class="current">4.49</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-DanMachi3.html'">
+        <img src="../Image/Books/DanMachi_3.jpg" alt="DanMachi3">
+        <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.3</span>
+        <span class="AuthorName">Fujino Omori</span>
+        <div class="prices">
+          <span class="origin">4.99</span>
+          <span class="current">4.49</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+
+    </div><!--End Container-->
+  </div>
+  <!--Endlatest-->
+  <!--MiddleBanner-->
+<div class="MiddleBanner">
+  <img src="../Image/BookBanner.jpeg" alt="">
+  <div class="text">
+  <span>A reader lives thousand lives before he dies</span>
+  <span>A man who never reads only live once.</span>
+  </div>
+</div>
+<!--End Middle Banner-->
+<!--Category-->
+<div class="CatergoryContainer">
+  <!--Light Novel-->
+  <div class="Display" id="LightNovel">
+    <h4>Light Novel
+      <span class="InnerText">Light Novel</span><!--A replicate show on background-->
+    </h4>
+    <div class="container">
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-WeatheringWithYou.html'">
+        <img src="../Image/Books/WeatheringWithYou.jpg" alt="Weathering With You Banner">
+        <span class="ProductName">Weathering With You</span>
+        <span class="AuthorName">Shinkai Makoto</span>
+        <div class="prices">
+          <span class="origin">4.49</span>
+          <span class="current">2.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-DanMachi4.html'">
+        <img src="../Image/Books/DanMachi_4.jpg" alt="Dan Machi">
+        <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.4</span>
+        <span class="AuthorName">Fujino Omori</span>
+        <div class="prices">
+          <span class="origin">4.99</span>
+          <span class="current">4.49</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-DanMachi3.html'">
+        <img src="../Image/Books/DanMachi_3.jpg" alt="Dan Machi">
+        <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.3</span>
+        <span class="AuthorName">Fujino Omori</span>
+        <div class="prices">
+          <span class="origin">4.99</span>
+          <span class="current">4.49</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <div class="box" onclick="location.href='ProductPage/Product-DanMachi2.html'">
+        <img src="../Image/Books/DanMachi_2.jpg" alt="Dan Machi">
+        <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.2</span>
+        <span class="AuthorName">Fujino Omori</span>
+        <div class="prices">
+          <span class="origin">4.99</span>
+          <span class="current">4.49</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <div class="box" onclick="location.href='ProductPage/Product-DanMachi1.html'">
+        <img src="../Image/Books/DanMachi_1.jpg" alt="Dan Machi">
+        <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.1</span>
+        <span class="AuthorName">Fujino Omori</span>
+        <div class="prices">
+          <span class="origin">4.99</span>
+          <span class="current">4.49</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <div class="box" onclick="location.href='ProductPage/Product-YourName.html'">
+        <img src="../Image/Books/YourName.jpg" alt="Your Name">
+        <span class="ProductName">Your Name</span>
+        <span class="AuthorName">Shinkai Makoto</span>
+        <div class="prices">
+          <span class="origin">4.49</span>
+          <span class="current">2.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+
+    </div><!--End Container-->
+  </div>
+  <!--EndLightNovel-->
+<!--Economy-->
+  <div class="Display" id="Economy">
+    <h4>Economy
+      <span class="InnerText">Economy</span><!--A replicate show on background-->
+    </h4>
+    <div class="container">
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-HowMoneyWorks.html'">
+        <img src="../Image/Books/HowMoneyWorks.jpg" alt="How Money Works Photo">
+        <span class="ProductName">How Money Works</span>
+        <span class="AuthorName">DK</span>
+        <div class="prices">
+          <span class="current">11.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-TonTuBinhPhap.html'">
+        <img src="../Image/Books/TonTuBinhPhap.jpg" alt="Ton Tu Binh Phap">
+        <span class="ProductName">Tôn Tử Binh Pháp-nghệ thuật thương trường</span>
+        <span class="AuthorName">Phùng Hiếu</span>
+        <div class="prices">
+          <span class="current">5.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+
+
+    </div><!--End Container-->
+  </div>
+  <!--End Economy-->
+  <!--Detective&Mystery-->
+    <div class="Display" id="Detective&Mysterious">
+      <h4>Detective & Mysterious
+        <span class="InnerText">Detective & Mysterious</span><!--A replicate show on background-->
+      </h4>
+      <div class="container">
+        <!--box-->
+        <div class="box" onclick="location.href='ProductPage/Product-SherlockHolmes.Vol1.html'">
+          <img src="../Image/Books/SherlockHolmes.jpg" alt="SherlockHolmes">
+          <span class="ProductName">Sherlock Holmes Vol.1</span>
+          <span class="AuthorName">Sir Author Conan Doyle</span>
+          <div class="prices">
+            <span class="current">6.49</span>
+          </div>
+          <div class="HoverEffect">
+              <div class="HoverButton"> Check</div>
+          </div>
+        </div>
+        <!--box-->
+        <div class="box" onclick="location.href='ProductPage/Product-SherlockHolmes.Vol2.html'">
+          <img src="../Image/Books/SherlockHolmes2.jpg" alt="SherlockHolmes">
+          <span class="ProductName">Sherlock Holmes Vol.2</span>
+          <span class="AuthorName">Sir Author Conan Doyle</span>
+          <div class="prices">
+            <span class="current">6.99</span>
+          </div>
+          <div class="HoverEffect">
+              <div class="HoverButton"> Check</div>
+          </div>
+        </div>
+
+
+      </div><!--End Container-->
+    </div>
+    <!--End Detective & Mystery-->
+    <!--Scifi& Fantasy-->
+      <div class="Display" id="Scifi&Fantasy">
+        <h4>Science Fiction & Fantasy
+          <span class="InnerText">Sci-fi & Fantasy</span><!--A replicate show on background-->
+        </h4>
+        <div class="container">
+          <!--box-->
+          <div class="box" onclick="location.href='ProductPage/Product-TheFutureOfHumanity.html'">
+            <img src="../Image/Books/TheFutureOfHumanity.jpg" alt="The Future Of Humanity">
+            <span class="ProductName">The Future Of Humanity</span>
+            <span class="AuthorName">Michio Kaku</span>
+            <div class="prices">
+              <span class="current">14.99</span>
+            </div>
+            <div class="HoverEffect">
+                <div class="HoverButton"> Check</div>
+            </div>
+          </div>
+
+
+
+        </div><!--End Container-->
+      </div>
+      <!--Scifi& Fantasy-->
+      <!--Self Improvement-->
+        <div class="Display" id="SelfImprovement">
+          <h4>Self Improvement
+            <span class="InnerText">Self Improvement</span><!--A replicate show on background-->
+          </h4>
+          <div class="container">
+            <!--box-->
+            <div class="box" onclick="location.href='ProductPage/Product-HowToWinFriendsAndInfluencePeople.html'">
+              <img src="../Image/Books/HowToWinFriendsAndInfluencePeople.jpg" alt="HowToWinFriendsAndInfluencePeople">
+              <span class="ProductName">How To Win Friends And Influence People</span>
+              <span class="AuthorName">Dale Carnegie</span>
+              <div class="prices">
+                <span class="origin">9.99</span>
+                <span class="current">5.99</span>
+              </div>
+              <div class="HoverEffect">
+                  <div class="HoverButton"> Check</div>
+              </div>
+            </div>
+            <!--box-->
+            <div class="box" onclick="location.href='ProductPage/Product-RichDadPoorDad.html'">
+              <img src="../Image/Books/RichDadPoorDad.jpg" alt="RichDadPoorDad">
+              <span class="ProductName">Rich Dad Poor Dad</span>
+              <span class="AuthorName">Robert T.Kiyosaki</span>
+              <div class="prices">
+                <span class="origin">18.99</span>
+                <span class="current">13.99</span>
+              </div>
+              <div class="HoverEffect">
+                  <div class="HoverButton"> Check</div>
+              </div>
+            </div>
+
+
+          </div><!--End Container-->
+        </div>
+        <!--Scifi& Fantasy-->
+</div>
+
+<!--EndDisplay-->
+<!--Footer-->
+<footer>
+  <div class="LowerBar">
+    <section class="CopyRight">
+      Copyright© Book World 2021
+    </section>
+    <section class="Policy">
+      <!--Change link to one of your store-->
+      <a href="TermOfUse_BookWorld.html">
+        <li>Term Of Service</li>
+      </a>
+      <a href="PrivacyPolicy_BookWorld.html">
+        <li>Privacy Policy</li>
+      </a>
+    </section>
+  </div>
+</footer>
+</body>
+
+</html>

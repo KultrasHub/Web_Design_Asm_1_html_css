@@ -1,0 +1,159 @@
+body {
+  box-sizing: border-box;
+  font-family: courier, arial, helvetica;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.Return{
+  position: absolute;
+  height: 100px;
+  width:100px;
+  top:100px;
+  left:50px;
+  cursor: pointer;
+  
+}
+.Return:hover .Holder div{
+  border-top: 5px solid #21b9f2;
+  border-left: 5px solid #21b9f2;
+}
+.Return .Holder{
+width: 60%;
+height: 60%;
+position: relative;
+border-radius: 50%;
+-webkit-box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.1); 
+box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.1);
+}
+.Return .Holder div{
+  position:absolute;
+  height: 35%;
+  width: 35%;
+  border-top: 5px solid #ddd;
+  border-left: 5px solid #ddd;
+  left:40%;
+  top:30%;
+  transform: rotateZ(-45deg);
+  transition: all 300ms ease 0s;
+}
+.AboutUs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Starter{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Starter img{
+  width:100px;
+  height:100px;
+}
+.Starter h1 {
+  position: relative;
+  width: 100%;
+  font-size: 30px;
+  font-family: courier, arial, helvetica;
+  text-align: center;
+  font-weight: 300;
+}
+
+.Starter h1::after {
+  content: "";
+  height: 2px;
+  width: 60%;
+  background-image: linear-gradient(to right, #333, #fff);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left:60%;
+}
+.Starter p{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 100;
+}
+.display{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.display .box{
+  margin: 40px;
+  width: 300px;
+  height: 500px;
+  padding:20px;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
+}
+.display .box img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.display .box .name{
+  position: relative;
+  font-size: 20px;
+  font-weight: 550;
+}
+.display .box .name::before{
+  position: absolute;
+  top: -15px;
+  left:-15px;
+  font-size: 24px;
+  font-weight: 100;
+  color:#00aaff;
+content: "o";
+}
+.display .box .id{
+  font-size: 15px;
+  font-weight: 100;
+  color:#777;
+}
+.display .box .Hobby{
+  width: inherit;
+}
+.display .box .Hobby h3{
+  font-size: 16px;
+}
+.display .box .Hobby li::before{
+  content: "➤"
+}
+.display .box .Hobby li{
+  width: 90%;
+   list-style: none;
+   font-size: 16px;
+   color: #777;
+}
+.display .box  a{
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  color: #777;
+  padding:10px 10px;
+  background-color: #212121;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.display .box  a:hover{
+  background-color: #666;
+  color:#fff;
+}

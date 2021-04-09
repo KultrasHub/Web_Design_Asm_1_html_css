@@ -1,0 +1,186 @@
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: courier,arial,helvetica;
+  background-color: #fff;
+}
+.NonHeaderbackground{
+  position: absolute;
+  background-color: #cecece;
+  height: 80vh;
+  width: 100%;
+  z-index: -1;
+  top:0;
+}
+
+.Return{
+  position: absolute;
+  height: 100px;
+  width:100px;
+  top:100px;
+  left:50px;
+  cursor: pointer;
+  z-index: 2;
+}
+.Return:hover .Holder div{
+  border-top: 5px solid #21b9f2;
+  border-left: 5px solid #21b9f2;
+}
+.Return .Holder{
+width: 60%;
+height: 60%;
+position: relative;
+border-radius: 50%;
+-webkit-box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.1); 
+box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.1);
+}
+.Return .Holder div{
+  position:absolute;
+  height: 35%;
+  width: 35%;
+  border-top: 5px solid #ddd;
+  border-left: 5px solid #ddd;
+  left:40%;
+  top:30%;
+  transform: rotateZ(-45deg);
+  transition: all 300ms ease 0s;
+}
+.Contact{
+  margin-top: 100px;
+
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.Contact .Content{
+  width: 100%;
+}
+.Contact .Content p{
+  text-align: left;
+  line-height: 1px;
+font-weight: 300px;
+font-size: 30px;
+color:#212121;
+font-weight: 500;
+font-family:'Rubik';
+letter-spacing: 3px;
+}
+.container{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+}
+
+.contactForm{
+  overflow: hidden;
+  margin-top: 20px;
+  width: 45%;
+  padding:40px;
+  background: #212121;
+}
+
+.contactForm h2{
+  position: relative;
+  font-size: 30px;
+  color:#fff;
+  font-weight: 700;
+  font-family:'Rubik';
+letter-spacing: 3px;
+}
+.contactForm .inputBox{
+  
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 10px;
+  color:#fff;
+}
+.contactForm .inputBox input{
+  color:#fff;
+  width: 100%;
+  padding: 5px 0;
+  height: 25;
+  font-size: 16px;
+  margin: 10px 0;
+  border:none;
+  border-bottom: 2px solid #262626;
+  outline: none;
+  background-color: #1b1b1b;
+
+}
+.contactForm .inputBox textarea{
+  color:#fff;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin:10px 0;
+  background-color: #1b1b1b;
+  border: 2px solid #262626;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span{
+  position:  absolute;
+  left:0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #777;
+}
+
+.contactForm .inputBox input:focus~span,
+.contactForm .inputBox input:valid~span,
+.contactForm .inputBox textarea:focus~span,
+.contactForm .inputBox textarea:valid~span{
+  color:#25bbda;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .But{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.contactForm .SendBut{
+  width: 90%;
+  display: flex;
+  border: 2px solid #777;
+  cursor: pointer;
+}
+
+.contactForm .SendBut:hover{
+  border: 2px solid #65c9f3;
+}
+.contactForm .SendBut:hover input{
+  color:#fff;
+}
+.contactForm .But input{
+  transition: all 300ms ease 0s;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  font-size: 16px;
+  background: #212121;
+  color:#777;
+  border:none;
+  cursor: pointer;
+  padding:10px;
+  border-radius: 20px;
+}

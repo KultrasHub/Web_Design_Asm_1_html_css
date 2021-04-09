@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="ProductPage/ProductDetailBody.css">
+  <link rel="stylesheet" href="BareBearsStyle.css">
+</head>
+
+
+<body>
+  <header>
+    <a href="Home.html" class="LogoName"><img class="logo" src="../Image/Essen/barebear.png" alt="logo"><span>Bare Bears</span></a>
+    <nav>
+      <ul class="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Fees.html">Fees</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li class="Browse">
+          <k class="BrowseText">Browse</k>
+          <ul class="DropDown">
+            <li class="DropDownContent">Browse Stores by Name</li>
+            <li class="DropDownContentd DropDownEnd">Browse Stores by Category</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+    <a href="MyAccount-Login.html"><img class="myAcount" src="../Image/Profolio/user.png" alt=""></a>
+  </header>
+  <div class="background">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,128L20,160C40,192,80,256,120,240C160,224,200,128,240,112C280,96,320,160,360,160C400,160,440,96,480,64C520,32,560,32,600,42.7C640,53,680,75,720,122.7C760,171,800,245,840,256C880,267,920,213,960,160C1000,107,1040,53,1080,37.3C1120,21,1160,43,1200,80C1240,117,1280,171,1320,160C1360,149,1400,75,1420,37.3L1440,0L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path></svg>
+    </div>
+  </div>
+  <div id="container">
+
+    <div class="columns">
+
+      <div class="mainDisplay">
+        <img id="backgroundImage" src="../Image/Octoplushies/Octo1.jpg">
+        <img id="mainFeature" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage">
+      </div>
+      <br>
+      <img class="gallery active" src="../Image/Octoplushies/Octo1.jpg" alt="octoImage1">
+      <img class="gallery" src="../Image/Octoplushies/Octo2.jpg" alt="octoImage2">
+      <img class="gallery" src="../Image/Octoplushies/Octo3.jpg" alt="octoImage3">
+      <img class="gallery" src="../Image/Octoplushies/Octo4.jpg" alt="octoImage4">
+
+    </div>
+
+    <div class="general">
+      <h1>Cute Emotional Octopus</h1>
+      <a href="#" class="shop"> Check shop</a>
+      <hr>
+      <p>Happily Angry...all in one!</p>
+      <div class="prices">
+        <span class="originalPrice">10.99</span>
+        <span class="currentPrice">4.99</span>
+      </div>
+      <input id="inp" value=1 type="number">
+      <a class="proButt" href="#">Order Now!</a>
+    </div>
+
+    <script ="text/javascript">
+      let gallery = document.getElementsByClassName("gallery")
+      let hoveredImg = document.getElementsByClassName("active")
+
+      for(var i = 0; i < gallery.length; i++){
+        gallery[i].addEventListener("mouseover", function(){
+          if (hoveredImg.length > 0){
+            hoveredImg[0].classList.remove("active")
+          }
+          this.classList.add("active")
+          document.getElementById("mainFeature").src =this.src;
+                    document.getElementById("backgroundImage").src =this.src;
+        })
+      }
+    </script>
+
+    <div class="productTile">
+
+      <h1 id="headerCus">Emotional Octopus</h1>
+      <hr>
+      <p>Made by the comfiest material that mankind can find, this emotional octopus will surely make your everyday social interaction more interesting and cute.</p>
+      <p>It is happy on the outside yet sometimes she can be very angry on the inside.</p>
+      <p>Consisting of happy and sad expression so whenever you feel happy/sad, turn that face all the way around!</p>
+      <p>Be sure to take a visit throughout our other products in the future!</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="UpperBar">
+      <div class="logoText">Bare Bears <p>with barely best brands</p>
+      </div>
+      <div class="shop">
+        <h1>Top Category</h1>
+        <li>Pet Stores</li>
+        <li>Book Stores</li>
+        <li>Toy Stores</li>
+      </div>
+      <div class="Support">
+        <h1>Support</h1>
+
+        <li>Order Status</li>
+        <li>FAQs</li>
+        <li>Contact Us</li>
+        <li>Fees</li>
+        <li>Order Status</li>
+        <li>Shipping Information</li>
+      </div>
+      <div class="Language">
+        <h1>Language</h1>
+        <br>
+        🌎
+        <select class="language" name="language">
+
+          <option value="English"> English</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Korean">Korean</option>
+        </select>
+      </div>
+    </div>
+    <div class="LowerBar">
+      <section class="CopyRight">
+        Copyright© Bare Bears 2021
+      </section>
+      <section class="Policy">
+        <li>Term Of Service</li>
+        <li>Privacy Policy</li>
+      </section>
+    </div>
+  </footer>
+</body>

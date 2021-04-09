@@ -20,8 +20,41 @@ transform: translateX(50%)rotateZ(-90deg);
   position: absolute;
   bottom: -1px;
 }
+/*Return work with store pages*/
+.Return{
+  position: absolute;
+  height: 100px;
+  width:100px;
+  top:100px;
+  left:50px;
+  cursor: pointer;
+  z-index: 2;
+}
+.Return:hover .Holder div{
+  border-top: 5px solid #21b9f2;
+  border-left: 5px solid #21b9f2;
+}
+.Return .Holder{
+width: 60%;
+height: 60%;
+position: relative;
+border-radius: 50%;
+-webkit-box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.1); 
+box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.1);
+}
+.Return .Holder div{
+  position:absolute;
+  height: 35%;
+  width: 35%;
+  border-top: 5px solid #ddd;
+  border-left: 5px solid #ddd;
+  left:40%;
+  top:30%;
+  transform: rotateZ(-45deg);
+  transition: all 300ms ease 0s;
+}
 .banner{
-  margin-top: 80px;
+  margin-top: 120px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;

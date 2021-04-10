@@ -6,16 +6,33 @@ body{
 }
 /*header*/
 header{
-  width: 80%;
-position: fixed;
-top: 0;
+  position: relative;
+  width: 90%;
+  height: 100px;
+  position: fixed;
+  top: 0;
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10%;
+  padding: 0px 5%;
   background-color: #212121;
   z-index: 2;
+}
+/* Header simulator */
+header .headerSimulator{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+header .headerSimulator .holder{
+  margin-top: 32px;
+  margin-right: 25px;
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 header li,a,button{
 font-family: courier,arial,helvetica;
@@ -24,32 +41,106 @@ font-size: 17px;
 text-decoration: none;
 }
 .logo{
-  margin-top: 12px;
   cursor: pointer;
   height: 60px;
   width: 60px;
-  display: inline-block;
-  float:left;
+}
+.LogoName{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 .LogoName span{
-  padding: 25px;
+  white-space: nowrap;
   font-size: 35px;
-  display: inline-block;
 }
 .navLinks{
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.navLinks li{
+
+/*#region HamburgerIcon */
+
+.Ham{
+  position: relative;
+  margin-left: 10px;
+  flex-direction:column;
+  width:40px;
+  cursor:pointer;
+  z-index: 3;
+  display: flex;
+}
+
+.Ham span{
+  background: #fff;
+  border-radius:10px;
+  height:4px;
+  margin: 3px 0;
+  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+}
+
+
+.Ham span:nth-of-type(1){
+  width:50%;
+  
+}
+
+.Ham span:nth-of-type(2){
+  width:100%;
+}
+
+
+.Ham span:nth-of-type(3){
+  width:75%;
+ 
+}
+
+
+.Ham input[type="checkbox"]{
+  display:none;
+}
+
+
+.Ham input[type="checkbox"]:checked ~ span:nth-of-type(1){
+  transform-origin:bottom;
+  transform:rotatez(45deg) translate(5px,0px)
+}
+
+
+.Ham input[type="checkbox"]:checked ~ span:nth-of-type(2){
+  
+  transform-origin:top;
+  transform:rotatez(-45deg)
+}
+
+
+.Ham input[type="checkbox"]:checked ~ span:nth-of-type(3){
+  
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(17px,-3px) rotatez(45deg);
+
+}
+
+/*#endRegion*/
+
+.navLinks >li{
   display: inline-block;
   padding: 15px 20px;
+  cursor: pointer;
+}
+.navLinks >li:hover >a{
+  border-bottom: 1px solid #aaa;
 }
 .navLinks li a{
   transition: all 0.3s ease 0s;
   padding:25px 0px;
 }
-.navLinks li  a:hover{
-  border-bottom: 1px solid #aaa;
-}
+
 .navLinks .Browse .BrowseText{
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -58,8 +149,15 @@ text-decoration: none;
   position: relative;
 }
 /* Browse DropDown*/
+#hoverBrowse{
+  
+  display: block;
+}
+#buttonBrowse{
+  display: none;
+}
 .DropDown{
-  cursor: pointer;
+    cursor: pointer;
     position: absolute;
     top:100%;
     left:0;
@@ -122,6 +220,10 @@ text-decoration: none;
   left:70%;
   top:0;
   display: none;
+}
+.navLinks .DropDown .DropDownContainer li{
+  display: inline-block;
+  padding: 15px 20px;
 }
 .navLinks .DropDown .DropDownContainer .Holder{
  display: flex;
@@ -195,7 +297,8 @@ header button:hover{
   color:#e9ebeb;
 }
 /*my Account& animation*/
-.myAcount{
+.myAcount img{
+  margin-left: 15px;
   width: 27px;
   height: 27px;
   padding: 3px;
@@ -203,7 +306,7 @@ header button:hover{
   border-radius: 50%;
   background-color: #d1d4d5;
 }
-.myAcount:hover{
+.myAcount img:hover{
   width: 35px;
   height: 35px;
   padding: 10px  ;
@@ -292,4 +395,236 @@ footer .LowerBar .Policy li{
 display: inline-flex;
 list-style: none;
 padding:15px 20px;
+}
+@media screen and (min-width:1050px){
+  .navLinks{
+    display: flex;
+  }
+}
+@media screen and (max-width:1050px){
+  header{
+    flex-direction: column;
+  }
+  .LogoName{
+
+    margin-top:15px;
+  }
+
+  .navLinks{
+    top: 80px;
+    position:fixed;
+    list-style: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #393939;
+    width: 100%;
+    padding:0;
+    padding-bottom: 25px;
+    transition:all 300ms ease 0s;
+    z-index: 1;
+  }
+  .navLinks>li{
+    padding-left:0;
+    padding-right:0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    transition:all 300ms ease 0s;
+  }
+  .navLinks>li:hover{
+    background-color: #454545;
+  }
+  /* Disable account icon */
+  .myAcount{
+    display: none;
+  }
+  /* Enable ham and account icon in top right */
+  header .headerSimulator{
+    display: block;
+    position:absolute;
+  }
+  header .top_right{
+    display: block;
+  }
+  /* Change contact button */
+  header button{
+    padding:9px 10px;
+    background-color: inherit;
+    border:2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+  }
+  header button:hover{
+    padding: 9px 10px;
+    background-color: inherit;
+    border:2px solid #777;
+    color:#777;
+  }
+  /* Browse Setting */
+  /* Disable */
+  #hoverBrowse{
+    display: none;
+  }
+
+  #buttonBrowse{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+  #buttonBrowse .BrowseText
+  {
+    height: inherit;
+    width: inherit;
+
+  }
+  #buttonBrowse .BrowseText div{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  #buttonBrowse:hover> .BrowseText{
+    border-bottom: 1px solid #93e6f1;
+    color:#93e6f1;
+  }
+ #buttonBrowse input[type="checkbox"]{
+    display: none;
+  }
+
+  #buttonBrowse>#DropDown[type="checkbox"]:checked~ .DropDown{
+    display: block;
+  }
+  .DropDown{
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    padding-bottom: 0;
+}
+  .DropDown .DropDownContent{
+    width: 100%;
+    position: relative;
+    color:#b8b8b8;
+    display: inline-block;
+    background: #212121;
+   padding: 0px 0px;
+   cursor: pointer;
+}
+.DropDown .DropDownEnd{
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius:0px;
+}
+.DropDown .DropDownLabel div{
+  width: 100%;
+  height: 30px;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
+.navLinks .DropDown .DropDownContent:hover{
+  background-color:#292929;
+}
+
+
+/* Drop Down Detail(submenu)*/
+#buttonBrowse .DropDownContent #LettersDropDown[type="checkbox"]:checked~ .DropDownContainer{
+  display: flex;
+}
+.navLinks .DropDown .DropDownContainer{
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-bottom:0;
+  margin-top: 10px;
+  background-color:#1c1c1c;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.navLinks .DropDown .DropDownContainer li{
+  display: inline-block;
+  padding: 15px 20px;
+}
+.navLinks .DropDown .DropDownContainer .Holder{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+ display: block;
+ justify-content: flex-start;
+ align-items:left;
+ flex-direction: column;
+ background-color: #1c1c1c;
+ padding:20px 20px;
+ border-radius: 0;
+}
+.navLinks .DropDown .DropDownContainer .Holder a{
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 10px;
+}
+.navLinks .DropDown .DropDownContainer .Holder h3{
+  letter-spacing:2px;
+  font-size: 25px;
+  padding:0 15px;
+}
+.navLinks .DropDown .DropDownContainer .Holder a:hover{
+  color:#1c83e3;
+}
+/*First Holder*/
+#buttonBrowse .DropDownContent #CateDropDown[type="checkbox"]:checked~ .DropDownContainer{
+  display: flex;
+}
+
+.navLinks #buttonBrowse .DropDownDetail{
+    color:#b8b8b8;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    z-index: 5;
+    cursor: pointer;
+}
+.navLinks #buttonBrowse .DropDownContainer .DropDownDetail:hover {
+  background-color: #1f1f1f;
+  
+}
+.navLinks #buttonBrowse .DropDownContainer .DropDownDetail:hover span{
+  color:#00c2ff;
+}
+/*Display submenu in Dropdown content*/
+.navLinks .DropDown .DropDownContent:hover .DropDownContainer{
+  display: none;
+}
+
+}
+@media screen and (max-width:480px)
+{
+  header{
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .LogoName{
+    position:absolute;
+    left:20px;
+  }
+  .LogoName span{
+    font-size: 20px;
+   }
+
 }

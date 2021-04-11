@@ -335,9 +335,9 @@ footer .logoText p{
   color: #e1ebba;
   top: -20px;
   font-size: 12px;
-  text-align: center;
 }
 footer .UpperBar div h1{
+  text-align: center;
   font-family: courier,arial,helvetica;
   color: #686868;
   font-size: 14px;
@@ -371,16 +371,16 @@ footer .Language .language{
 footer .LowerBar{
 
   background-image: linear-gradient(to right, #3a3a3a , #1b1b1b);
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   padding: 0px 15%;
   color:#eee;
   -webkit-box-shadow: 0px -3px 6px 2px rgba(0,0,0,0.2);
   box-shadow: 0px -3px 6px 2px rgba(0,0,0,0.2);
 }
 footer .LowerBar .CopyRight{
-
 font-size: 12px;
 letter-spacing: 2.3px;
 font-family: 'Enriqueta', arial, serif;
@@ -389,6 +389,7 @@ footer a:hover li{
   border-bottom: 1px solid #eee;
   color:#777;
 }
+
 footer .LowerBar .Policy li{
     font-family: courier,arial,helvetica;
     font-size: 17px;
@@ -610,10 +611,22 @@ padding:15px 20px;
 .navLinks .DropDown .DropDownContent:hover .DropDownContainer{
   display: none;
 }
-
+/* FOOTER */
+footer .UpperBar{
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 15% 90px 15%;
+  background-color: #2a2a2a;
 }
-@media screen and (max-width:480px)
-{
+footer .UpperBar div{
+  height: fit-content;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+}
+@media screen and (max-width:480px){
   header{
     justify-content: flex-start;
     align-items: center;
@@ -627,4 +640,10 @@ padding:15px 20px;
     font-size: 20px;
    }
 
+}
+@media screen and (max-width:856px)
+{
+  footer .LowerBar .CopyRight{
+    margin-top: 20px;
+  }
 }

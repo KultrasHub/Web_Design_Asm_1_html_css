@@ -77,6 +77,7 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
   position: relative;
   font-size: 20px;
   font-weight: 550;
+  text-align: center;
 }
 .display .box .name::before{
   position: absolute;
@@ -94,9 +95,12 @@ content: "o";
 }
 .display .box .Hobby{
   width: inherit;
+  padding: 0;
+  
 }
 .display .box .Hobby h3{
   font-size: 16px;
+  text-align: center;
 }
 .display .box .Hobby li::before{
   content: "➤"
@@ -106,4 +110,25 @@ content: "o";
    list-style: none;
    font-size: 16px;
    color: #777;
+}
+@media screen and (max-width:400px){
+  .display .box{
+    width: 240px;
+  }
+  .display .box .Hobby h3{
+    font-size: 14px;
+  }
+  .display .box .Hobby li{
+    font-size: 14px;
+  }
+  .Starter h1::after {
+    height: 1px;
+    width: 90%;
+    background-image: linear-gradient(to right, #fff,#333, #fff);
+
+    top: 0;
+    bottom: -40px;
+    left:0;
+    right:0;
+  }
 }

@@ -294,6 +294,7 @@ opacity: 0;
 }
 .container .ProductBox .HoverEffect a{
   text-decoration: none;
+  
 }
 .container .ProductBox .HoverEffect .HoverButton{
 color: #000;
@@ -304,6 +305,7 @@ padding:20px 10px;
   transition: all 300ms ease-in-out 0s;
   opacity: 0;
   box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+  z-index: 8;
 }
 .container .ProductBox:hover >.HoverEffect{
 opacity: 1;
@@ -555,5 +557,8 @@ display: none;
 .DiscountBar .display .timeDisplay .box .timeName{
   color: #aaa;
   font-size: 13px;
+}
+.container .box .HoverEffect{
+  border-radius: 0;
 }
 }

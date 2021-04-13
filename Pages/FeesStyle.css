@@ -63,3 +63,62 @@ body{
 .feesTable tbody tr:nth-of-type(odd){
   background-color: #f3f3f3;
 }
+@media screen and (max-width:1100px){
+  .feesTable{
+    width: 95%;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width:850px){
+  .Title{
+    margin-top:100px;
+    color:#212121;
+    margin-left: 10%;
+    font-family: courier,arial,helvetica;
+    font-size: 50px;
+  }
+  .feesTable{
+   border-radius:0;
+    width: 90%;
+  font-size: 15px;
+  min-width: unset;
+  margin-top: 80px;
+  overflow: unset;
+  box-shadow: 0px 0px 0px rgba(114, 114, 113, 0.5);
+  }
+  .feesTable thead{
+    display: none;
+  }
+ .feesTable tbody, .feesTable tr, .feesTable td{
+    display: block;
+    width: 100%;
+  }
+  
+  .feesTable td{
+    margin-top: 30px;
+    padding: 10px 5px;
+    text-align: right;
+    align-items: right;
+    margin-left: 47%;
+    width: 50%;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+  }
+  .feesTable tr{
+    margin-bottom: 0;
+    box-shadow: 0px 0px 5px rgba(114, 114, 113, 0.5);
+    border-bottom: 2px solid #ddd;
+  }
+  .feesTable td::before{
+    content:attr(data-label);
+    text-align: left;
+    position: absolute;
+    left: -90%;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color:#000;
+    
+  }
+}

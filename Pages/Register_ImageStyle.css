@@ -154,3 +154,22 @@ transform: rotateZ(45deg);
   padding:10px;
   border-radius: 20px;
 }
+@media screen and (max-width:500px){
+  .LoginForm{
+    position: relative;
+  background-color: #fff;
+  width: 90%;
+  padding:40px 5%;
+
+  }
+  .LoginForm .lowerBar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 14px;
+    align-items: center;
+  }
+  .LoginForm .lowerBar a{
+    font-size: 14px;
+  }
+}

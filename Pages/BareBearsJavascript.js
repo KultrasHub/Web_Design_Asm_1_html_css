@@ -12,6 +12,7 @@ function HamDisplay(){
     function frame() {
         if (pos >= 80) {
           clearInterval(id);
+          nav.style.top ='80px'; 
         } else {
           pos+=15; 
           nav.style.top = pos + 'px'; 

@@ -97,7 +97,7 @@ height: 1px;
 }
 
 details{
-   background: #f6f6f6;
+   background: #eee;
    padding: 10px 20px;
    border-radius: 7px;
    margin-top: 20px;
@@ -132,4 +132,13 @@ details .text{
   content: "";
   display: table;
   clear: both;
+}
+@media screen and (max-width:500px){
+  .background{
+    height: 90vh;
+    width: 150%;
+  }
+  .box{
+    width: 90%;
+  }
 }

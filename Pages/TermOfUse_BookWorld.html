@@ -7,6 +7,7 @@
   <title>Term Of Use</title>
   <link rel="stylesheet" href="TermOfUseStyle.css">
   <link rel="stylesheet" href="ShopHeader_FooterStyle.css">
+  <script src="ShopHeader_FooterStyle.js"></script>
 </head>
 <body>
 
@@ -25,8 +26,7 @@
           </div>
         </div>
       </div>
-      <nav>
-        <ul class="navLinks">
+        <ul class="navLinks" id="navBar">
           <li><a href="Home.html">Home</a></li>
           <!--change link to one of your store-->
           <li><a href="AboutUs_BookWorld.html">About Us</a></li>
@@ -67,10 +67,62 @@
               </li>
             </ul>
           </li>
+          <li class="BrowseButton">
+            <input type="checkbox" id="checkBrowseBox" >
+            <label for="checkBrowseBox" class="BrowseText"> <div>Browse</div></label>
+            <ul class="DropDown">
+              <li class="DropDownContent">
+                <input type="checkbox" id="BrowseContent" >
+                <label for="BrowseContent"> <div>Browse Products by Category</div></label>
+                <!--Change amount and category names-->
+                <ul class="DropDownContainer">
+                  <li class="DropDownDetail" onclick="location.href='#LightNovel'">
+                    <span> Light Novel</span>
+                  </li>
+                  <li class="DropDownDetail" onclick="location.href='#Economy'">
+                    <span> Economy</span>
+                  </li>
+                  <li class="DropDownDetail" onclick="location.href='#Detective&Mysterious'">
+                    <span> Detective & Mystery</span>
+                  </li>
+                  <li class="DropDownDetail" onclick="location.href='#Scifi&Fantasy'">
+                    <span> Science Fiction & Fantasy</span>
+                  </li>
+                  <li class="DropDownDetail" onclick="location.href='#SelfImprovement'">
+                    <span> Self Improvement</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="DropDownContent DropDownEnd">
+                <input type="checkbox" id="BrowseContentByTime" >
+                <label for="BrowseContentByTime"> <div>Browse Products by Time</div></label>
+                <ul class="DropDownContainer">
+                  <!--change link to one of your store-->
+                  <li class="DropDownDetail" onclick="location.href='BrowseProducts_BookWorld.html'">
+                    <span> Newest</span>
+                  </li>
+                  <!--change link to one of your store-->
+                  <li class="DropDownDetail" onclick="location.href='BrowseStore_BookWorld.html'">
+                    <span> Oldest</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <a href="Contact_BookWorld.html" class="contact"> <button type="button" name="button">Contact</button></a>
         </ul>
-      </nav>
       <!--Chnage link to one of your store-->
-      <a href="Contact_BookWorld.html" class="contact"> <button type="button" name="button">Contact</button></a>
+  
+      <div class="headerSimulator">
+        <div class="holder">
+          <input type="checkbox" id="check" />
+        <label class="Ham" for="check" onclick="DisplayNavBar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      </div>
     </header>
     <!--Return Button-->
   <div class="Return" onclick="location.href='BookWorld.html'"><!--Change link to your shop-->

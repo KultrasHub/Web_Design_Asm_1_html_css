@@ -70,6 +70,9 @@ body{
   }
 }
 @media screen and (max-width:850px){
+  body{
+    background-color:#e7e7e7;
+  }
   .Title{
     margin-top:100px;
     color:#212121;

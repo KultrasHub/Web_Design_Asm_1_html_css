@@ -177,7 +177,6 @@ opacity: 1;
   height: 50%;
   width: 100%;
   top:0px;
-
 }
 .Display h3{
   margin-top: 30px;
@@ -257,22 +256,7 @@ font-weight: 300;
   margin-top: 40px;
 }
 .MiddleBanner .text{
-  width: fit-content;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 50%;
-  top:50%;
-  transform: translate(-50%, -50%);
-  font-size: 32px;
-  color:#222;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  -webkit-box-shadow: 7px 6px 15px -5px rgba(0,0,0,0.61);
-  box-shadow: 7px 6px 15px -5px rgba(0,0,0,0.61);
-  padding:20px;
+display: none;
 }
 /* Category display*/
 .CatergoryContainer .Display{
@@ -309,4 +293,47 @@ font-weight: 300;
 .CatergoryContainer .Display .container{
   padding:0px 20px;
   justify-content: flex-start;
+}
+@media screen and (max-width:750px)
+{
+  .Banner h1{
+    position: absolute;
+      color:#f4fbfe;
+    top:45%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+  }
+  .Banner h3{
+    display: none;
+  }
+  .Banner p{
+      display: none;
+  }
+  .Banner a{
+    text-decoration: none;
+  
+  }
+  .Banner a div{
+    display: none;
+  }
+}
+@media screen and (max-width:850px)
+{
+  .MiddleBanner .text{
+    display: none;
+  }
+  .CatergoryContainer .Display .container{
+    padding:0px 20px;
+    justify-content: center;
+  }
+
+}
+@media screen and (max-width:550px)
+{
+  .Display .background{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top:0px;
+  }
 }

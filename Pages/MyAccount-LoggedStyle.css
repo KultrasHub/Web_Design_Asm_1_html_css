@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family:courier,arial,helvetica;
+    background-color:#e7e7e7;
+}
+.Profile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
+box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+}
+.Profile img{
+    height: 200px;
+    width: 200px;
+}
+.Profile span{
+   font-size: 30px;
+}
+.Profile .profile{
+    font-weight: 550;
+    margin-bottom: 50px;
+}
+.Profile .userName{
+    margin-top: 25px;
+    font-size: 25px;
+}
+.Detail{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.Detail>.container{
+    background-color: #fff;
+    padding:40px 20px;
+    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
+    box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+    width: 40%;
+}
+.Detail .container .box{
+    margin-top: 20px;
+    height: 30px;
+    border-bottom: 1px solid #e3e3e3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding:0 10px;
+}
+.Detail .container .box .info{
+    font-size: 18px;
+}
+.Detail .container .box .detail{
+    color:#777;
+}
+.Detail .Shop_Setting{
+    width: 40%;
+    margin-right: 5%;
+}
+.Detail .Shop_Setting .container{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding:40px 20px;
+    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
+    box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+    width: 100%;
+}
+@media screen and (max-width:1050px)
+{
+    .Detail .Shop_Setting{
+        width: 40%;
+        margin-right: 8%;
+    }
+}
+@media screen and (max-width:750px)
+{
+    .Profile img{
+        height: 100px;
+        width: 100px;
+    }
+    .Profile span{
+       font-size: 20px;
+    }
+    .Profile .profile{
+        font-weight: 550;
+        margin-bottom: 20px;
+    }
+    .Detail{
+        align-items:center;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .Detail>.container{
+        overflow-x: hidden;
+        background-color: #fff;
+        padding:40px 0;
+        -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.15); 
+        box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.15);
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .Detail .Shop_Setting{
+        overflow-x: hidden;
+        width: 100%;
+        margin-right:0;
+    }
+    .Detail .Shop_Setting .container{
+        margin-bottom: 15px;
+        background-color: #fff;
+        padding:40px 0px;
+        -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
+        box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+        width: 100%;
+    }
+}

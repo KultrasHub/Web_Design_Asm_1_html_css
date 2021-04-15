@@ -15,6 +15,7 @@ body{
 }
 
 .Return{
+  
   position: absolute;
   height: 100px;
   width:100px;
@@ -28,6 +29,7 @@ body{
   border-left: 5px solid #21b9f2;
 }
 .Return .Holder{
+  background-color: #fff;
 width: 60%;
 height: 60%;
 position: relative;
@@ -63,7 +65,7 @@ box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.1);
 .Contact .Content p{
   text-align: left;
   line-height: 1px;
-font-weight: 300px;
+font-weight: 300;
 font-size: 30px;
 color:#212121;
 font-weight: 500;
@@ -82,7 +84,7 @@ letter-spacing: 3px;
 .contactForm{
   overflow: hidden;
   margin-top: 20px;
-  width: 45%;
+  width: 450px;
   padding:40px;
   background: #212121;
 }
@@ -108,7 +110,7 @@ letter-spacing: 3px;
   color:#fff;
   width: 100%;
   padding: 5px 0;
-  height: 25;
+  height: 25px;
   font-size: 16px;
   margin: 10px 0;
   border:none;
@@ -136,7 +138,7 @@ letter-spacing: 3px;
   margin: 10px 0;
   pointer-events: none;
   transition: 0.5s;
-  color: #777;
+  color: #999;
 }
 
 .contactForm .inputBox input:focus~span,
@@ -183,4 +185,51 @@ letter-spacing: 3px;
   cursor: pointer;
   padding:10px;
   border-radius: 20px;
+}
+@media screen and (max-width:750px){
+  .Contact{
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding:0;
+
+}
+  .contactForm{
+    overflow: hidden;
+    margin-top: 20px;
+    padding:40px;
+    background: #212121;
+    -webkit-box-shadow: 0px 8px 6px -2px rgba(0,0,0,0.34); 
+box-shadow: 0px 8px 6px -2px rgba(0,0,0,0.34);
+  }
+  .Contact .Content{
+    width: 80%;
+  }
+}
+@media screen and (max-width:550px){
+
+  .contactForm{
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    padding:40px;
+    background: #212121;
+  }
+}
+@media screen and (max-width:400px){
+  .Contact .Content p{
+    font-size: 22px;
+  }
+  .contactForm{
+    padding:20px;
+    
+  }
+  .Return{
+  
+    height: 60px;
+    width:60px;
+    top:100px;
+    left:25px;
+  }
 }

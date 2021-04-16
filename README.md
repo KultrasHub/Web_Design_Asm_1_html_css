@@ -3,7 +3,7 @@ GitHub: https://github.com/KultrasHub/Web_Design_Asm_1_html_css
 
 Members:
 >Tran Nguyen Anh Khoa s3863956
->--------------------------------
+>Ho Buu Quoc Phong s3803566
 >--------------------------------
 Our website is a shopping mall webpages, there are three stores which we created by ourselves, Book world, Out sneaking and Trapicality. However, you may only see one store as we only created the interface for one store. 
 

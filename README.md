@@ -3,9 +3,10 @@ GitHub: https://github.com/KultrasHub/Web_Design_Asm_1_html_css
 
 Members:
 >Tran Nguyen Anh Khoa s3863956
->--------------------------------
->--------------------------------
-Our website is a shopping mall webpages, there are three stores which we created by ourselves, Book world, Out sneaking and Trapicality. However, you may only see one store as we only created the interface for one store. 
+>Ho Buu Quoc Phong s3803566
+>Lu Minh Khang s3863969
+
+Our website is a shopping mall webpages, there are three stores which we created by ourselves, Book world, Out sneaking and Trapicality. However, you may only see one store as we only created the interface for one store.
 
 The second issue you may find in our website is there are lots of products pages. It was due to our misunderstanding that we thought we need to create 3 stores webpages and all products pages for each. However, we realised we were wrong after reading your message. As a result we did not build any stores or product pages afterward but we did not delete the created product pages, because it is our work contribution and deleting these pages may cause issues with an imbalance between our contribution.
 
@@ -19,4 +20,3 @@ profile-user.png
 
 [1]"Profile icon, User Computer Icons System, chinese wind title column, service, logo, number png | PNGWing", Pngwing.com, 2021. [Online]. Available: https://www.pngwing.com/en/free-png-ngegq. [Accessed: 16- Apr- 2021].
 //delete this line when writing-------------------------------------------
-

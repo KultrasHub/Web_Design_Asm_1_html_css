@@ -14,3 +14,9 @@ function DisplayNavBar()
     online=!online;
     
 }
+function todo(link)
+{
+    location.href=link;
+    console.log("todo running");
+    DisplayNavBar();
+}

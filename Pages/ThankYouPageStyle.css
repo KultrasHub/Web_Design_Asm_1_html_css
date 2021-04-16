@@ -1,0 +1,76 @@
+body{
+    background-color: #e3e5eb;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content{
+    margin-top: 150px;
+    width: 100%;
+}
+.content .box{
+    border-top: 5px solid #5edaea;
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+    background-color: #fff;
+    padding:40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: 2px 8px 15px -1px rgba(0,0,0,0.57); 
+box-shadow: 2px 8px 15px -1px rgba(0,0,0,0.57);
+}
+.content .box img{
+    border-radius: 50%;
+}
+.content .box h3{
+    font-size: 25px;
+}
+.content .box h4{
+    color:#666;
+}
+.content .box span{
+    color:#777;
+}
+.content .box a{
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid #111;
+    color:#111;
+    transition: all 300ms ease 0s;  
+}
+.content .box a:hover{
+    background-color: #111;
+    color:#fff;
+}
+.content .bearFact{
+    width: 40%;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.content .bearFact h4{
+    font-size: 23px;
+    color:#333;
+}
+.content .bearFact span{
+    font-size: 16px;
+    color:#777;
+}
+@media screen and (max-width:600px)
+{
+    .content .bearFact{
+        width: 80%;
+    }
+    .content .box{
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

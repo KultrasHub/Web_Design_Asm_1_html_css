@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact</title>
-  <link rel="stylesheet" href="Contact_StoreStyle.css">
-  <link rel="stylesheet" href="ShopHeader_FooterStyle.css">
-  <script src="ShopHeader_FooterStyle.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Products</title>
+    <link rel="stylesheet" href="BrowseProducts_BookWorldStyle.css">
+    <link rel="stylesheet" href="ShopHeader_FooterStyle.css">
+    <script src="ShopHeader_FooterStyle.js"></script>
 </head>
-
 <body>
     <!--Header-->
     <header>
@@ -125,47 +123,117 @@
       </div>
       </div>
     </header>
-  <!--background-->
-  <!--Return Button-->
-  <div class="Return" onclick="location.href='BookWorld.html'"><!--Change link to your shop-->
-    <div class="Holder">
-      <div></div>
-    </div>
-  </div>
-  <!--Content-->
-<div class="NonHeaderbackground"></div>
-  <setion class="Contact">
-    <div class="Content">
-      <p>Get in touch with us</p>
-      <p>Send Us a message.</p>
+     <!--content-->
+  <div class="content">
+    <div class="Starter">
+      <h3>Looking for latest products?</h3>
+      <p>Browse Products by Date</p>
     </div>
     <div class="container">
-      
-      <div class="contactForm">
-        <form action="barebears.com" method="get">
-          <h2>Send Us Message</h2>
-          <div class="inputBox">
-            <input type="text" name="name"  required />
-            <span>Full name</span>
+      <div class="LetterBox">
+        
+        <h3>Latest Products</h3><!--the real display-->
+       <!--stores in the box-->
+       <div class="storeContainer">
+        <div class="box" onclick="location.href='ProductPage/Product-WeatheringWithYou.html'">
+          <img src="../Image/Books/WeatheringWithYou.jpg" alt="Weathering With You Banner">
+          <span class="ProductName">Weathering With You</span>
+          <span class="AuthorName">Shinkai Makoto</span>
+          <div class="prices">
+            <span class="origin">4.49</span>
+            <span class="current">2.99</span>
           </div>
-          <div class="inputBox">
-            <input type="email" name="email" required  />
-            <span>Email</span>
+          <div class="HoverEffect">
+              <div class="HoverButton"> Check</div>
           </div>
-          <div class="inputBox">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+        </div>
+        <!--Box-->
+        <div class="box" onclick="location.href='ProductPage/Product-DanMachi4.html'">
+          <img src="../Image/Books/DanMachi_4.jpg" alt="DanMachi4">
+          <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.4</span>
+          <span class="AuthorName">Fujino Omori</span>
+          <div class="prices">
+            <span class="origin">4.99</span>
+            <span class="current">4.49</span>
+          </div>
+          <div class="HoverEffect">
+              <div class="HoverButton"> Check</div>
+          </div>
+        </div>
+        <!--Box-->
+        <div class="box" onclick="location.href='ProductPage/Product-DanMachi3.html'">
+          <img src="../Image/Books/DanMachi_3.jpg" alt="DanMachi3">
+          <span class="ProductName">Is it wrong to find girls in a dungeon? Vol.3</span>
+          <span class="AuthorName">Fujino Omori</span>
+          <div class="prices">
+            <span class="origin">4.99</span>
+            <span class="current">4.49</span>
+          </div>
+          <div class="HoverEffect">
+              <div class="HoverButton"> Check</div>
+          </div>
+        </div>
+        <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-HowMoneyWorks.html'">
+        <img src="../Image/Books/HowMoneyWorks.jpg" alt="How Money Works Photo">
+        <span class="ProductName">How Money Works</span>
+        <span class="AuthorName">DK</span>
+        <div class="prices">
+          <span class="current">11.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
 
-          </div>
-          <div class="But">
+      </div>
+     </div>
+       <div class="LetterBox">
           
-          <div class="SendBut">
-            <input type="submit" name="send" value="Send">
-          </div>
-          </div>
-        </form>
+          <h3>Oldest Products</h3><!--the real display-->
+          <!--stores in the box-->
+          <div class="storeContainer">
+             <!--box-->
+      <div class="box" onclick="location.href='ProductPage/Product-TonTuBinhPhap.html'">
+        <img src="../Image/Books/TonTuBinhPhap.jpg" alt="Ton Tu Binh Phap">
+        <span class="ProductName">Tôn Tử Binh Pháp-nghệ thuật thương trường</span>
+        <span class="AuthorName">Phùng Hiếu</span>
+        <div class="prices">
+          <span class="current">5.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+       <!--box-->
+       <div class="box" onclick="location.href='ProductPage/Product-SherlockHolmes.Vol2.html'">
+        <img src="../Image/Books/SherlockHolmes2.jpg" alt="SherlockHolmes">
+        <span class="ProductName">Sherlock Holmes Vol.2</span>
+        <span class="AuthorName">Sir Author Conan Doyle</span>
+        <div class="prices">
+          <span class="current">6.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+      <div class="box" onclick="location.href='ProductPage/Product-RichDadPoorDad.html'">
+        <img src="../Image/Books/RichDadPoorDad.jpg" alt="RichDadPoorDad">
+        <span class="ProductName">Rich Dad Poor Dad</span>
+        <span class="AuthorName">Robert T.Kiyosaki</span>
+        <div class="prices">
+          <span class="origin">18.99</span>
+          <span class="current">13.99</span>
+        </div>
+        <div class="HoverEffect">
+            <div class="HoverButton"> Check</div>
+        </div>
+      </div>
+
+       </div>
       </div>
     </div>
-  </setion>
+  </div>
   <footer>
     <div class="LowerBar">
       <section class="CopyRight">
@@ -183,5 +251,4 @@
     </div>
   </footer>
 </body>
-
 </html>

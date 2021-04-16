@@ -203,7 +203,7 @@
         <span class="originalPrice">4.49</span>
         <span class="currentPrice">2.99</span>
       </div>
-      <form action="OrderPage.html" class="input">
+      <form action="../OrderPage.html" class="input">
       <input id="inp" value=1 type="number">
       <div class="inputBut">
       <input type="submit"class="proButt" value="Order Now"></input>
@@ -211,22 +211,6 @@
       </div>
       </form>
     </div>
-
-    <script ="text/javascript">
-      let gallery = document.getElementsByClassName("gallery")
-      let hoveredImg = document.getElementsByClassName("active")
-
-      for(var i = 0; i < gallery.length; i++){
-        gallery[i].addEventListener("mouseover", function(){
-          if (hoveredImg.length > 0){
-            hoveredImg[0].classList.remove("active")
-          }
-          this.classList.add("active")
-          document.getElementById("mainFeature").src =this.src;
-                    document.getElementById("backgroundImage").src =this.src;
-        })
-      }
-    </script>
 
     <div class="productTile">
 

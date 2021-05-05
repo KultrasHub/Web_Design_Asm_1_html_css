@@ -1,6 +1,8 @@
 var id=null;
+var nav;
+
 function HamDisplay(){
-    var nav=document.getElementById("navigationBar");
+    nav=document.getElementById("navigationBar");
     var checkHam=document.getElementById("check");
     if(checkHam.checked)
     {
@@ -33,18 +35,5 @@ function HamDisplay(){
         }
       }
     }
-
 }
-function myFunction(x) {
-    var nav=document.getElementById("navigationBar");
-    
-    if (x.matches) { // If media query matches
-        
-        nav.style.display="flex";
-    } 
-  }
-  
-  var x = window.matchMedia("(min-width: 1050px)");
-  myFunction(x) ;
-  x.addEventListener(myFunction)
   

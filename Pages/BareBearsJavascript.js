@@ -50,7 +50,7 @@ function myFunction(x) {
 
 //javascript of new05 adding by Kent//
   function inputBox() {
-   var password= new RegExp ('password')
+   var password= new RegExp ('^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])');
    if (password.test(Password)) {
       return true
    }

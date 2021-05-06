@@ -36,6 +36,7 @@ function HamDisplay(){
       }
     }
 }
+
 function myFunction(x) {
     var nav=document.getElementById("navigationBar");
 

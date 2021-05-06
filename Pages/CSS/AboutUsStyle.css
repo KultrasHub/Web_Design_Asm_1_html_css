@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 0;
 }
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 .AboutUs{
   display: flex;
   justify-content: center;
@@ -69,6 +73,7 @@ body {
 box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
 }
 .display .box img{
+  cursor: pointer;
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -110,6 +115,32 @@ content: "o";
    list-style: none;
    font-size: 16px;
    color: #777;
+}
+.AboutUs .modalWindow{
+  display: none;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+.AboutUs .modalWindow img{
+  max-height: 60%;
+  max-width: 60%;
+  min-width: 30%;
+  height: auto;
+  background-color: #fff;
+  border:5px solid #fff;
+  cursor:default;
+ 
 }
 @media screen and (max-width:400px){
   .display .box{

@@ -47,10 +47,12 @@ function myFunction(x) {
   var x = window.matchMedia("(min-width: 1050px)");
   myFunction(x) ;
   x.addEventListener(myFunction)
+<<<<<<< HEAD
+=======
 
 //javascript of new05 adding by Kent//
   function inputBox() {
-   var password= new RegExp ('password')
+   var password= new RegExp ('^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])');
    if (password.test(Password)) {
       return true
    }
@@ -65,3 +67,4 @@ function myFunction(x) {
       alert("Incorrect Password or Username")
    }
 }
+>>>>>>> dc5f7b3b1a4aa2ecd13e80c3cab82fff4ddc0680

@@ -49,4 +49,8 @@ function myFunction(x) {
   }
 
   myFunction(x) ;
+<<<<<<< HEAD
 
+=======
+  x.addEventListener(myFunction)
+>>>>>>> 51b56c08b114a2514831c7a32728894dfc83ec97

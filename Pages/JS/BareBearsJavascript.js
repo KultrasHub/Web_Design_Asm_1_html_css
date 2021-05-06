@@ -37,20 +37,3 @@ function HamDisplay(){
     }
 }
 
-var x = window.matchMedia("(min-width: 1050px)");
-myFunction(x) ;
-function myFunction(x) {
-    var nav=document.getElementById("navigationBar");
-
-    if (x.matches) { // If media query matches
-
-        nav.style.display="flex";
-    }
-  }
-
-  myFunction(x) ;
-<<<<<<< HEAD
-
-=======
-  x.addEventListener(myFunction)
->>>>>>> 51b56c08b114a2514831c7a32728894dfc83ec97

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="CSS/ContactStyle.css">
   <link rel="stylesheet" href="CSS/BareBearsStyle.css">
   <script src="JS/BareBearsJavascript.js"></script>
-  <script type="text/javascript" src="JS/ContactUs.js"></script>
+  
 </head>
 
 <body>
@@ -199,8 +199,8 @@
           </div>
         </div>
       </div>
-      <div class="contactForm">
-        <form action="javascript:void(0);">
+      <div class="contactForm" id="form">
+        <form name="myForm" onsubmit=" event.preventDefault(); CheckValidity()">
           <h2>Send Message</h2>
           <div class="purposeBox">
             <span>Contact Purpose</span>
@@ -214,15 +214,15 @@
             </select>
           </div>
           <div class="inputBox">
-            <input type="text" name="name"  id=" nameText"  />
+            <input type="text" name="name"  id="nameText"  />
             <span>Full name</span>
           </div>
           <div class="inputBox">
-            <input type="email" name="email" />
+            <input type="email" name="email" id="emailText" />
             <span>Email</span>
           </div>
           <div class="inputBox">
-            <input type="tel" name="phoneNumber"/>
+            <input type="tel" name="phoneNumber"id="phoneText"/>
             <span>Phone Number</span>
           </div>
           <div class="radioBox">
@@ -244,7 +244,7 @@
             <input type="checkBox" id="Sunday" name="contactDays[]" value="Sunday" /><label for="Sunday">Sunday</label>
           </div>
           <div class="inputBox">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+            <textarea name="" id="messageBox" cols="30" rows="10" placeholder="Enter your message..."></textarea>
 
           </div>
           <div class="But">
@@ -299,3 +299,4 @@
 </body>
 
 </html>
+<script type="text/javascript" src="JS/ContactUs.js"></script>

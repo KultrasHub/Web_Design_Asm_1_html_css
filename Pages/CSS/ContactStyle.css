@@ -87,8 +87,8 @@ color:#212121;
   font-weight: 700;
 }
 .contactForm{
+  position: relative;
   border-radius: 20px;
-  overflow: hidden;
   margin-top: 20px;
   width: 40%;
   padding:40px;
@@ -126,7 +126,12 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.45);
   outline: none;
 
 }
-
+.contactForm .inputBox input.invalid{
+  border-color: red;
+}
+.contactForm .inputBox textarea.invalid{
+  border-color: red;
+}
 .contactForm .inputBox textarea{
   width: 100%;
   padding: 10px 0;
@@ -155,6 +160,12 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.45);
   font-size: 12px;
   transform: translateY(-20px);
 }
+
+.contactForm .inputBox input:invalid~span{
+  color:red;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
 .contactForm .purposeBox span{
   font-size: 16px;
   font-weight: 500;
@@ -173,6 +184,9 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.45);
   background-color: #fff;
   border-radius: 5px;
 }
+.contactForm .radioBox{
+  position: relative;
+}
 .contactForm .radioBox span{
   font-size: 16px;
   font-weight: 500;
@@ -182,6 +196,9 @@ margin: 10px 0;
   cursor: pointer;
   color: #777;
   font-size: 14px;
+}
+.contactForm .checkBox{
+  position: relative;
 }
 .contactForm .checkBox span{
   font-size: 16px;
@@ -212,6 +229,10 @@ margin: 10px 0;
   width: 100%;
   display: flex;
 }
+.contactForm .But input:active{
+  color:rgb(65, 65, 65);
+  background: #000;
+}
 .contactForm .But input{
   margin-left: auto;
   margin-right: auto;
@@ -223,6 +244,25 @@ margin: 10px 0;
   cursor: pointer;
   padding:10px;
   border-radius: 20px;
+  transition:all 300ms ease 0s;
+}
+#notify {
+  margin-top: 0px;
+  padding: 10px;
+  font-size: 12px;
+  width: 60%;
+  height: fit-content;
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -40%;
+}
+#notify.error {
+  background-color: #DD2C00;
+}
+#notify.advice {
+  background-color: #60d400;
 }
 @media screen and (max-width:1000px){
   .background{
@@ -287,6 +327,7 @@ margin: 10px 0;
     white-space: nowrap;
   }
 }
+
 @media screen and (max-width:400px)
 {
   .Contact{

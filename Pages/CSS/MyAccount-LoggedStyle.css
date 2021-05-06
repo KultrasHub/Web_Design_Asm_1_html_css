@@ -15,7 +15,7 @@ body{
     padding-top: 120px;
     padding-bottom: 50px;
     background-color: #fff;
-    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
 box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
 }
 .Profile img{
@@ -45,7 +45,7 @@ box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
 .Detail>.container{
     background-color: #fff;
     padding:40px 20px;
-    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
     box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
     width: 40%;
 }
@@ -72,7 +72,7 @@ box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
     margin-bottom: 20px;
     background-color: #fff;
     padding:40px 20px;
-    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+    -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
     box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
     width: 100%;
 }
@@ -109,7 +109,7 @@ box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
         overflow-x: hidden;
         background-color: #fff;
         padding:40px 0;
-        -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.15);
+        -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.15); 
         box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.15);
         width: 100%;
         margin-bottom: 15px;
@@ -123,7 +123,7 @@ box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
         margin-bottom: 15px;
         background-color: #fff;
         padding:40px 0px;
-        -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
+        -webkit-box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35); 
         box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
         width: 100%;
     }

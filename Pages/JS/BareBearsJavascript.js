@@ -1,6 +1,8 @@
 var id=null;
+var nav;
+
 function HamDisplay(){
-    var nav=document.getElementById("navigationBar");
+    nav=document.getElementById("navigationBar");
     var checkHam=document.getElementById("check");
     if(checkHam.checked)
     {
@@ -33,7 +35,6 @@ function HamDisplay(){
         }
       }
     }
-
 }
 function myFunction(x) {
     var nav=document.getElementById("navigationBar");

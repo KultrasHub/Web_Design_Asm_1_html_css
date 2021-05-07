@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="CSS/RegisterStyle.css">
   <link rel="stylesheet" href="CSS/BareBearsStyle.css">
   <script src="JS/BareBearsJavascript.js"></script>
+  <script src="JS/Register.js"></script>
 </head>
 <body>
   <header>
@@ -84,12 +85,12 @@
       <li  id="buttonBrowse">
         <input type="checkbox" id='DropDown' >
         <label class="BrowseText"  for="DropDown"> <div>Browse</div></label>
-        
+
         <ul class="DropDown">
           <li class="DropDownContent">
             <input type="checkbox" id='LettersDropDown' >
             <label for="LettersDropDown" class="DropDownLabel">
-              <div>Browse Stores by Name</div> 
+              <div>Browse Stores by Name</div>
             </label>
             <!--Box-->
             <ul class="DropDownContainer">
@@ -173,7 +174,7 @@
     </div>
   </div>
   <div class="LoginForm">
-    <form action="Register_Image.html" method="get">
+    <form action="Register_Image.html" method="get" onsubmit="infoFunc(); event.preventDefault();">
       <div class="FormHeader">
       <img src="../Image/Essen/barebear.png" alt=""class="logo">
       <h2>Bare Bears</h2>
@@ -187,11 +188,11 @@
       </div>
       <div class="NameBoxes">
         <div class="inputBox">
-          <input type="text" name="firstName" placeholder=" " required />
+          <input type="text" id= "firstVeri" name="firstName" placeholder=" " required />
           <span>First Name</span>
         </div>
         <div class="inputBox">
-          <input type="text" name="lastName" placeholder=" " required />
+          <input type="text" id= "lastVeri" name="lastName" placeholder=" " required />
           <span>Last Name</span>
         </div>
       </div>
@@ -205,23 +206,23 @@
         <span>User Email</span>
       </div>
       <div class="inputBox">
-        <input type="password" name="password" placeholder=" " required />
+        <input type="password" id="passVeri" name="password" placeholder=" " required />
         <span>Password</span>
       </div>
       <div class="inputBox">
-        <input type="password" name="cpassword" placeholder=" " required />
+        <input type="password" id="rePassVeri" name="cpassword" placeholder=" " required />
         <span>Confirm Password</span>
       </div>
       <div class="inputBox">
-        <input type="address" name="address" placeholder=" " required />
+        <input type="address" id="addressVeri" name="address" placeholder=" " required />
         <span>Address</span>
       </div>
       <div class="inputBox">
-        <input type="text" name="city" placeholder=" " required />
+        <input type="text" id="cityVeri" name="city" placeholder=" " required />
         <span>City</span>
       </div>
       <div class="inputBox">
-        <input type="tel" name="Zipcode" pattern="[0-9]*"placeholder=" " title="Please enter a Zip Code" max="999999" required/>
+        <input type="tel" id="zipVeri" name="Zipcode" pattern="[0-9]*" placeholder=" " title="Please enter a Zip Code" required/>
         <span>Zipcode</span>
       </div>
       <div class="SelectBox">

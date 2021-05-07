@@ -44,6 +44,7 @@
 
                   <a href="BrowseStore.html#H">H</a>
                   <a href="BrowseStore.html#I">I</a>
+
                   <a href="BrowseStore.html#J">J</a>
                   <a href="BrowseStore.html#K">K</a>
                   <a href="BrowseStore.html#L">L</a>
@@ -84,17 +85,15 @@
         </ul>
       </li>
       <!--Online on lower than desktop-->
-      <li id="buttonBrowse">
-        <input type="checkbox" id='DropDown'>
-        <label class="BrowseText" for="DropDown">
-          <div>Browse</div>
-        </label>
-
+      <li  id="buttonBrowse">
+        <input type="checkbox" id='DropDown' >
+        <label class="BrowseText"  for="DropDown"> <div>Browse</div></label>
+        
         <ul class="DropDown">
           <li class="DropDownContent">
-            <input type="checkbox" id='LettersDropDown'>
+            <input type="checkbox" id='LettersDropDown' >
             <label for="LettersDropDown" class="DropDownLabel">
-              <div>Browse Stores by Name</div>
+              <div>Browse Stores by Name</div> 
             </label>
             <!--Box-->
             <ul class="DropDownContainer">
@@ -138,10 +137,8 @@
           </li>
           <!--Box-->
           <li class="DropDownContent DropDownEnd">
-            <input type="checkbox" id='CateDropDown'>
-            <label for="CateDropDown" class="DropDownLabel">
-              <div>Browse Stores by Category</div>
-            </label>
+            <input type="checkbox" id='CateDropDown' >
+            <label for="CateDropDown" class="DropDownLabel"> <div>Browse Stores by Category</div> </label>
             <ul class="DropDownContainer">
               <!--Detail-->
               <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
@@ -160,18 +157,18 @@
         </ul>
       </li>
       <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
-      <a href="MyAccount-Login.html" class="myAcount"><img src="../Image/Profolio/user.png" alt=""></a>
+      <a id="myAcount" class="myAcount" onclick="MyAccount()"><img  src="../Image/Profolio/user.png" alt=""></a>
     </ul>
     <div class="headerSimulator">
       <div class="holder">
-        <a href="MyAccount-Login.html" class="myAcount top_right"><img src="../Image/Profolio/user.png" alt=""></a>
-        <label class="Ham" for="check" onclick="HamDisplay()">
-          <input type="checkbox" id="check" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
+      <a href="" class="myAcount top_right" onclick="MyAccount()"><img src="../Image/Profolio/user.png" alt=""></a>
+      <label class="Ham" for="check" onclick="HamDisplay()">
+        <input type="checkbox" id="check" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
     </div>
   </header>
   <div class="background">

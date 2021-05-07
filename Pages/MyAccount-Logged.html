@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Account Logged</title>
-    <link rel="stylesheet" href="CSS/MyAccount-LoggedStyle.css">
-    <link rel="stylesheet" href="CSS/BareBearsStyle.css">
-    <script src="JS/BareBearsJavascript.js"></script>
-    <script src="JS/LoginJavaScript.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account Logged</title>
+  <link rel="stylesheet" href="CSS/MyAccount-LoggedStyle.css">
+  <link rel="stylesheet" href="CSS/BareBearsStyle.css">
+  <link rel="stylesheet" href="CSS/Cookie.css">
+  <script src="JS/BareBearsJavascript.js"></script>
 </head>
 
 <body>
@@ -84,17 +84,15 @@
         </ul>
       </li>
       <!--Online on lower than desktop-->
-      <li id="buttonBrowse">
-        <input type="checkbox" id='DropDown'>
-        <label class="BrowseText" for="DropDown">
-          <div>Browse</div>
-        </label>
-
+      <li  id="buttonBrowse">
+        <input type="checkbox" id='DropDown' >
+        <label class="BrowseText"  for="DropDown"> <div>Browse</div></label>
+        
         <ul class="DropDown">
           <li class="DropDownContent">
-            <input type="checkbox" id='LettersDropDown'>
+            <input type="checkbox" id='LettersDropDown' >
             <label for="LettersDropDown" class="DropDownLabel">
-              <div>Browse Stores by Name</div>
+              <div>Browse Stores by Name</div> 
             </label>
             <!--Box-->
             <ul class="DropDownContainer">
@@ -138,10 +136,8 @@
           </li>
           <!--Box-->
           <li class="DropDownContent DropDownEnd">
-            <input type="checkbox" id='CateDropDown'>
-            <label for="CateDropDown" class="DropDownLabel">
-              <div>Browse Stores by Category</div>
-            </label>
+            <input type="checkbox" id='CateDropDown' >
+            <label for="CateDropDown" class="DropDownLabel"> <div>Browse Stores by Category</div> </label>
             <ul class="DropDownContainer">
               <!--Detail-->
               <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
@@ -160,18 +156,18 @@
         </ul>
       </li>
       <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
-      <a href="MyAccount-Login.html" class="myAcount"><img src="../Image/Profolio/user.png" alt=""></a>
+      <a id="myAcount" class="myAcount" onclick="MyAccount()"><img  src="../Image/Profolio/user.png" alt=""></a>
     </ul>
     <div class="headerSimulator">
       <div class="holder">
-        <a href="MyAccount-Login.html" class="myAcount top_right"><img src="../Image/Profolio/user.png" alt=""></a>
-        <label class="Ham" for="check" onclick="HamDisplay()">
-          <input type="checkbox" id="check" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
+      <a href="" class="myAcount top_right" onclick="MyAccount()"><img src="../Image/Profolio/user.png" alt=""></a>
+      <label class="Ham" for="check" onclick="HamDisplay()">
+        <input type="checkbox" id="check" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
     </div>
   </header>
   <div class="Profile">
@@ -181,60 +177,63 @@
   </div>
   <div class="Detail">
     <!--Personal Info-->
-      <div class="box">
-        <span class="info">User Name</span>
-        <span class="detail">bear_6s9g</span>
-      </div>
-      <div class="box">
-        <span class="info">Phone</span>
-        <span class="detail">0123 456 789</span>
-      </div>
-      <div class="box">
-        <span class="info">Email</span>
-        <span class="detail">baka@gmail.com</span>
-      </div>
-      <div class="box">
-        <span class="info">Address</span>
-        <span class="detail">Space Grove</span>
-      </div>
-      <div class="box">
-        <span class="info">Gender</span>
-        <span class="detail">Male</span>
-      </div>
-
+    <div class="container">
+    <div class="box">
+      <span class="info">User Name</span>
+      <span class="detail" id="userName">bear_6s9g</span>
     </div>
-    <div class="Shop_Setting">
-      <!--Shop Info-->
-      <div class="container">
-        <div class="box">
-          <span class="info">Shop Voucher</span>
-          <span class="detail">></span>
-        </div>
-        <div class="box">
-          <span class="info">Bare Bear Coin</span>
-          <span class="detail">100</span>
-        </div>
+    <div class="box">
+      <span class="info">Phone</span>
+      <span class="detail" id="phone">0123 456 789</span>
+    </div>
+    <div class="box">
+      <span class="info">Email</span>
+      <span class="detail" id="email">baka@gmail.com</span>
+    </div>
+    <div class="box">
+      <span class="info">Address</span>
+      <span class="detail" id="address">Space Grove</span>
+    </div>
+    <div class="box">
+      <span class="info">Gender</span>
+      <span class="detail" id="gender">Male</span>
+    </div>
+  </div>
+
+  <div class="Shop_Setting">
+    <!--Shop Info-->
+    <div class="container">
+      <div class="box">
+        <span class="info">Shop Voucher</span>
+        <span class="detail">></span>
       </div>
-      <!--Setting-->
-      <div class="container">
-        <div class="box">
-          <span class="info">Setting</span>
-          <span class="detail">></span>
-        </div>
-        <div class="box">
-          <span class="info">Password</span>
-          <span class="detail">Change Password ></span>
-        </div>
+      <div class="box">
+        <span class="info">Bare Bear Coin</span>
+        <span class="detail">100</span>
+      </div>
+    </div>
+    <!--Setting-->
+    <div class="container">
+      <div class="box">
+        <span class="info">Setting</span>
+        <span class="detail">></span>
+      </div>
+      <div class="box">
+        <span class="info">Password</span>
+        <span class="detail">Change Password ></span>
       </div>
     </div>
   </div>
-<!--Cookies-->
-<div class="cookiesBar" id="cookies">
-  <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
-  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
-  <div onclick="HideCookie()"> <span>I understand</span></div>
 </div>
-<!--End Cookies-->
+
+  <!--Cookies-->
+  <div class="cookiesBar" id="cookies">
+    <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
+    <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out
+      more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+    <div onclick="HideCookie()"> <span>I understand</span></div>
+  </div>
+  <!--End Cookies-->
   <footer>
     <div class="UpperBar">
       <div class="logoText">Bare Bears <p>with barely best brands</p>
@@ -296,10 +295,6 @@
     </div>
   </footer>
 </body>
-<<<<<<< HEAD
-
 </html>
-<script type="text/javascript" src="JS/Cookies.js"></script> 
-=======
-</html>
->>>>>>> c6b06808a2bf2934570365869f26dc24e618a88a
+<script type="text/javascript" src="JS/LoggedInformation.js"></script>
+  <script type="text/javascript" src="JS/Cookies.js"></script>

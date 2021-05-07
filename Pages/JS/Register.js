@@ -1,7 +1,18 @@
 
 function infoFunc(){
-  //var emailCheck =/email/;
+  var emailCheck =/^(([a-zA-Z0-9]+[.]?)+[a-zA-Z0-9]*){3,}@(([a-zA-Z0-9]+[.]?)*[a-zA-Z0-9]+)+([.]{1}[a-zA-Z0-9]{2,})+$/;
   //var phoneCheck =/phone/;
+
+
+  //values for email
+  var emailValue = document.getElementById("emailVeri");
+
+  //Conditions
+  if(emailCheck.test(emailValue) != true){
+    alert("Please recheck your email as is it not in the correct format.");
+    return false;
+  }
+
 
   //Condition for password
   var passCheck =/^(?=.{8,20})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/;
@@ -56,4 +67,5 @@ function infoFunc(){
   if(zipCheck.test(zipValue) == false){
     alert("Zip needs to contain between 4-6 digits.");
   }
+  return true;
 }

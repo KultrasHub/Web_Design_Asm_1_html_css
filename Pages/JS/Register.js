@@ -45,7 +45,7 @@ function infoFunc(){
   }
 
   //Zip value
-  var zipCheck=/(?=.{4,6})/;
+  var zipCheck=/[0-9](?=.{4,6})/;
 
   //Getting Values for Zipcode
   var zipValue = document.getElementById("zipVeri").value;

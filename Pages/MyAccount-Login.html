@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
   <title>My Acccount - Login</title>
   <link rel="stylesheet" href="CSS/MyAccount-LoginStyle.css">
   <link rel="stylesheet" href="CSS/BareBearsStyle.css">
+  <link rel="stylesheet" href="CSS/Cookie.css">
   <script src="JS/BareBearsJavascript.js"></script>
-  <script src="JS/LoginJavaScript.js"></script>  
+  <script src="JS/LoginJavaScript.js"></script>
 </head>
+
 <body>
   <header>
     <a href="Home.html" class="LogoName">
@@ -82,13 +85,15 @@
         </ul>
       </li>
       <!--Online on lower than desktop-->
-      <li  id="buttonBrowse">
-        <input type="checkbox" id='DropDown' >
-        <label class="BrowseText"  for="DropDown"> <div>Browse</div></label>
+      <li id="buttonBrowse">
+        <input type="checkbox" id='DropDown'>
+        <label class="BrowseText" for="DropDown">
+          <div>Browse</div>
+        </label>
 
         <ul class="DropDown">
           <li class="DropDownContent">
-            <input type="checkbox" id='LettersDropDown' >
+            <input type="checkbox" id='LettersDropDown'>
             <label for="LettersDropDown" class="DropDownLabel">
               <div>Browse Stores by Name</div>
             </label>
@@ -134,8 +139,10 @@
           </li>
           <!--Box-->
           <li class="DropDownContent DropDownEnd">
-            <input type="checkbox" id='CateDropDown' >
-            <label for="CateDropDown" class="DropDownLabel"> <div>Browse Stores by Category</div> </label>
+            <input type="checkbox" id='CateDropDown'>
+            <label for="CateDropDown" class="DropDownLabel">
+              <div>Browse Stores by Category</div>
+            </label>
             <ul class="DropDownContainer">
               <!--Detail-->
               <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
@@ -154,88 +161,121 @@
         </ul>
       </li>
       <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
-      <a href="MyAccount-Login.html"class="myAcount"><img  src="../Image/Profolio/user.png" alt=""></a>
+      <a href="MyAccount-Login.html" class="myAcount"><img src="../Image/Profolio/user.png" alt=""></a>
     </ul>
     <div class="headerSimulator">
       <div class="holder">
-      <a href="MyAccount-Login.html" class="myAcount top_right"><img src="../Image/Profolio/user.png" alt=""></a>
-      <label class="Ham" for="check" onclick="HamDisplay()">
-        <input type="checkbox" id="check" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
+        <a href="MyAccount-Login.html" class="myAcount top_right"><img src="../Image/Profolio/user.png" alt=""></a>
+        <label class="Ham" for="check" onclick="HamDisplay()">
+          <input type="checkbox" id="check" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
     </div>
   </header>
-<div class="background">
+  <div class="background">
+  </div>
+  <div class="LoginForm">
+    <form action="MyAccount-Logged.html" method="get">
+      <div class="FormHeader">
+        <img src="../Image/Essen/barebear.png" alt="" class="logo">
+        <h2>Bare Bears</h2>
+      </div>
+      <div class="SignUp">
+        <span>Don't have an account?</span>
+        <a href="Register.html"><span>Create your account</span></a>
+      </div>
+      <div class="inputBox">
+        <input type="email" name="emailUser" placeholder=" " required />
+        <span>Email</span>
+      </div>
+      <div class="inputBox">
+        <input type="password" name="password" placeholder=" " required />
+        <span>Password</span>
+      </div>
+      <div class="lowerBar">
+        <div class="checkBox">
+          <input type="checkbox" name="rememberMe" id="RememeberMe" />
+          <label for="RememeberMe">Rememeber Me</label>
+        </div>
+        <a href="ForgotPassword.html">Forgot Password</a>
+      </div>
+      <div class="SendBut">
+        <input type="submit" name="send" value="Send">
+      </div>
+    </form>
+  </div>
+  <!--Cookies-->
+<div class="cookiesBar" id="cookies">
+  <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
+  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+  <div onclick="HideCookie()"> <span>I understand</span></div>
 </div>
-<div class="LoginForm">
-  <form action="MyAccount-Logged.html" method="get">
-    <div class="FormHeader">
-    <img src="../Image/Essen/barebear.png" alt=""class="logo">
-    <h2>Bare Bears</h2>
-    </div>
-    <div class="SignUp">
-      <span>Don't have an account?</span>
-      <a href="Register.html"><span>Create your account</span></a>
-    </div>
-    <div class="inputBox">
-      <input type="email" name="emailUser" placeholder=" " required />
-      <span>Email</span>
-    </div>
-    <div class="inputBox">
-      <input type="password" name="password" placeholder=" " required />
-      <span>Password</span>
-    </div>
-    <div class="lowerBar">
-    <div class="checkBox">
-      <input type="checkbox" name="rememberMe" id="RememeberMe"/>
-      <label for="RememeberMe">Rememeber Me</label>
-    </div>
-    <a href="ForgotPassword.html">Forgot Password</a>
-</div>
-<div class="SendBut">
-  <input type="submit" name="send" value="Send">
-</div>
-  </form>
-</div>
-<footer>
-<div class="UpperBar">
-<div class="logoText">Bare Bears <p>with barely best brands</p></div>
-<div class="shop"><h1>Top Category</h1>
-  <a href="BrowseStore.html"><li>Book Stores</li></a>
-  <a href="BrowseStore.html"><li>Toy Stores</li></a>
-</div>
-<div class="Support"><h1>Support</h1>
+<!--End Cookies-->
+  <footer>
+    <div class="UpperBar">
+      <div class="logoText">Bare Bears <p>with barely best brands</p>
+      </div>
+      <div class="shop">
+        <h1>Top Category</h1>
+        <a href="BrowseStore.html">
+          <li>Book Stores</li>
+        </a>
+        <a href="BrowseStore.html">
+          <li>Toy Stores</li>
+        </a>
+      </div>
+      <div class="Support">
+        <h1>Support</h1>
 
-  <a href="#"><li>Order Status</li></a>
-  <a href="FAQs.html"><li>FAQs</li></a>
-  <a href="Contact.html"><li>Contact Us</li></a>
-  <a href="Fees.html"><li>Fees</li></a>
-  <a href="#"><li>Order Status</li></a>
-  <a href="#"><li>Shipping Information</li></a>
-</div>
-<div class="Language"><h1>Language</h1>
-  <br>
-  🌎
-  <select class="language" name="language">
+        <a href="#">
+          <li>Order Status</li>
+        </a>
+        <a href="FAQs.html">
+          <li>FAQs</li>
+        </a>
+        <a href="Contact.html">
+          <li>Contact Us</li>
+        </a>
+        <a href="Fees.html">
+          <li>Fees</li>
+        </a>
+        <a href="#">
+          <li>Order Status</li>
+        </a>
+        <a href="#">
+          <li>Shipping Information</li>
+        </a>
+      </div>
+      <div class="Language">
+        <h1>Language</h1>
+        <br>
+        🌎
+        <select class="language" name="language">
 
-      <option value="English"> English</option>
-      <option value="Vietnamese">Vietnamese</option>
-      <option value="Korean">Korean</option>
-  </select>
-</div>
-</div>
-<div class="LowerBar">
-<section class="CopyRight">
-Copyright© Bare Bears 2021
-</section>
-<section class="Policy">
-<a href="TermOfUse.html"><li>Term Of Service</li></a>
-<a href="PrivacyPolicy.html"><li>Privacy Policy</li></a>
-</section>
-</div>
-</footer>
+          <option value="English"> English</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Korean">Korean</option>
+        </select>
+      </div>
+    </div>
+    <div class="LowerBar">
+      <section class="CopyRight">
+        Copyright© Bare Bears 2021
+      </section>
+      <section class="Policy">
+        <a href="TermOfUse.html">
+          <li>Term Of Service</li>
+        </a>
+        <a href="PrivacyPolicy.html">
+          <li>Privacy Policy</li>
+        </a>
+      </section>
+    </div>
+  </footer>
 </body>
+
 </html>
+<script type="text/javascript" src="JS/Cookies.js"></script> 

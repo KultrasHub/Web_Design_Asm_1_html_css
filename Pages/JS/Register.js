@@ -58,7 +58,7 @@ function infoFunc(){
     alert("Last name needs to be 3 characters or more.");
   } else if (allCheck.test(cityValue) == false) {
     alert("City needs to be 3 characters or more.");
-  } else if (allCheck.test(addressValueValue) == false) {
+  } else if (allCheck.test(addressValue) == false) {
     alert("Address needs to be 3 characters or more.");
   }
 

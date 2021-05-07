@@ -5,9 +5,18 @@ body{
     overflow-x: hidden;
     font-family: 'Courier New', Courier, monospace;
 }
-
+/* Setting for prices box */
 .prices::before{
 content: '$';
+}
+.negativeprices::before{
+    content: '-$';
+}
+.voucherAmount::before{
+    content:'(';
+}
+.voucherAmount::after{
+    content:'%)';
 }
 .content{
     width: 100%;
@@ -76,24 +85,78 @@ content: '$';
     background-color: #333;
 }
 .content .payment{
-    width: 27%;
+    width: 25%;
     padding: 50px 20px;
     border-left: 1px solid #ebebeb;
 }
 .content .paymentInfo{
+    position: relative;
     padding-top: 125px;
     display: flex;
     justify-content: flex-start;
     align-items: left;
     flex-direction: column;
 }
+.content .paymentInfo .cart{
+    display: flex;
+    flex-direction: column;
+}
+.content .paymentInfo .cart span{
+    font-size: 14px;
+    color:#333;
+}
+.content .paymentIntro .voucherBox .discountAmount::after{
+    content: '%';
+}
+.content .paymentIntro .voucherBox .discountAmount::before{
+    content: '-';
+}
+.content .paymentIntro .voucherBox .discountAmount{
+    display: none;
+}
+.content .paymentInfo .voucherBox{
+    position: relative;
+    width: 55%;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+.content .paymentInfo .voucherBox .subVoucher{
+    display: flex;
+    flex-direction: row;
+}
+.content .paymentInfo .voucherBox .subVoucher>div{
+    width: 30%;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 2%;
+    background-color: #212121;
+    height:23px;
+    padding:1px 2px;
+    color:#fff;
+    cursor: pointer;
+    border: 2px solid #212121;
+}
+.content .paymentInfo .voucherBox .subVoucher>div:hover{
+    color:#000;
+    background-color: #fff;
+}
+.content .paymentInfo .voucherBox input{
+    width: 70%;
+    height: 23px;
+    font-size: 16px;
+}
 .content .paymentInfo .button{
+    position: relative;
     justify-content: flex-start;
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 .content .paymentInfo a{
+
     padding:15px 10px;
     margin:5px 0;
     text-decoration: none;
@@ -103,6 +166,7 @@ content: '$';
     border-radius: 30px;
     text-align: center;
     transition:  all 300ms ease 0s;
+    border: 2px solid #333;
 }
 .content .paymentInfo .Order{
     margin-top: 20px;
@@ -113,7 +177,6 @@ content: '$';
 .content .paymentInfo a:hover{
     background-color: #fff;
     color:#333;
-    border: 2px solid #333;
 }
 .content .paymentInfo .subOrder{
     color:#777;
@@ -164,6 +227,12 @@ content: '$';
         border-left: none;
         background-color: #ebebeb;
     }
+    .content .paymentInfo .paymentIntro{
+        width: 70%;
+    }
+    .content .paymentInfo .paymentIntro .voucherBox{
+        width: 100%;
+    }
     .content .paymentInfo{
         padding-top: 0;
         display: flex;
@@ -174,8 +243,13 @@ content: '$';
         padding-left: 2%;
         padding-right: 2%;
     }
-    .content .paymentIntro{
-        width: 70%;
+    .content .paymentInfo .button{
+        align-items: center;
+    }
+    .content .paymentInfo .button a{
+        padding:15px 5px;
+        font-size: 14px;
+        border-radius: 0;
     }
 }
 @media screen and (max-width:550px)
@@ -193,6 +267,15 @@ content: '$';
         flex-direction: unset;
         flex-wrap: wrap;
     }
+
+    .content .paymentInfo .paymentIntro{
+        display: flex;
+        justify-self: start;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
     .content .paymentInfo .Invoice{
         width: 100%;
         display: flex;
@@ -200,14 +283,11 @@ content: '$';
         background-color: #dfdfdf;
     }
     .content .paymentInfo .button{
-        width: 50%;
-        justify-content: flex-start;
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
+        width: 100%;
+
     }
-    .content .paymentInfo a{
-        width: 80%;
+    .content .paymentInfo .button a{
+        width: 30%;
     }
     .content .cart .box .left input{
         padding:2px 0;

@@ -12,12 +12,12 @@ function infoFunc(){
 
   var zipCheck=/[0-9](?=.{4,6})/;
 
-  var elem;
+  //var elem;
 
   //Create warning message
-  elem=document.creatElement('div');
-  elem.id="notify";
-  elem.style.display="none";
+  //elem=document.creatElement('div');
+  //elem.id="notify";
+  //elem.style.display="none";
 
   //values
   var emailValue = document.getElementById("emailVeri").value;
@@ -40,11 +40,7 @@ function infoFunc(){
 
   //Conditions
   if(!emailCheck.test(emailValue)){
-    inputBox[0].appendChild(elem);
-    emailValue.className='invalid';
-    elem.textContent="Wrong email format.";
-    elem.className='error';
-    elem.style.display='block';
+    alert("Please recheck your email as is it not in the correct format.");
     return false;
   }
 

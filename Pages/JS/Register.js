@@ -46,22 +46,22 @@ function infoFunc(){
     if(rePassValue != passValue){
 			alert("You retyped it wrong.");
       return false;
-		}
-	}else{
-		alert("The password requires 8-20 characters including an uppercase, lowercase, atleast one special character and digit.");
+    }
+  } else {
+    alert("The password requires 8-20 characters including an uppercase, lowercase, atleast one special character and digit.");
     return false;
-	}
+  }
 
   if(allCheck.test(firstValue) == false){
     alert("First name needs to be 3 characters or more.");
-  }else if(allCheck.test(lastValue) == false){
+  } else if (allCheck.test(lastValue) == false) {
     alert("Last name needs to be 3 characters or more.");
-  }else if(allCheck.test(cityValue) == false){
+  } else if (allCheck.test(cityValue) == false) {
     alert("City needs to be 3 characters or more.");
-  }else if(allCheck.test(addressValueValue) == false){
+  } else if (allCheck.test(addressValueValue) == false) {
     alert("Address needs to be 3 characters or more.");
   }
-  
+
   if(zipCheck.test(zipValue) == false){
     alert("Zip needs to contain between 4-6 digits.");
   }

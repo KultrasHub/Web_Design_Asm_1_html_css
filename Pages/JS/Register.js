@@ -1,7 +1,8 @@
 
 function infoFunc(){
+  //var for email
   var emailCheck =/^(([a-zA-Z0-9]+[.]?)+[a-zA-Z0-9]*){3,}@(([a-zA-Z0-9]+[.]?)*[a-zA-Z0-9]+)+([.]{1}[a-zA-Z0-9]{2,})+$/;
-  //var phoneCheck =/phone/;
+
 
 
   //values for email
@@ -13,6 +14,19 @@ function infoFunc(){
     return false;
   }
 
+  //var for phone
+  var phoneCheck =/^([0-9][-.]?){9,11}$/;
+
+  //values for phone
+  var phoneValue = document.getElementById("phongVeri");
+
+  //Conditions
+  if(phoneCheck.test(phoneValue) != true){
+    alert("Please recheck your phone as is it not in the correct format.");
+    return false;
+  }else{
+    return true;
+  }
 
   //Condition for password
   var passCheck =/^(?=.{8,20})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/;

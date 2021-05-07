@@ -1,3 +1,4 @@
+
 function infoFunc(){
   //var emailCheck =/email/;
   //var phoneCheck =/phone/;
@@ -11,12 +12,13 @@ function infoFunc(){
 
   //conditions for the password/retype field
   if(passCheck.test(passValue) == true){
-		if(rePassValue != passValue){
+    if(rePassValue != passValue){
 			alert("You retyped it wrong.");
+      return false;
 		}
-
 	}else{
 		alert("The password requires 8-20 characters including an uppercase, lowercase, atleast one special character and digit.");
+    return false;
 	}
 
 	//testing/debugging command: alert(passValue + ":" + passResult);

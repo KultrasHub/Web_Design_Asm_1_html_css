@@ -246,6 +246,43 @@ margin: 10px 0;
   border-radius: 20px;
   transition:all 300ms ease 0s;
 }
+.PopUpMenu{
+  position: absolute;
+  top: 22.5%;
+  left:-50%;
+  height: 55%;
+  background-color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 3px 6px 5px rgba(0,0,0,0.18); 
+  box-shadow: 5px 3px 6px 5px rgba(0,0,0,0.18);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.PopUpMenu img{
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+}
+.PopUpMenu>div{
+  background-color: #212121;
+  padding:10px 40px;
+  color:#fff;
+  margin-top: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid #212121;
+  
+}
+.PopUpMenu>div:hover{
+  background-color: #fff;
+  padding:10px 40px;
+  color:#212121;
+
+}
 #notify {
   margin-top: 0px;
   padding: 10px;
@@ -256,7 +293,7 @@ margin: 10px 0;
   display: block;
   position: absolute;
   left: 50%;
-  top: -40%;
+  top: -20px;
 }
 #notify.error {
   background-color: #DD2C00;
@@ -275,6 +312,10 @@ margin: 10px 0;
   .contactForm{
     width: 60%;
   }
+  .PopUpMenu{
+    width: 120%;
+    left:-10%;
+  }
 }
 @media screen and (max-width:850px){
   .contactForm{
@@ -285,6 +326,16 @@ margin: 10px 0;
   .contactForm{
     width: 120%;
   }
+  .PopUpMenu{
+    top:30%;
+    width: 90%;
+    left:1.5%;
+    height: 40%;
+  }
+  .PopUpMenu img{
+    width: 150px;
+    height: 150px;
+  }
 }
 @media screen and (max-width:700px){
   .contactForm{
@@ -292,9 +343,7 @@ margin: 10px 0;
     padding: 40px 30px;
   }
   .Contact{
-    padding: 50px 50px;
-
-    
+    padding: 50px 50px;  
   }
 }
 @media screen and (max-width:500px){
@@ -326,6 +375,12 @@ margin: 10px 0;
     line-height: 1;
     white-space: nowrap;
   }
+  .PopUpMenu{
+    top:35%;
+    width: 90%;
+    left:0.5%;
+    height: 40%;
+  }
 }
 
 @media screen and (max-width:400px)
@@ -338,9 +393,17 @@ margin: 10px 0;
   .contactForm{
     width: 100%;
     border-radius: 0;
+    overflow-x: hidden;
   }
   .background{
     top:0;
     
+    }
+    .PopUpMenu{
+      top:35%;
+      width: 90%;
+      left:0%;
+      height: 40%;
+      
     }
 }

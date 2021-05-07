@@ -21,6 +21,21 @@ var check_Boxes=checkBox[0].getElementsByTagName('input');
 //message Box
 var messageText=document.getElementById("messageBox");
 var elem;//warning messagae;
+//popUpMenu
+var popUpMenu=document.getElementById("PopUp");
+function PostChecking()
+{
+    var valid=CheckValidity();
+    if(valid)
+    {
+        //display a pop up menu
+        popUpMenu.style.display="flex";
+    }
+}
+function HidePopUpMenu()
+{
+    popUpMenu.style.display="none";
+}
 function CheckValidity()
 {
     //create warning message

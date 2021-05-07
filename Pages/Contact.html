@@ -200,7 +200,7 @@
         </div>
       </div>
       <div class="contactForm" id="form">
-        <form name="myForm" onsubmit=" event.preventDefault(); CheckValidity()">
+        <form name="myForm" onsubmit=" event.preventDefault(); PostChecking()">
           <h2>Send Message</h2>
           <div class="purposeBox">
             <span>Contact Purpose</span>
@@ -254,6 +254,12 @@
           <div class="SendBut">
             <input type="submit" name="send" value="Send" >
           </div>
+          </div>
+          <div class="PopUpMenu" id="PopUp">
+            <img src="../Image/Profolio/fk.png" alt="">
+            <h3>Thank for contacting us</h3>
+            <span>Your voice matters! we will get back to you as soon as possible!</span>
+            <div onclick="HidePopUpMenu()">Got It!</div>
           </div>
         </form>
       </div>

@@ -86,13 +86,15 @@
         </ul>
       </li>
       <!--Online on lower than desktop-->
-      <li  id="buttonBrowse">
-        <input type="checkbox" id='DropDown' >
-        <label class="BrowseText"  for="DropDown"> <div>Browse</div></label>
+      <li id="buttonBrowse">
+        <input type="checkbox" id='DropDown'>
+        <label class="BrowseText" for="DropDown">
+          <div>Browse</div>
+        </label>
 
         <ul class="DropDown">
           <li class="DropDownContent">
-            <input type="checkbox" id='LettersDropDown' >
+            <input type="checkbox" id='LettersDropDown'>
             <label for="LettersDropDown" class="DropDownLabel">
               <div>Browse Stores by Name</div>
             </label>
@@ -138,8 +140,10 @@
           </li>
           <!--Box-->
           <li class="DropDownContent DropDownEnd">
-            <input type="checkbox" id='CateDropDown' >
-            <label for="CateDropDown" class="DropDownLabel"> <div>Browse Stores by Category</div> </label>
+            <input type="checkbox" id='CateDropDown'>
+            <label for="CateDropDown" class="DropDownLabel">
+              <div>Browse Stores by Category</div>
+            </label>
             <ul class="DropDownContainer">
               <!--Detail-->
               <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
@@ -158,18 +162,18 @@
         </ul>
       </li>
       <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
-      <a id="myAcount" class="myAcount" onclick="MyAccount()"><img  src="../Image/Profolio/user.png" alt=""></a>
+      <a id="myAcount" class="myAcount" onclick="MyAccount()"><img src="../Image/Profolio/user.png" alt=""></a>
     </ul>
     <div class="headerSimulator">
       <div class="holder">
-      <a href="" class="myAcount top_right" onclick="MyAccount()"><img src="../Image/Profolio/user.png" alt=""></a>
-      <label class="Ham" for="check" onclick="HamDisplay()">
-        <input type="checkbox" id="check" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
+        <a href="" class="myAcount top_right" onclick="MyAccount()"><img src="../Image/Profolio/user.png" alt=""></a>
+        <label class="Ham" for="check" onclick="HamDisplay()">
+          <input type="checkbox" id="check" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
     </div>
   </header>
   <div class="background">
@@ -195,6 +199,7 @@
 
     <div class="general">
       <h1>Your Name</h1>
+      <h2 id="productID">YN</h2>
       <a href="BookWorld.html">
         <div class="shop">
           <img src="../Image/Logo/BookCafe.png" alt="">
@@ -210,13 +215,19 @@
         <span class="originalPrice">4.49</span>
         <span class="currentPrice">2.99</span>
       </div>
-      <form action="../OrderPage.html" class="input">
-        <input id="inp" value=1 type="number">
-        <div class="inputBut">
-          <input type="submit" class="proButt" value="Order Now"></input>
-          <a class="proButt" href="#">Add</a>
+      <div class="ButtonSection">
+        <div id="inputBox">
+          <input id="inp" value=1 type="number">
         </div>
-      </form>
+        <div class="inputBut" id="inputBut">
+          <div id="buttonBox">
+            <button onclick="AddToCart(2,true)">Order Now</button>
+          </div>
+          <div id="buttonBox">
+            <button onclick="AddToCart(2,false)">Add</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="productTile">
@@ -325,12 +336,13 @@
   </div>
   <!--End container intro/!-->
   <!--Cookies-->
-<div class="cookiesBar" id="cookies">
-  <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
-  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
-  <div onclick="HideCookie()"> <span>I understand</span></div>
-</div>
-<!--End Cookies-->
+  <div class="cookiesBar" id="cookies">
+    <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
+    <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out
+      more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+    <div onclick="HideCookie()"> <span>I understand</span></div>
+  </div>
+  <!--End Cookies-->
   <footer>
     <div class="UpperBar">
       <div class="logoText">Bare Bears <p>with barely best brands</p>

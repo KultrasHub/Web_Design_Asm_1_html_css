@@ -195,6 +195,7 @@
 
     <div class="general">
       <h1>Weathering With You</h1>
+      <h2 id="productID">WWY</h2>
       <a href="BookWorld.html">
         <div class="shop">
           <img src="../Image/Logo/BookCafe.png" alt="">
@@ -210,13 +211,19 @@
         <span class="originalPrice">4.49</span>
         <span class="currentPrice">2.99</span>
       </div>
-      <form action="../OrderPage.html" class="input">
-        <input id="inp" value=1 type="number">
-        <div class="inputBut">
-          <input type="submit" class="proButt" value="Order Now"></input>
-          <a class="proButt" href="#">Add</a>
+      <div class="ButtonSection">
+        <div id="inputBox">
+          <input id="inp" value=1 type="number">
         </div>
-      </form>
+        <div class="inputBut"id="inputBut">
+          <div id="buttonBox">
+            <button onclick="AddToCart(1,true)">Order Now</button>
+          </div>
+          <div id="buttonBox">
+            <button onclick="AddToCart(1,false)">Add</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript">
@@ -408,6 +415,7 @@
       </section>
     </div>
   </footer>
-  <script>
+
 </body>
+</html>
 <script type="text/javascript" src="JS/Cookies.js"></script>

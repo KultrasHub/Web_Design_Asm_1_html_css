@@ -177,7 +177,7 @@
   </header>
   <div class="content">
     <!--cart-->
-    <div class="cart">
+    <div class="cart" id="cart">
       <h3>Cart</h3>
       <!--Title box-->
       <div class="box">
@@ -185,7 +185,7 @@
         <span>Price</span>
       </div>
       <!--product box-->
-      <div class="box">
+      <!-- <div class="box">
         <img src="../Image/Books/DanMachi_4.jpg" alt="Dan Machi 4">
         <div class="left">
           <h4>Is it wrong to find girls in dugeon? Vol.4</h4>
@@ -196,26 +196,14 @@
           <span class="prices">4.49</span>
           <span class="remove">remove</span>
         </div>
-      </div>
+      </div> -->
       <!--product box-->
-      <div class="box">
-        <img src="../Image/Books/DanMachi_3.jpg" alt="Dan Machi 3">
-        <div class="left">
-          <h4>Is it wrong to find girls in dugeon? Vol.3</h4>
-          <h4 class="AuthorName">Fujino Omori</h4>
-          <input type="number" value="1" required>
-        </div>
-        <div class="right">
-          <span class="prices">4.49</span>
-          <span class="remove">remove</span>
-        </div>
-      </div>
     </div>
     <!--payment-->
     <div class="payment">
       <div class="paymentInfo">
         <div class="paymentIntro">
-          <h4 class="cart"> Subtotal <span>0 items</span> </h4>
+          <h4 class="cart"> Subtotal <span id="MainAmount">0 items</span> </h4>
           <div class="voucherBox">
             <span>Voucher <span class="discountAmount" id="discountAmount">0</span> </span>
             <div class="subVoucher">

@@ -4,7 +4,9 @@ body{
   margin: 0;
   background-color: #dddddd;
   font-family: courier,arial,helvetica;
-
+}
+#productID{
+  display: none;
 }
 .background{
   position: absolute;
@@ -180,25 +182,32 @@ font-size: 23px;
   align-items: left;
   flex-direction: column;
 }
+.general #inputBox{
+  position: relative;
+}
 .general .inputBut{
 margin-top: 10px;
+display: flex;
+position: relative;
 }
-.proButt{
-  border:none;
-  background-color: black;
-  color:white;
-  text-align: center;
-  transition-duration: 0.1s;
+.general .inputBut #buttonBox{
+  margin-right: 10px;
+  position: relative;
+}
+.inputBut button{
+  padding:10px 15px;
+  background-color: #212121;
+  border: 2px solid #212121;
   cursor: pointer;
-  display: inline-block;
-  padding: 7px 16px;
-  font-size: 16px;
 }
-
-.proButt:hover{
-  background-color: white;
-  color: black;
-  border: 2px solid black;
+.inputBut button:hover{
+  color:#212121;
+  background-color: #fff;
+}
+.inputBut button:active{
+  color:#000;
+  background-color: #aaa;
+  border: 2px solid #aaa;
 }
 /* Recommend Product */
 .container .ProductBox
@@ -330,6 +339,33 @@ height: 1px;
 #inp{
   padding: 5px 16px;
 }
+#notify {
+  margin-top: 0px;
+  padding: 10px;
+  font-size: 12px;
+  width: fit-content;
+  height: fit-content;
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+}
+#notify::before{
+  content: '"';
+  font-size: 20px;
+}
+#notify.error {
+  background-color: #DD2C00;
+}
+#notify.advice {
+  background-color: #11a5aa;
+}
+
+#notify.fun {
+  background-color: #FFE3CB;
+  color:#B0CEEF;
+}
 @media screen and (max-width:820px){
 .container{
   justify-content: center;
@@ -399,8 +435,13 @@ height: 1px;
     justify-content: flex-start;
     align-items: left;
     flex-direction: column;
+    width: 100%;
     }
-    .general .inputBut a{
-      margin-top: 10px;
+    .general .inputBut #buttonBox{
+      width: 100%;
     }
+    .inputBut button{
+      margin-top: 5px;
+    }
+
 }

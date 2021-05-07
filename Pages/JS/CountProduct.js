@@ -1,82 +1,113 @@
-let carts = document.querySelectorAll('.cartButt');
 
 let products = [
-    {
-        name:'Cute Emotional Octopus',
-        tag:'octo',
-        price: 10.99,
-        inCart: 0
-    },
-    {
-        name:'Weathering With You',
-        tag:'WWY',
-        price: 4.49,
-        inCart: 0
-    },
-    {
-        name:'Your Name',
-        tag:'YN',
-        price: 4.49,
-        inCart: 0
-    },
+  {
+    name: 'Cute Emotional Octopus',
+    tag: 'octo',
+    author: '',
+    price: 4.99,
+    photo: '../Image/Octoplushies/Octo1.jpg',
+    alt:'Octo Product'
+  },
+  {
+    name: 'Weathering With You',
+    tag: 'WWY',
+    author: 'Shinkai Makoto',
+    price: 2.99,
+    photo: '../Image/Books/WeatheringWithYou.jpg',
+    alt:'weathering With You cover'
+
+  },
+  {
+    name: 'Your Name',
+    tag: 'YN',
+    author: 'Shinkai Makoto',
+    price: 2.99,
+    photo: '../Image/Books/YourName.jpg',
+    alt:'Your Name cover'
+  },
 ]
-
-for (let i=0; i<carts.length; i++){
-  carts[i].addEventListener('click',() => {
-    cartNumbers(products[i]);
-  })
-}
-
-function onLoadCartNumbers(){
-  let productNumbers = localStorage.getItem('cartNumbers');
-  if (productNumbers) {
-    document.querySelector('.cart span').textContent = productNumbers;
+//add the product to product id
+var count = 1;//to control the index of the product and the amount of the product bought
+//key=productNo+count
+//value is a string of product name-tag-author-price-photo-amount
+//generating a warning message and be arround for 2 second
+var warningMessage;
+function AddToCart(productid, toOrder) {
+  //renew the count
+  //product from pages may overlap each other
+  //so count will start the new index begin from the saved one
+  let storageCount=localStorage.getItem("Count");
+  if(storageCount!=null)
+  {
+    let result=parseInt(storageCount)+1;
+    count=result;
   }
-}
 
-function cartNumbers(product) {
-    let productNumbers = localStorage.getItem('cartNumbers');
-    productNumbers = parseInt(productNumbers);
-    if (productNumbers) {
-      localStorage.setItem('cartNumbers', productNumbers + 1);
-      document.querySelector('.cart span').textContent = 1;
-    } else {
-      localStorage.setItem('cartNumbers', 1);
-      document.querySelector('.cart span').textContent = 1;
+  warningMessage = document.createElement('div');
+  warningMessage.id = "notify";
+  warningMessage.style.display = 'none';
+  //check logged in status
+  let logged = localStorage.getItem('logStatus');
+  if (!logged || logged == null) {
+    //has not login
+    let parent = document.getElementById('inputBut');
+      parent.appendChild(warningMessage);
+      warningMessage.textContent = "You must login to order";
+      warningMessage.className = 'advice';
+      warningMessage.style.display = 'block';
+      //hide message after 2 second
+      setTimeout(() => {
+        HideWarningMessage();
+      }, 3000);
+    return;
+  }
+  if (productid < products.length) {
+    //get amount
+    let amount = document.getElementById("inp").value;
+    if (amount == 0) {
+      //no item to add
+      let parent = document.getElementById('inputBox');
+      parent.appendChild(warningMessage);
+      warningMessage.textContent = "You cannot buy 0 item";
+      warningMessage.className = 'error';
+      warningMessage.style.display = 'block';
+      //hide message after 2 second
+      setTimeout(() => {
+        HideWarningMessage();
+      }, 3000);
+
     }
-    setItem(product);
-}
-function setItem(product){
-  let cartItems = localStorage.getItem('productsInCart');
-  cartItems = kent.parse(cartItems);
-  if (cartItems != null) {
-    if (cartItems[product.tag]==undefined) {
-      cartItems = {
-        ...cartItems,
-        [product.tag]:product
+    else {
+      let parent = document.getElementById('inputBut');
+      parent.appendChild(warningMessage);
+      warningMessage.textContent = "Your product has been added to cart!!! :)";
+      warningMessage.className = 'fun';
+      warningMessage.style.display = 'block';
+      //hide message after 2 second
+      setTimeout(() => {
+        HideWarningMessage();
+      }, 3000);
+      let productKey = "productNo." + count.toString();
+      let productValue = products[productid].name + ";" + products[productid].tag + ";" + products[productid].author + ";" + products[productid].price.toString()+";" + products[productid].photo + ";"+products[productid].alt+";" + amount.toString();
+      localStorage.setItem(productKey, productValue);
+      //also save the total time of buying product
+      localStorage.setItem("Count",count.toString());
+      count += 1;
+      //to move to order page 
+      if (toOrder) {
+        window.location.replace("OrderPage.html");
       }
     }
-    cartItems[product.tag].inCart +=1;
-  } else{
-    product.inCart = 1;
-    cartItems = {
-      [product.tag]:product
+  }
+  else {
+    //not likely to happen
+    alert("Issue: product id exceed amount in storage");
+  }
+  function HideWarningMessage() {
+    if (warningMessage != null) {
+      warningMessage.style.display = 'none';
     }
   }
-  localStorage.setItem("productsInCart", kent.stringify(cartItems));
-}
-
-function totalCost(product){
-  let cartCost = localStorage.getItem('totalCost');
-  console.log("My cartCost is", cartCost);
-  console.log(typeof cartCost);
-  if (cartCost != null){
-    cartCost = parseInt(cartCost);
-    localStorage.setItem("totalCost", cartCost + product.price);
-  } else {
-    localStorage.setItem("totalCost", product.price);
-  }
 }
 
 
-onLoadCartNumbers();

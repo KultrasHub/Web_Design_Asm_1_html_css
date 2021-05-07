@@ -6,10 +6,10 @@ function infoFunc() {
 
 
   //values for email
-  var emailValue = document.getElementById("emailVeri");
+  var emailValue = document.getElementById("emailVeri").value;
 
   //Conditions
-  if (emailCheck.test(emailValue) != true) {
+  if(!emailCheck.test(emailValue)){
     alert("Please recheck your email as is it not in the correct format.");
     return false;
   }
@@ -18,16 +18,13 @@ function infoFunc() {
   var phoneCheck = /^([0-9][-.]?){9,11}$/;
 
   //values for phone
-  var phoneValue = document.getElementById("phongVeri");
+  var phoneValue = document.getElementById("phoneVeri").value;
 
   //Conditions
-  if (phoneCheck.test(phoneValue) != true) {
+  if(!phoneCheck.test(phoneValue)){
     alert("Please recheck your phone as is it not in the correct format.");
     return false;
-  } else {
-    return true;
   }
-
   //Condition for password
   var passCheck = /^(?=.{8,20})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/;
 

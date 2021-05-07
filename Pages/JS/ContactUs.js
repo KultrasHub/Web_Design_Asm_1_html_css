@@ -8,7 +8,7 @@ var inputBox=document.getElementsByClassName("inputBox");
 var radioBox=document.getElementsByClassName("radioBox");
 var checkBox=document.getElementsByClassName("checkBox");
 
-//input 
+//input
 var nameText=document.getElementById("nameText");
 var emailText=document.getElementById("emailText");
 var phoneText=document.getElementById("phoneText");
@@ -39,13 +39,13 @@ function HidePopUpMenu()
 function CheckValidity()
 {
     //create warning message
-         elem=document.createElement('div');
+        elem=document.createElement('div');
         elem.id='notify';
         elem.style.display='none';
     //check input box
     if(!namePat.test(nameText.value))
     {   inputBox[0].appendChild(elem);
-        nameText.className='invalid';    
+        nameText.className='invalid';
         elem.textContent="Username should contain at least 3 characters";
         elem.className='error';
         elem.style.display='block';
@@ -70,7 +70,7 @@ function CheckValidity()
     }
     //check radio
     if(!phoneRadio.checked&&!emailRadio.checked){
-        
+
         radioBox[0].appendChild(elem);
         elem.textContent="Please select one option!"
         elem.className='error';

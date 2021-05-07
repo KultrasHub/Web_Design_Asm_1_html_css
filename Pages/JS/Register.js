@@ -12,6 +12,13 @@ function infoFunc(){
 
   var zipCheck=/[0-9](?=.{4,6})/;
 
+  //var elem;
+
+  //Create warning message
+  //elem=document.creatElement('div');
+  //elem.id="notify";
+  //elem.style.display="none";
+
   //values
   var emailValue = document.getElementById("emailVeri").value;
 
@@ -52,18 +59,23 @@ function infoFunc(){
     return false;
   }
 
-  if(allCheck.test(firstValue) == false){
+  if(!allCheck.test(firstValue)){
     alert("First name needs to be 3 characters or more.");
-  } else if (allCheck.test(lastValue) == false) {
+    return false;
+  } else if (!allCheck.test(lastValue)) {
     alert("Last name needs to be 3 characters or more.");
-  } else if (allCheck.test(cityValue) == false) {
+    return false;
+  } else if (!allCheck.test(cityValue)) {
     alert("City needs to be 3 characters or more.");
-  } else if (allCheck.test(addressValue) == false) {
+    return false;
+  } else if (!allCheck.test(addressValue)) {
     alert("Address needs to be 3 characters or more.");
+    return false;
   }
 
-  if(zipCheck.test(zipValue) == false){
+  if(!zipCheck.test(zipValue)){
     alert("Zip needs to contain between 4-6 digits.");
+    return false;
   }
   return true;
 }

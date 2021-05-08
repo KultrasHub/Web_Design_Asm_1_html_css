@@ -54,7 +54,7 @@ function CheckValidity()
     {
         inputBox[1].appendChild(elem);
         emailText.className='invalid';
-        elem.textContent="[name]@[domain] no '#$!%^&*()_+=- <>??/:,' allowed domain must contain a dot"
+        elem.textContent="[name]@[domain] no special characters allowed in name and domain, domain must contain a dot";
         elem.className='error';
         elem.style.display='block';
         return false;

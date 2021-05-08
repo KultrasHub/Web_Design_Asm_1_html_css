@@ -156,6 +156,25 @@ margin-right: auto;
 .LoginForm .SendBut a{
   text-decoration: none;
 }
+#notify{
+  margin-top: 0px;
+  padding: 10px;
+  font-size: 12px;
+  width: 60%;
+  height: fit-content;
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 40%;
+  top: -10px;
+}
+
+#notify.error{
+  background-color: #DD2C00
+}
+#notify.advice{
+  background-color: #60D400;
+}
 @media screen and (max-width:500px){
   .LoginForm{
     position: relative;
@@ -175,23 +194,5 @@ margin-right: auto;
     font-size: 14px;
   }
 
-  #notify{
-    margin-top: 0px;
-    padding: 10px;
-    font-size: 12px;
-    width: 60%;
-    height: fit-content;
-    color: #fff;
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: -20px;
-  }
-
-  #notify.error{
-    background-color: #DD2C00
-  }
-  #notify.advice{
-    background-color: #60D400;
-  }
+  
 }

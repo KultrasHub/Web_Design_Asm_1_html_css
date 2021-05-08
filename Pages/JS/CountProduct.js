@@ -1,4 +1,3 @@
-
 let products = [
   {
     name: 'Cute Emotional Octopus',

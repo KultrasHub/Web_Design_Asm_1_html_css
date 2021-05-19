@@ -1,72 +1,70 @@
-body{
+body {
   width: 100%;
-padding: 0;
-margin: 0;
-background-color: #dddddd;
-  font-family: courier,arial,helvetica;
-
+  padding: 0;
+  margin: 0;
+  background-color: #dddddd;
+  font-family: courier, arial, helvetica;
 }
-.background{
+.background {
   position: absolute;
   background-color: #7b7a7c;
   height: 70vh;
   width: 100%;
   top: 0;
   z-index: -1;
-  transform: rotateZ(-35deg)translateX(-30%)translateY(-50vh);
-
+  transform: rotateZ(-35deg) translateX(-30%) translateY(-50vh);
 }
-.LoginForm{
+.LoginForm {
   position: relative;
-background-color: #fff;
-width: 400px;
-padding:40px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 200px;
-display: flex;
-justify-content: center;
-align-items: center;
--webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+  background-color: #fff;
+  width: 400px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
 }
-.LoginForm .FormHeader{
+.LoginForm .FormHeader {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.LoginForm .logo{
+.LoginForm .logo {
   width: 80px;
   height: 80px;
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.LoginForm .FormHeader h2{
+.LoginForm .FormHeader h2 {
   font-size: 40px;
-  color:#212121;
+  color: #212121;
 }
-.LoginForm .inputBox{
+.LoginForm .inputBox {
   width: 100%;
   position: relative;
   margin-top: 10px;
 }
-.LoginForm .inputBox input{
+.LoginForm .inputBox input {
   width: 100%;
   padding: 5px 0;
   font-size: 16px;
   margin: 10px 0;
-  border:none;
+  border: none;
   border-bottom: 2px solid #333;
   outline: none;
 }
-.LoginForm .inputBox input.invalid{
+.LoginForm .inputBox input.invalid {
   border-color: red;
 }
-.LoginForm .inputBox span{
-  position:  absolute;
-  left:0;
+.LoginForm .inputBox span {
+  position: absolute;
+  left: 0;
   padding: 5px 0;
   font-size: 16px;
   margin: 10px 0;
@@ -74,40 +72,40 @@ margin-right: auto;
   transition: 0.5s;
   color: #777;
 }
-.LoginForm .inputBox input:focus~span,
-.LoginForm .inputBox input:valid~span{
-  color:#25bbda;
+.LoginForm .inputBox input:focus ~ span,
+.LoginForm .inputBox input:valid ~ span {
+  color: #25bbda;
   font-size: 12px;
   transform: translateY(-20px);
 }
-.LoginForm .inputBox input:not(:placeholder-shown):invalid~span{
-  color:#25bbda;
+.LoginForm .inputBox input:not(:placeholder-shown):invalid ~ span {
+  color: #25bbda;
   font-size: 12px;
-    transform: translateY(-20px);
+  transform: translateY(-20px);
 }
-.LoginForm .SignUp{
+.LoginForm .SignUp {
   font-size: 14px;
 }
-.LoginForm .SignUp span{
-  color:#666;
+.LoginForm .SignUp span {
+  color: #666;
 }
-.LoginForm .SignUp a{
+.LoginForm .SignUp a {
   text-decoration: none;
 }
-.LoginForm .SignUp a span{
-  color:#ea1573;
+.LoginForm .SignUp a span {
+  color: #ea1573;
 }
-.LoginForm .lowerBar{
+.LoginForm .lowerBar {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
   align-items: center;
 }
-.LoginForm .lowerBar label{
+.LoginForm .lowerBar label {
   color: #333;
   cursor: pointer;
 }
-.LoginForm .lowerBar a{
+.LoginForm .lowerBar a {
   text-decoration: none;
   color: #7b7a7c;
 }
@@ -117,7 +115,7 @@ margin-right: auto;
   justify-content: center;
   align-items: center;
 }
-.LoginForm .SendBut input{
+.LoginForm .SendBut input {
   text-decoration: none;
   display: block;
   margin-left: auto;
@@ -125,10 +123,10 @@ margin-right: auto;
   width: 70%;
   font-size: 16px;
   background: #212121;
-  color:#fff;
-  border:none;
+  color: #fff;
+  border: none;
   cursor: pointer;
-  padding:10px;
+  padding: 10px;
   border-radius: 20px;
 }
 #notify {
@@ -144,27 +142,26 @@ margin-right: auto;
   top: -40px;
 }
 #notify.error {
-  background-color: #DD2C00;
+  background-color: #dd2c00;
 }
 #notify.advice {
   background-color: #35c7b3;
 }
-@media screen and (max-width:500px){
-  .LoginForm{
+@media screen and (max-width: 500px) {
+  .LoginForm {
     position: relative;
-  background-color: #fff;
-  width: 90%;
-  padding:40px 5%;
-
+    background-color: #fff;
+    width: 90%;
+    padding: 40px 5%;
   }
-  .LoginForm .lowerBar{
+  .LoginForm .lowerBar {
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
     font-size: 14px;
     align-items: center;
   }
-  .LoginForm .lowerBar a{
+  .LoginForm .lowerBar a {
     font-size: 14px;
   }
 }

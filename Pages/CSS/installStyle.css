@@ -1,0 +1,11 @@
+.LoginForm{
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+.LoginForm form{
+    position: relative;
+    width: 80%;
+}
+.LoginForm .SignUp{
+    text-align: center;
+}

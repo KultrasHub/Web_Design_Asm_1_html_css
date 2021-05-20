@@ -25,7 +25,7 @@ if ($user) {
 //resgister if no error//
 if (count($error)==0) {
     $password = md5($password);
-    $querry = "INSERT INTO usersave ('PhoneNumber, Email, Password, FirstName') VALUES ('$phonenum,$email,$password,$username')";
+    $querry = "INSERT INTO usersave ('PhoneNumber', 'Email', 'Password', 'FirstName') VALUES ('$phonenum','$email','$password','$username')";
     mysqli_check ($database,$query);
     $_SESSION ['PhoneNumber'] = $phonenum;
     $_SESSION ['Success'] = "You are now logged in";
@@ -33,4 +33,8 @@ if (count($error)==0) {
     header ('location: MyAccount-Logged.php');
 }
 
+//save infor into a file(userInforsave.txt)//
+$myfile = 'userInforsave.txt';
+$file = fopen($myfile,"w+");
+file_put_contents("$file,$querry");
 ?>

@@ -13,7 +13,7 @@ $phonenum = mysqli_real_escape_string($database,$_POST['phoneNumber']);
 $email = mysqli_real_escape_string($database,$_POST['email']);
 $password = mysqli_real_escape_string($database,$_POST['password']);
 
-//check database for existing user with same username//
+//check database for existing user with same username//                 
 $user_check = "SELECT * FROM usersave WHERE PhoneNumber = '$phonenum' or Email = '$email' LIMIT 1";
 $results = mysqli_check($database,$user_check);
 $user = mysqli_fetch($results);

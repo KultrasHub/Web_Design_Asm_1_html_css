@@ -47,27 +47,6 @@ if (isset($_POST["submit"])) {
     }
 }
 
-
-if (count($error) == 0) {
-    $file_open = fopen("userinfor.csv","a");
-    $no_row = count(file("userinfor.csv"));
-    if ($no_row > 1) {
-        $no_row = ($no_row - 1) + 1;
-    }
-    $form_data = array(
-        'id' => $no_row,
-        'phonenum' => $phonenumber,
-        'name' => $username,
-        'email' => $email,
-        'password' => $password
-    );
-    fputcsv($file_open,$form_data);
-    $phonenumber= '';
-    $email='';
-    $username='';
-    $password='';
-}
-
 //for login.php//
 if (isset($_POST['login_user'])) {
     $email = $_POST['email'];

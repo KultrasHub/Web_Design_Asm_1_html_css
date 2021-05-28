@@ -358,7 +358,7 @@
               //time setup
               $now=time();
               $mostRecent=array(0,0,0,0,0,0,0,0,0,0);
-              $mostRecentID=array("0","0","0","0","0","0","0","0","0","0");
+              $mostRecentID=array("0","0","0","0","0","0","0","0","0","0");//at most 10 stores
 
               //find 10 most recent stores
               if(($file=fopen("../Data/products.csv","r"))!=false){
@@ -505,61 +505,70 @@
         <p class="introContent">Check the stores has been featured by developers.</p>
         <div class="container" id="newShop">
             <!--1 ----------------------------------->
+            <?php 
+              //open files
+              if(($file=fopen("../Data/stores.csv","r"))!=false){
+                $headingRead=false;
+                //featured stores
+                $maxAmount=10;
+                $count=0;
+                //image path
+                //display different products and logo 
+              $productPath="../Image/GeneralProduct/";
+              $logoPath="../Image/Logo/";
+              $products=array("Yourname.jpg","Coke.jpeg","chip.jpeg","Perfume.jpg","toyota.jpeg","card1.jpg","bag.jpeg","xBox.jpeg","shoe.jpg","router.jpeg");
+              $logos=array("BookCafe.png","CocaCola.jpg","frito.png","Gucci.jpeg","logo-toyota.jpeg","logoshop2.png","louis.jpeg","MicroSoftLogo.jpg","Out-Sneaking.png","verizon-logo.jpeg");
+              $imgCount=4;
+                while(($data=fgetcsv($file,1000,","))!=false)
+                {
+                  if($data[4]==="TRUE")
+                  {
+                    if($count<$maxAmount)//limit to display at most 10 stores
+                    {
+                      $path1=$productPath.$products[$imgCount];
+                      $path2=$logoPath.$logos[$imgCount];
 
-            <!--box/!-->
-            <div class="box" onclick="location.href='BookWorld.html'">
-                <!--Shop/!-->
-                <div class="shop">
-                    <img src="../Image/Logo/Out-Sneaking.png" alt="">
-                    <h3>Out Sneaking</h3>
-                    <p>Out Sneaking</p>
-                </div>
-                <div class="bestSeller">
-                    <h3>Best Seller</h3>
-                    <!--Best seller on the right/!-->
-                    <div class="product">
-                        <img src="../Image/KentSneaker/AirMax1/AirMax97AllBlack(1).jpg" alt="">
-                        <div class="productDetail">
-                            <h4>Air Max 97</h4>
-                        </div>
-                    </div>
-                </div>
-                <!--Hover Effect/!-->
-                <div class="HoverEffect">
-                    <a href="ProductPage/Product-AirMax97AllBlack.html">
-                        <div class="HoverButton"> Check Now</div>
-                    </a>
-                </div>
-            </div>
-            <!--End Box/!-->
+                    $imgCount+=1;
+                    if($imgCount>=count($products)){
+                      $imgCount=0;
+                    }
+                    $count+=1;
+                    //<!--box/!-->
+                    echo'
+                      <div class="box" onclick="location.href='.'">
+                          <!--Shop/!-->
+                          <div class="shop">
+                              <img src='.$path2.' alt="">
+                              <h3>'.$data[1].'</h3>
+                              <p>'.$data[1].'</p>
+                          </div>
+                          <div class="bestSeller">
+                              <h3>Best Seller</h3>
+                              <!--Best seller on the right/!-->
+                              <div class="product">
+                                  <img src='.$path1.' alt="">
+                                  <div class="productDetail">
+                                      <h4></h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--Hover Effect/!-->
+                          <div class="HoverEffect">
+                              <a>
+                                  <div class="HoverButton"> Check Now</div>
+                              </a>
+                          </div>
+                      </div>';
+           // <!--End Box/!-->
+                    }
+                  }
+                }
 
-            <!--2 ----------------------------------->
-            <!--box/!-->
-            <div class="box" onclick="location.href='BookWorld.html'">
-                <!--Shop/!-->
-                <div class="shop">
-                    <img src="../Image/Logo/BookCafe.png" alt="">
-                    <h3>Book World</h3>
-                    <p>Book World</p>
-                </div>
-                <div class="bestSeller">
-                    <h3>Best Seller</h3>
-                    <!--Best seller on the right/!-->
-                    <div class="product">
-                        <img src="../Image/Books/WeatheringWithYou.jpg" alt="">
-                        <div class="productDetail">
-                            <h4>Weathering With You</h4>
-                        </div>
-                    </div>
-                </div>
-                <!--Hover Effect/!-->
-                <div class="HoverEffect">
-                    <a href="ProductPage/Product-WeatheringWithYou.html">
-                        <div class="HoverButton"> Check Now</div>
-                    </a>
-                </div>
-            </div>
-            <!--End Box/!-->
+                fclose($file);
+              }
+              
+              ?>
+
             <div class="sliderButton">
                 <div class="left-slider-button">
                     <div></div>
@@ -577,92 +586,64 @@
         <h1 class="intro"> Featured Products</h1>
         <p class="introContent"></p>
         <div class="container" id="newShop">
-            <!--1 ----------------------------------->
+            <?php 
+              //open files
+              if(($file=fopen("../Data/products.csv","r"))!=false){
+                $headingRead=false;
+                //featured stores
+                $maxAmount=10;
+                $count=0;
+                //image path
+                //display different products and logo 
+              $productPath="../Image/GeneralProduct/";
+              $products=array("Yourname.jpg","Coke.jpeg","chip.jpeg","Perfume.jpg","toyota.jpeg","card1.jpg","bag.jpeg","xBox.jpeg","shoe.jpg","router.jpeg");
+              $imgCount=4;
+                while(($data=fgetcsv($file,1000,","))!=false)
+                {
+                  if($data[6]==="TRUE")
+                  {
+                    if($count<$maxAmount)//limit to display at most 10 stores
+                    {
+                      $path1=$productPath.$products[$imgCount];
 
-            <!--box/!-->
-            <div class="ProductBox" onclick="location.href='Product-YourName.html'">
-                <img src="../Image/Books/YourName.jpg" alt="">
-                <h3 class="ProTitle">Your Name</h3>
-                <h3 class="Author">Shinkai Makoto</h3>
-                <div class="prices">
-                    <span class="original">4.49</span>
-                    <span class="current">2.99</span>
-                </div>
-                <!--Shop/!-->
-                <!--Hover Effect/!-->
-                <div class="HoverEffect">
-                    <a href="Product-YourName.html">
-                        <div class="HoverButton"> Check Now</div>
-                    </a>
-                </div>
-            </div>
-            <!--End Box/!-->
+                    $imgCount+=1;
+                    if($imgCount>=count($products)){
+                      $imgCount=0;
+                    }
+                    $count+=1;
+                    //<!--box/!-->
+                    echo'<div class="ProductBox" onclick="location.href='.'">
+                      <img src='.$path1.' alt="">
+                      <h3 class="ProTitle">'.$data[1].'</h3>
+                      <h3 class="Author"></h3>
+                      <div class="prices">
+                          <span class="star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          </span>
+                          <span class="current">'.$data[2].'</span>
+                      </div>
+                      <!--Shop/!-->
+                      <!--Hover Effect/!-->
+                      <div class="HoverEffect">
+                          <a href="">
+                              <div class="HoverButton"> Check Now</div>
+                          </a>
+                      </div>
+                  </div>';
+           // <!--End Box/!-->
+                    }
+                  }
+                }
 
-            <!--End slide-->
-            <!--2 ----------------------------------->
+                fclose($file);
+              }
+              
+              ?>
 
-            <!--box/!-->
-            <div class="ProductBox" onclick="location.href='Product-WeatheringWithYou'">
-                <img src="../Image/KentSneaker/AirForce1/AirForce1Para-NoiseV2(1).jpg" alt="">
-                <h3 class="ProTitle">Air Force 1 Para-Noise V2</h3>
-                <h3 class="Author"></h3>
-                <div class="prices">
-                    <span class="original">1,267</span>
-                    <span class="current">1.192</span>
-                </div>
-                <!--Shop/!-->
-                <!--Hover Effect/!-->
-                <div class="HoverEffect">
-                    <a href="Product-WeatheringWithYou.html">
-                        <div class="HoverButton"> Check Now</div>
-                    </a>
-                </div>
-            </div>
-            <!--End Box/!-->
-
-            <!--End slide-->
-            <!--3----------------------------------->
-            <!--box/!-->
-            <div class="ProductBox" onclick="location.href='Product-Octo.html'">
-                <img src="../Image/KentSneaker/Jordan1/Jordan1LowCourtPurple.png" alt="">
-                <h3 class="ProTitle">Jordan 1 Low Court Purple</h3>
-                <h3 class="Author"></h3>
-                <div class="prices">
-                    <span class="original">200</span>
-                    <span class="current">170</span>
-                </div>
-                <!--Shop/!-->
-                <!--Hover Effect/!-->
-                <div class="HoverEffect">
-                    <a href="Product-Octo.html">
-                        <div class="HoverButton">Check Now</div>
-                    </a>
-                </div>
-            </div>
-            <!--End Box/!-->
-
-            <!--End slide-->
-            <!--4 ----------------------------------->
-            <!--box/!-->
-            <div class="ProductBox" onclick="location.href='Product-YourName.htm'">
-                <img src="../Image/IllusionCard/card2.jpg" alt="">
-                <h3 class="ProTitle">Illusion Card</h3>
-                <h3 class="Author"></h3>
-                <div class="prices">
-                    <span class="original">29.99</span>
-                    <span class="current">24.99</span>
-                </div>
-                <!--Shop/!-->
-                <!--Hover Effect/!-->
-                <div class="HoverEffect">
-                    <a href="Product-YourName.html">
-                        <div class="HoverButton"> Check Now</div>
-                    </a>
-                </div>
-            </div>
-            <!--End Box/!-->
-
-            <!--End slide-->
             <div class="sliderButton">
                 <div class="left-slider-button">
                     <div></div>

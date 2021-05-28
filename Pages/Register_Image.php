@@ -1,3 +1,4 @@
+<?php include('Register.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -193,7 +194,7 @@
       </div>
       <div class="SignUp">
         <span>Choose your avatar</span>
-        <a href="MyAccount-Logged.html"><span>Skip for now</span></a>
+        <a href="MyAccount-Login.php"><span>Skip for now</span></a>
       </div>
       <div id="profile-container">
         <image id="profileImage" src="../Image/Profolio/user.png"

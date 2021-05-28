@@ -3,7 +3,7 @@ function FormValidate() {
   var valid = infoFunc();
   if (valid) {
 
-    window.location.replace("Register_Image.html");
+    window.location.replace("Register_Image.php");
   }
 }
 window.onload = function () {

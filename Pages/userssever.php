@@ -2,7 +2,7 @@
 session_start();
 
 //call all element//
-$error = array();
+$error = "";
 $username = "";
 $email = "";
 $phonenumber = "";
@@ -16,7 +16,7 @@ $email = isset($_POST['email']);
 $password = isset($_POST['password']);
 
 //if empty infornmation//
-if (isset($_POST["submit"])) {
+if (isset($_POST["send"])) {
     if (empty($username)) {array_push($error,"Username is required.");}
     if (empty($phonenum)) {array_push($error,"Phone number is required.");}
     if (empty($email)) {array_push($error,"Email is required.");}
@@ -27,8 +27,9 @@ if (isset($_POST["submit"])) {
     }
     //if there is no error
     if (count($error) == 0) {                         
-        $file_open = fopen("userinfor.csv","a");
-        $no_row = count(file("userinfor.csv"));
+        $file_open = fopen("userinfor.csv") or die("Can't open file");
+        $delimiter = ',';
+        $no_row = count(array("userinfor.csv"));
         if ($no_row > 1) {
             $no_row = ($no_row - 1) + 1;
         }
@@ -37,28 +38,22 @@ if (isset($_POST["submit"])) {
             'phonenum' => $phonenumber,
             'name' => $username,
             'email' => $email,
-            'password' => $password
+            'password' => $password,
         );
-        fputcsv($file_open,$form_data);
-        $phonenumber= '';
-        $email='';
-        $username='';
-        $password='';
-    }
-}
-
-//for login.php//
-if (isset($_POST['login_user'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    if (empty($email)) {
-        array_push($error,"Email is required.");
-    }
-    if (empty($password)) {
-        array_push($error,"Password is required.");
-    }
-    if (count($error) == 0) {
-        $password = password_hash($password, $PASSWORD_BCRYPT);
+        $file_put = fopen("userinfor.csv","w+");
+        foreach ($form_data as $infor) {
+            fputcsv($file_put, $_POST[$infor]);
+            $phonenumber = '';
+            $username = '';
+            $email = '';
+            $password = '';
+        }
+        if(count(array_unique($form_data)) != count($form_data)) {
+            array_push("Your phone number and email are unique");
+        } else {
+            array_push("Phone number and email already exist! Try new one.")
+        }
+        fclose($file_open);
     }
 }
 ?>

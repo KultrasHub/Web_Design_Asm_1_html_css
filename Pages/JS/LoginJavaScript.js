@@ -7,7 +7,7 @@ function Login()
   var valid=CheckValidity();
   if(valid)
   {
-    window.location.replace("MyAccount-Logged.html");
+    window.location.replace("MyAccount-Logged.php");
   }
 }
 function CheckValidity() {

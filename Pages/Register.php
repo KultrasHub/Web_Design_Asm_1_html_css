@@ -283,7 +283,7 @@
         </div>
       </div>
       <div class="SendBut">
-        <input type="submit" name="send" value="Next" href="MyAccount-Login.php">
+        <input type="submit" name="send" value="Next" onclick="FormValidate()">
       </div>
     </form>
   </div>

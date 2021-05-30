@@ -26,66 +26,7 @@
             <li onclick="location.href='AboutUs.html'"><a href="AboutUs.html">About Us</a></li>
             <li onclick="location.href='Fees.html'"><a href="Fees.html">Fees</a></li>
             <li onclick="location.href='FAQs.html'"><a href="FAQs.html">FAQs</a></li>
-            <!--Online on desktop-->
-            <li class="Browse" id="hoverBrowse">
-                <k class="BrowseText">Browse</k>
-                <ul class="DropDown">
-                    <li class="DropDownContent">Browse Stores by Name
-                        <ul class="DropDownContainer">
-                            <div class="Holder">
-                                <h3>Letters</h3>
-                                <div class="letters">
-                                    <a href="BrowseStore.html#A">A</a>
-                                    <a href="BrowseStore.html#B">B</a>
-                                    <a href="BrowseStore.html#C">C</a>
-                                    <a href="BrowseStore.html#D">D</a>
-                                    <a href="BrowseStore.html#E">E</a>
-                                    <a href="BrowseStore.html#F">F</a>
-                                    <a href="BrowseStore.html#G">G</a>
-
-                                    <a href="BrowseStore.html#H">H</a>
-                                    <a href="BrowseStore.html#I">I</a>
-
-                                    <a href="BrowseStore.html#J">J</a>
-                                    <a href="BrowseStore.html#K">K</a>
-                                    <a href="BrowseStore.html#L">L</a>
-                                    <a href="BrowseStore.html#M">M</a>
-
-                                    <a href="BrowseStore.html#N">N</a>
-                                    <a href="BrowseStore.html#O">O</a>
-                                    <a href="BrowseStore.html#P">P</a>
-                                    <a href="BrowseStore.html#Q">Q</a>
-
-                                    <a href="BrowseStore.html#R">R</a>
-                                    <a href="BrowseStore.html#S">S</a>
-                                    <a href="BrowseStore.html#T">T</a>
-                                    <a href="BrowseStore.html#U">U</a>
-
-                                    <a href="BrowseStore.html#V">V</a>
-                                    <a href="BrowseStore.html#W">W</a>
-                                    <a href="BrowseStore.html#X">X</a>
-                                    <a href="BrowseStore.html#Y">Y</a>
-                                    <a href="BrowseStore.html#Z">Z</a>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="DropDownContent DropDownEnd">Browse Stores by Category
-                        <ul class="DropDownContainer">
-                            <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
-                                <span> Book Stores</span>
-                            </li>
-                            <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
-                                <span> Toy Stores</span>
-                            </li>
-                            <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
-                                <span> Clothing Stores</span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <!--Online on lower than desktop-->
+            <!--Browse-->
             <li id="buttonBrowse">
                 <input type="checkbox" id='DropDown'>
                 <label class="BrowseText" for="DropDown">
@@ -146,17 +87,32 @@
                         </label>
                         <ul class="DropDownContainer">
                             <!--Detail-->
-                            <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
-                                <span> Book Stores</span>
-                            </li>
-                            <!--Detail-->
-                            <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
-                                <span> Toy Stores</span>
-                            </li>
-                            <!--Detail-->
-                            <li class="DropDownDetail" onclick="location.href='BrowseStoreCate.html'">
-                                <span> Clothing Stores</span>
-                            </li>
+                            <?php 
+                            if(($file=fopen("../Data/categories.csv","r"))!=false){
+                                $headingRead=false;
+                                while(($data=fgetcsv($file,1000,","))!=false)
+                                {
+                                  if($headingRead==true)
+                                  {
+                                  //ignore the first line
+                                    $info=$data[1];
+                                    $link="BrowseStoreCate.php#".$info;
+                                    echo'
+                                    <a href='.$link.'>
+                                    <li class="DropDownDetail">
+                                        <span> '.$info.'</span>
+                                    </li>
+                                    </a>
+                                    ';
+                                  }
+                                  $headingRead=true;
+                                }
+                                fclose($file);
+                              }
+                            ?>
+
+
+
                         </ul>
                     </li>
                 </ul>
@@ -302,9 +258,10 @@
                       {
                         $running=0;
                       }
+                      $link='HomeStore.php?storeID='.$data[0];
                       //extract data
                       //<!--box/!-->
-                      echo'<div class="box" onclick="location.href='.'BookWorld.html.'.'">
+                      echo'<div class="box" onclick="location.href='.$link.'">
                           <!--Shop/!-->
                           <div class="shop">
                               <img src='.$path2.' alt="">
@@ -323,7 +280,7 @@
                           </div>
                           <!--Hover Effect/!-->
                           <div class="HoverEffect">
-                              <a href="">
+                              <a href='.$link.'>
                                   <div class="HoverButton"> Check Now</div>
                               </a>
                           </div>
@@ -410,8 +367,9 @@
                         $running=0;
                       }
                       //extract data
+                      $link="ProductPage.php?productID=".$data[0];
                       //<!--box/!-->
-                      echo'<div class="ProductBox" onclick="location.href='.'">
+                      echo'<div class="ProductBox">
                       <img src='.$path1.' alt="">
                       <h3 class="ProTitle">'.$data[1].'</h3>
                       <h3 class="Author"></h3>
@@ -428,7 +386,7 @@
                       <!--Shop/!-->
                       <!--Hover Effect/!-->
                       <div class="HoverEffect">
-                          <a href="">
+                          <a href='.$link.'>
                               <div class="HoverButton"> Check Now</div>
                           </a>
                       </div>
@@ -533,9 +491,10 @@
                       $imgCount=0;
                     }
                     $count+=1;
+                    $link='HomeStore.php?storeID='.$data[0];
                     //<!--box/!-->
                     echo'
-                      <div class="box" onclick="location.href='.'">
+                      <div class="box" onclick="location.href='.$link.'">
                           <!--Shop/!-->
                           <div class="shop">
                               <img src='.$path2.' alt="">
@@ -554,7 +513,7 @@
                           </div>
                           <!--Hover Effect/!-->
                           <div class="HoverEffect">
-                              <a>
+                              <a href='.$link.'>
                                   <div class="HoverButton"> Check Now</div>
                               </a>
                           </div>
@@ -612,7 +571,8 @@
                     }
                     $count+=1;
                     //<!--box/!-->
-                    echo'<div class="ProductBox" onclick="location.href='.'">
+                    $link="ProductPage.php?productID=".$data[0];
+                    echo'<div class="ProductBox">
                       <img src='.$path1.' alt="">
                       <h3 class="ProTitle">'.$data[1].'</h3>
                       <h3 class="Author"></h3>
@@ -629,7 +589,7 @@
                       <!--Shop/!-->
                       <!--Hover Effect/!-->
                       <div class="HoverEffect">
-                          <a href="">
+                          <a href='.$data[0].'>
                               <div class="HoverButton"> Check Now</div>
                           </a>
                       </div>
@@ -728,5 +688,6 @@
 </body>
 
 </html>
+<script type="text/javascript" src="JS/BrowseBox.js"></script>
 <script type="text/javascript" src="JS/HomeCarousel.js"></script>
 <script type="text/javascript" src="JS/Cookies.js"></script>

@@ -216,7 +216,7 @@
                           $cate=(int)$data[2];
                           if($cate===$i)
                           {
-                            $storeList[$i-1][]=$data[1];//$storeList start from 0, save store name
+                            $storeList[$i-1][]=array($data[0],$data[1]);//$storeList start from 0, save store name
                             break;
                           }
                         }
@@ -234,6 +234,7 @@
                     echo'<h3>'.$categories[$i].'</h3>';
                     //container
                     echo'<div class="storeContainer">';
+                    echo'<span class="locator" id='.$categories[$i].'></span>';
                     if(count($storeList[$i])>0)
                     {
                       foreach($storeList[$i] as $store)
@@ -245,15 +246,18 @@
                         {
                           $running=0;
                         }
+                        $link="HomeStore.php?storeID=".$store[0];
                         echo'
-                          <div class="box" onclick="location.href='.'">
+                          <div class="box">
                           <img src='.$path.' alt="Book World Logo">
                           <div class="information">
-                              <h3 class="shopName">'.$store.'</h3>
-                              <h4 class="category">'.$store.'</h4>
+                              <h3 class="shopName">'.$store[1].'</h3>
+                              <h4 class="category">'.$store[1].'</h4>
                           </div>
                           <div class="HoverEffect">
+                                <a href='.$link.'>
                               <div class="HoverButton"> Check Now</div>
+                              </a>
                           </div>
                           </div>';
                       }

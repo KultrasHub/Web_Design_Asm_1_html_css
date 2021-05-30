@@ -256,15 +256,18 @@
                           }
                           $storeIndex=(int)$id-1;
                           $storeName=$stores[$storeIndex];
+                          $link="HomeStore.php?storeID=".$id;
                           echo'
-                          <div class="box" onclick="location.href='.'">
+                          <div class="box" >
                             <img src='.$path.' alt="Store Logo" />
                             <div class="information">
                                 <h3 class="shopName">'.$storeName.'</h3>
                                 <h4 class="category">'.$storeName.'</h4>
                             </div>
                             <div class="HoverEffect">
+                                <a href='.$link.'>
                                 <div class="HoverButton">Check Now</div>
+                                </a>
                             </div>
                           </div>';
                           //end of a box

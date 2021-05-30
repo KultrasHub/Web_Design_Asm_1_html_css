@@ -126,7 +126,6 @@ text-decoration: none;
   transform-origin:bottom;
   width:50%;
   transform: translate(17px,-3px) rotatez(45deg);
-
 }
 
 /*#endRegion*/
@@ -144,20 +143,26 @@ text-decoration: none;
   padding:25px 0px;
 }
 
-.navLinks .Browse .BrowseText{
+.navLinks #buttonBrowse .BrowseText{
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-.navLinks .Browse{
+.navLinks #buttonBrowse{
   position: relative;
 }
 /* Browse DropDown*/
 #hoverBrowse{
-  
-  display: block;
+  display: none;
 }
 #buttonBrowse{
+  display: block;
+}
+#buttonBrowse input{
   display: none;
+}
+
+#buttonBrowse>#DropDown[type="checkbox"]:checked~ .DropDown{
+  display: block;
 }
 .DropDown{
     cursor: pointer;
@@ -184,24 +189,24 @@ text-decoration: none;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius:10px;
 }
-.navLinks .Browse:hover> .BrowseText{
+.navLinks #buttonBrowse :hover> .BrowseText{
   border-bottom: 1px solid #93e6f1;
   color:#93e6f1;
 }
 .navLinks .DropDown .DropDownContent:hover{
   background-color:#4d4d4d;
 }
-.navLinks .Browse:hover .DropDown{
+.navLinks #buttonBrowse :hover .DropDown{
   box-sizing: border-box;
   font-size: 16px;
   letter-spacing: 0px;
   display: block;
 }
-.navLinks .Browse:hover .DropDownContent:nth-child(1){
+.navLinks #buttonBrowse :hover .DropDownContent:nth-child(1){
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: -200ms;
 }
-.navLinks .Browse:hover .DropDownContent:nth-child(2){
+.navLinks #buttonBrowse :hover .DropDownContent:nth-child(2){
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 0ms;
 }
@@ -253,10 +258,10 @@ padding:0 15px;
   color:#666;
 }
 /*First Holder*/
-.navLinks .Browse .DropDownDetail:hover{
+.navLinks #buttonBrowse .DropDownDetail:hover{
     background-color: #4d4d4d;
 }
-.navLinks .Browse .DropDownDetail{
+.navLinks #buttonBrowse .DropDownDetail{
   background-color: #212121;
     color:#b8b8b8;
     width: 100px;
@@ -264,7 +269,7 @@ padding:0 15px;
     justify-content: center;
     display: flex;
 }
-.navLinks .Browse .DropDownDetail span{
+.navLinks #buttonBrowse .DropDownDetail span{
 font-weight: 300;
 font-size: 14px;
 text-align: center;
@@ -273,17 +278,60 @@ text-align: center;
 .navLinks .DropDown .DropDownContent:hover .DropDownContainer{
   display: block;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(1){
+.navLinks #buttonBrowse:hover .DropDownDetail{
+
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(1){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: -400ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(2){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: -300ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(3){
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: -200ms;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(2){
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(4){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: -100ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(5){
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 0ms;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(3){
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(6){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 100ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(7){
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 200ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(8){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 300ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(9){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 400ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(10){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 500ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(11){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 600ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(12){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 700ms;
+}
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(13){
+  animation: dropDownAnimation 300ms ease-in-out forwards;
+  animation-delay: 800ms;
 }
 /*Contact & animation*/
 header button{

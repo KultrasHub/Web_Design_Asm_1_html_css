@@ -221,6 +221,7 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
   flex-direction: column;
     box-shadow: 1px 1px 30px rgba(0,0,0,0.05);
     cursor: pointer;
@@ -231,12 +232,13 @@ position: relative;
   margin-bottom: 5px;
 }
 .container .ProductBox .ProTitle{
+  text-align: center;
   margin: 0;
   width: 100%;
   height: 20px;
-  font-size: 20px;
-  font-weight: 300;
-  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .container .ProductBox .Author{
@@ -245,12 +247,16 @@ position: relative;
   margin-top: 30px;
   color:#cd995b;
 }
-.container .ProductBox .prices{
+
+.container .ProductBox .prices {
   margin-top: 5px;
   justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+.container .ProductBox .prices .star {
+  font-size: 10px;
 }
 .container .ProductBox .prices .original::before{
   content:'$';

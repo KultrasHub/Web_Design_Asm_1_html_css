@@ -71,10 +71,14 @@ button {
   list-style: none;
   color: #8d8e8a;
   font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .navLinks li {
   display: inline-block;
   padding: 15px 20px;
+  
 }
 .navLinks li a {
   transition: all 0.3s ease 0s;
@@ -83,11 +87,11 @@ button {
 .navLinks li a:hover {
   border-bottom: 1px solid #aaa;
 }
-.navLinks .Browse .BrowseText {
+.navLinks #buttonBrowse .BrowseText {
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-.navLinks .Browse {
+.navLinks #buttonBrowse {
   position: relative;
 }
 .navLinks .BrowseButton .BrowseText {
@@ -96,7 +100,7 @@ button {
 }
 .navLinks .BrowseButton {
   position: relative;
-  display: none;
+  display: block;
 }
 header input[type="checkbox"] {
   display: none;
@@ -129,7 +133,7 @@ header input[type="checkbox"] {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.navLinks .Browse:hover > .BrowseText {
+.navLinks #buttonBrowse:hover > .BrowseText {
   border-bottom: 1px solid #0e626d;
   color: #0e626d;
 }
@@ -137,17 +141,17 @@ header input[type="checkbox"] {
   background-color: #ccc;
   color: #000;
 }
-.navLinks .Browse:hover .DropDown {
+.navLinks #buttonBrowse:hover .DropDown {
   box-sizing: border-box;
   font-size: 16px;
   letter-spacing: 0px;
   display: block;
 }
-.navLinks .Browse:hover .DropDownContent:nth-child(1) {
+.navLinks #buttonBrowse:hover .DropDownContent:nth-child(1) {
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: -200ms;
 }
-.navLinks .Browse:hover .DropDownContent:nth-child(2) {
+.navLinks #buttonBrowse:hover .DropDownContent:nth-child(2) {
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 0ms;
 }
@@ -176,11 +180,11 @@ header input[type="checkbox"] {
 }
 
 /*First Holder*/
-.navLinks .Browse .DropDownDetail:hover {
+.navLinks #buttonBrowse .DropDownDetail:hover {
   background-color: #ccc;
   color: #000;
 }
-.navLinks .Browse .DropDownDetail {
+.navLinks #buttonBrowse .DropDownDetail {
   background-color: #fff;
   color: #333;
   width: 100px;
@@ -267,32 +271,32 @@ header input[type="checkbox"] {
 }
 
 /*#endRegion*/
-.navLinks .Browse .DropDownDetail span {
+.navLinks #buttonBrowse .DropDownDetail span {
   font-weight: 300;
   font-size: 14px;
   text-align: center;
 }
 /*Display submenu in Dropdown content*/
-.navLinks .Browse .DropDown .DropDownContent:hover .DropDownContainer {
+.navLinks #buttonBrowse .DropDown .DropDownContent:hover .DropDownContainer {
   display: block;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(1) {
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(1) {
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: -200ms;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(2) {
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(2) {
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 0ms;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(3) {
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(3) {
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 100ms;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(4) {
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(4) {
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 200ms;
 }
-.navLinks .Browse:hover .DropDownDetail:nth-child(5) {
+.navLinks #buttonBrowse:hover .DropDownDetail:nth-child(5) {
   animation: dropDownAnimation 300ms ease-in-out forwards;
   animation-delay: 300ms;
 }
@@ -424,6 +428,7 @@ footer .LowerBar .Policy li {
     -webkit-box-shadow: 0px 8px 6px -2px rgba(0, 0, 0, 0.34);
     box-shadow: 0px 8px 6px -2px rgba(0, 0, 0, 0.34);
   }
+
   .navLinks .DropDownContent > input:checked ~ .DropDownContainer {
     display: flex;
   }
@@ -437,6 +442,17 @@ footer .LowerBar .Policy li {
     background-color: #333;
     left: 0;
     padding: 0;
+  }
+  .navLinks #buttonBrowse .DropDownDetail {
+    background-color: #434343;
+    color: #aaa;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    cursor: pointer;
   }
   .navLinks .DropDown .DropDownContainer > li {
     width: 100%;
@@ -452,7 +468,7 @@ footer .LowerBar .Policy li {
     position: absolute;
     bottom: -1px;
     height: 2px;
-    background-image: linear-gradient(to right, #606060, #ccc, #606060);
+    background-image: linear-gradient(to right, #434343, rgb(24, 24, 24), #434343);
   }
   .navLinks .DropDown .DropDownContainer > li:hover {
     color: #fff;

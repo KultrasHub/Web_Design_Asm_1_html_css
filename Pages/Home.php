@@ -215,7 +215,7 @@
                   if($headingRead==true)
                   {
                   //ignore the first line
-                  $curDate=$data[3];
+                  $curDate=strtotime($data[3]);
                   $curId=strval($data[0]);
                   //check with 10 most recent
                   $value=DateCheck($curDate,$mostRecent,$curId,$mostRecentID);
@@ -325,7 +325,7 @@
                   if($headingRead==true)
                   {
                   //ignore the first line
-                  $curDate=$data[3];
+                  $curDate=strtotime($data[3]);
                   $curId=strval($data[0]);
                   //check with 10 most recent
                   $value=DateCheck($curDate,$mostRecent,$curId,$mostRecentID);

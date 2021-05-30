@@ -67,7 +67,52 @@ background-image: linear-gradient(to right,#777,#000);
 position: absolute;
 top:-120px
 }
-.content .container .LetterBox> h3{
+.content .container .LetterBox .containerHeader{
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    justify-content: space-between;
+    text-align: center;
+}
+.content .container .LetterBox .containerHeader .pagination{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.content .container .LetterBox .containerHeader a{
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    align-self: center;
+    color:#e98074;
+    font-size: 16px;
+}
+.content .container .LetterBox .containerHeader a:hover{
+    text-decoration: underline;
+}
+.content .container .LetterBox .containerHeader .chosen{
+    color:#e85a4f;
+    font-size: 20px;
+    font-weight: 700;
+}
+.content .container .LetterBox .containerHeader .cover{
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    background-color: #212121;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content .container .LetterBox .containerHeader i{
+    color: #fff;
+    position: absolute;
+    top:7px;
+    left:10px;
+
+}
+.content .container .LetterBox .containerHeader> h3{
     margin-left: 40px;
     font-size: 40px;
     color:#777;
@@ -76,7 +121,7 @@ top:-120px
     margin-right: 30px;
     position: relative;
 }
-.content .container .LetterBox> h3::after{
+.content .container .LetterBox .containerHeader> h3::after{
     font-family: 'Courier New', Courier, monospace;
     content: '›';
     position: absolute;
@@ -106,6 +151,7 @@ top:-120px
     -webkit-box-shadow: 3px 4px 15px 1px rgba(0,0,0,0.37); 
     box-shadow: 3px 4px 15px 1px rgba(0,0,0,0.37);
     cursor: pointer;
+    padding-bottom: 30px;
 }
 .content .container .LetterBox .box img{
 width: 150px;
@@ -115,12 +161,21 @@ height: 150px;
     font-size: 14px;
     text-align: center;
     margin-bottom: 5px;
+    color: rgb(26, 142, 196);
+    font-weight: 700;
+}
+.content .container .LetterBox .box .addedTime{
+    color:#cd995b;
+    position: absolute;
+    font-size: 12px;
+    bottom: 10px;
+    right:10px;
 }
 .content .container .LetterBox .box .AuthorName{
     font-weight: 550;
     color:#cd995b;
 }
-.content .container .LetterBox .box .prices span::before{
+.content .container .LetterBox .box .prices .current::before{
 content: '$';
 }
 .content .container .LetterBox .box .prices .origin{
@@ -131,6 +186,7 @@ content: '$';
 }
 /* HoverVFX */
 .container .box .HoverEffect{
+    top:0px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -139,8 +195,8 @@ content: '$';
     text-align: center;
     justify-content: center;
     align-items: center;
-  display: flex;
-  opacity: 0;
+    display: flex;
+    opacity: 0;
   }
   .container .box .HoverEffect a{
     text-decoration: none;

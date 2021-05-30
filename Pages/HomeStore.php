@@ -19,6 +19,7 @@
         <!--change icon and name base on shop-->
         <a class="LogoName" href="#"><img class="logo" src="../Image/Logo/BookCafe.png" alt="logo" />
             <?php 
+            $id=0;
           if(isset($_GET['storeID']))
           {
             $id=strval($_GET['storeID']);
@@ -46,48 +47,10 @@
             <li><a href="Home.html">Home</a></li>
             <!--change link to one of your store-->
             <li><a href="AboutUs_BookWorld.html">About Us</a></li>
-            <li class="Browse">
-                <k class="BrowseText">Browse</k>
-                <ul class="DropDown">
-                    <li class="DropDownContent">
-                        Browse Stores by Category
-                        <!--Change amount and category names-->
-                        <ul class="DropDownContainer">
-                            <li class="DropDownDetail" onclick="location.href='#LightNovel'">
-                                <span> Light Novel</span>
-                            </li>
-                            <li class="DropDownDetail" onclick="location.href='#Economy'">
-                                <span> Economy</span>
-                            </li>
-                            <li class="DropDownDetail" onclick="location.href='#Detective&Mysterious'">
-                                <span> Detective & Mystery</span>
-                            </li>
-                            <li class="DropDownDetail" onclick="location.href='#Scifi&Fantasy'">
-                                <span> Science Fiction & Fantasy</span>
-                            </li>
-                            <li class="DropDownDetail" onclick="location.href='#SelfImprovement'">
-                                <span> Self Improvement</span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="DropDownContent DropDownEnd">
-                        Browse Products by Time
-                        <ul class="DropDownContainer">
-                            <!--change link to one of your store-->
-                            <li class="DropDownDetail" onclick="location.href='BrowseProducts_BookWorld.html'">
-                                <span> Newest</span>
-                            </li>
-                            <!--change link to one of your store-->
-                            <li class="DropDownDetail" onclick="location.href='BrowseStore_BookWorld.html'">
-                                <span> Oldest</span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="BrowseButton">
-                <input type="checkbox" id="checkBrowseBox" />
-                <label for="checkBrowseBox" class="BrowseText">
+
+            <li class="BrowseButton" id="buttonBrowse">
+                <input type="checkbox" id="DropDown" />
+                <label for="DropDown" class="BrowseText">
                     <div>Browse</div>
                 </label>
                 <ul class="DropDown">
@@ -122,13 +85,25 @@
                         </label>
                         <ul class="DropDownContainer">
                             <!--change link to one of your store-->
-                            <li class="DropDownDetail" onclick="location.href='BrowseProducts_BookWorld.html'">
+                            <?php $link="BrowseProducts.php?storeID=".$id."&pageID=1&dir=0" ;
+                             echo '<a href='.$link.'>';
+                            ?>
+                            <li class="DropDownDetail">
                                 <span> Newest</span>
                             </li>
+                            <?php 
+                             echo'</a>';
+                            ?>
+                            <?php $link="BrowseProducts.php?storeID=".$id."&pageID=1&dir=1" ;
+                             echo '<a href='.$link.'>';
+                            ?>
                             <!--change link to one of your store-->
-                            <li class="DropDownDetail" onclick="location.href='BrowseStore_BookWorld.html'">
+                            <li class="DropDownDetail" >
                                 <span> Oldest</span>
                             </li>
+                            <?php 
+                             echo'</a>';
+                            ?>
                         </ul>
                     </li>
                 </ul>
@@ -379,7 +354,7 @@
                         $tempID=(int)$data[4];
                         if($storedID===$tempID)//only save the products belong to this shop
                         {
-                            $curDate=$data[3];
+                            $curDate=strtotime($data[3]);
                             $curId=strval($data[0]);
                             //check with 10 most recent
                             $value=DateCheck($curDate,$mostRecent,$curId,$mostRecentID);
@@ -491,3 +466,4 @@
 
 </html>
 <script type="text/javascript" src="JS/Cookies.js"></script>
+<script type="text/javascript" src="JS/BrowseBox.js"></script>

@@ -301,10 +301,15 @@
                 $running=0;
                 //place to start
                 $whereToStart=((int)$pageID-1)*$storePerPage;
+                
                 $whereToStop=$whereToStart+$storePerPage;
                 //read file again to extract data for boxes
                 for($i=$whereToStart;$i<$whereToStop;$i++)//loop through products id that is in order
                 {
+                  if($i>=count($mostRecentID))
+                  {
+                    break;
+                  }
                   foreach($productsList as $data)//loop through products in no order
                   {
                     if($mostRecentID[$i]==$data[0])

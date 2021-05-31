@@ -1,6 +1,16 @@
 <?php 
+<<<<<<< HEAD
 session_start();
 ?>
+=======
+
+//Checking to see if install.php still exists or not
+
+if(file_exists("../install.php")){
+    die("Please locate the existing file called 'install.php' and remove it, then attempt to restart the website again.");
+}; ?>
+
+>>>>>>> b37ad2d33a9d12f2bd622455384e954dd559cee4
 <!DOCTYPE html>
 <html lang="en">
 

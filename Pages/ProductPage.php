@@ -1,3 +1,4 @@
+<?php include('MemberVeri.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -270,7 +271,7 @@
         <span class="originalPrice">10.99</span>
 
         <span class="currentPrice">
-          <?php echo$price ?>
+          <?php echo $price ?>
         </span>
       </div>
       <div class="ButtonSection">
@@ -279,8 +280,16 @@
         </div>
         <div class="inputBut"id="inputBut">
           <div id="buttonBox">
-            <button onclick="AddToCart(0,true)">Order Now</button>
+
+          <?php echo"<a href='$accessLink'>" ?>
+
+            <button>Order Now</button>
+
+          <?php echo"</a>"; ?>
           </div>
+
+
+
           <div id="buttonBox">
             <button onclick="AddToCart(0,false)">Add</button>
           </div>

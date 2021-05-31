@@ -1,16 +1,6 @@
 <?php 
-<<<<<<< HEAD
 session_start();
 ?>
-=======
-
-//Checking to see if install.php still exists or not
-
-if(file_exists("../install.php")){
-    die("Please locate the existing file called 'install.php' and remove it, then attempt to restart the website again.");
-}; ?>
-
->>>>>>> b37ad2d33a9d12f2bd622455384e954dd559cee4
 <!DOCTYPE html>
 <html lang="en">
 
@@ -155,14 +145,22 @@ if(file_exists("../install.php")){
                 }
               }
             }
+            $loggedIn=false;
+            $myAccountLink="MyAccount-Login.php";
+            if(isset($_SESSION['loggedIn'])&&$_SESSION['loggedIn']==TRUE)
+            {
+                $loggedIn=true;
+                $myAccountLink="MyAccount-Logged.php";
+            }
+            
             ?>
-            <a id="myAcount" class="myAcount" onclick="MyAccount()">
+            <a id="myAcount" class="myAcount" href =<?php echo$myAccountLink;  ?> >
             <img src=<?php echo$avatarLink; ?> alt="">
         </a>
         </ul>
         <div class="headerSimulator">
             <div class="holder">
-                <a href="" class="myAcount top_right" onclick="MyAccount()"><img src=<? echo$avatarLink; ?>
+                <a href="" class="myAcount top_right" href =<?php echo$myAccountLink;  ?>><img src=<? echo$avatarLink; ?>
                         alt=""></a>
                 <label class="Ham" for="check" onclick="HamDisplay()">
                     <input type="checkbox" id="check" />

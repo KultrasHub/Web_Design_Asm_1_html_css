@@ -109,8 +109,43 @@ session_start();
                     </li>
                 </ul>
             </li>
-            <a href="Contact_Store.php" class="contact">
-                <button type="button" name="button">Contact</button></a>
+            <a href="Contact.php" class="contact"> <button type="button" name="button">Contact</button></a>
+            <?php 
+            $id=0;
+            $avatarLink="../Image/Profolio/profile-user.png";
+      
+            if(isset($_SESSION['userID']))
+            {
+              $id= (int)$_SESSION['userID'];
+              if($id!=0)
+              {
+                //get photo
+                if(($file=fopen("../userinfo.csv","r"))!=false)
+                {
+                  while(($data=fgetcsv($file,1000,","))!=false)
+                  {
+                    $curId=(int)$data[0];
+                    if($id===$curId)
+                    {
+                      $avatarLink=$data[8];
+                    }
+                  }
+                  fclose($file);
+                }
+              }
+            }
+            $loggedIn=false;
+            $myAccountLink="MyAccount-Login.php";
+            if(isset($_SESSION['loggedIn'])&&$_SESSION['loggedIn']==TRUE)
+            {
+                $loggedIn=true;
+                $myAccountLink="MyAccount-Logged.php";
+            }
+            
+            ?>
+            <a id="myAcount" class="myAcount" href =<?php echo$myAccountLink;  ?> >
+            <img src=<?php echo$avatarLink; ?> alt="">
+        </a>
         </ul>
         <!--Chnage link to one of your store-->
 

@@ -120,7 +120,7 @@ session_start();
                     </li>
                 </ul>
             </li>
-            <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+            <a href="Contact.php" class="contact"> <button type="button" name="button">Contact</button></a>
             <?php 
             $id=0;
             $avatarLink="../Image/Profolio/profile-user.png";

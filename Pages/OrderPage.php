@@ -1,4 +1,8 @@
+<?php 
+session_start();
+?>
 <?php $thankLink="ThankYouPage.html"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +29,8 @@
         <ul class="navLinks" id="navigationBar">
             <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
             <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
-            <li onclick="location.href='Fees.html'"><a href="Fees.html">Fees</a></li>
-            <li onclick="location.href='FAQs.html'"><a href="FAQs.html">FAQs</a></li>
+            <li onclick="location.href='Fees.php'"><a href="Fees.html">Fees</a></li>
+            <li onclick="location.href='FAQs.php'"><a href="FAQs.html">FAQs</a></li>
             <!--Browse-->
             <li id="buttonBrowse">
                 <input type="checkbox" id='DropDown'>
@@ -261,13 +265,13 @@
                 <a href="#">
                     <li>Order Status</li>
                 </a>
-                <a href="FAQs.html">
+                <a href="FAQs.php">
                     <li>FAQs</li>
                 </a>
-                <a href="Contact.html">
+                <a href="Contact.php">
                     <li>Contact Us</li>
                 </a>
-                <a href="Fees.html">
+                <a href="Fees.php">
                     <li>Fees</li>
                 </a>
                 <a href="#">

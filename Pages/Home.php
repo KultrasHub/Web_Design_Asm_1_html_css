@@ -19,14 +19,14 @@ session_start();
 
 <body>
     <header>
-        <a href="Home.html" class="LogoName">
+        <a href="Home.php" class="LogoName">
             <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
             <span>Bare Bears</span>
         </a>
 
         <ul class="navLinks" id="navigationBar">
-            <li onclick="location.href='Home.html'"><a href="Home.html">Home</a></li>
-            <li onclick="location.href='AboutUs.html'"><a href="AboutUs.html">About Us</a></li>
+            <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
+            <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
             <li onclick="location.href='Fees.html'"><a href="Fees.html">Fees</a></li>
             <li onclick="location.href='FAQs.html'"><a href="FAQs.html">FAQs</a></li>
             <!--Browse-->
@@ -47,37 +47,37 @@ session_start();
                             <div class="Holder">
                                 <h3>Letters</h3>
                                 <div class="letters">
-                                    <a href="BrowseStore.html#A">A</a>
-                                    <a href="BrowseStore.html#B">B</a>
-                                    <a href="BrowseStore.html#C">C</a>
-                                    <a href="BrowseStore.html#D">D</a>
-                                    <a href="BrowseStore.html#E">E</a>
-                                    <a href="BrowseStore.html#F">F</a>
-                                    <a href="BrowseStore.html#G">G</a>
+                                    <a href="BrowseStore.php#A">A</a>
+                                    <a href="BrowseStore.php#B">B</a>
+                                    <a href="BrowseStore.php#C">C</a>
+                                    <a href="BrowseStore.php#D">D</a>
+                                    <a href="BrowseStore.php#E">E</a>
+                                    <a href="BrowseStore.php#F">F</a>
+                                    <a href="BrowseStore.php#G">G</a>
 
-                                    <a href="BrowseStore.html#H">H</a>
-                                    <a href="BrowseStore.html#I">I</a>
+                                    <a href="BrowseStore.php#H">H</a>
+                                    <a href="BrowseStore.php#I">I</a>
 
-                                    <a href="BrowseStore.html#J">J</a>
-                                    <a href="BrowseStore.html#K">K</a>
-                                    <a href="BrowseStore.html#L">L</a>
-                                    <a href="BrowseStore.html#M">M</a>
+                                    <a href="BrowseStore.php#J">J</a>
+                                    <a href="BrowseStore.php#K">K</a>
+                                    <a href="BrowseStore.php#L">L</a>
+                                    <a href="BrowseStore.php#M">M</a>
 
-                                    <a href="BrowseStore.html#N">N</a>
-                                    <a href="BrowseStore.html#O">O</a>
-                                    <a href="BrowseStore.html#P">P</a>
-                                    <a href="BrowseStore.html#Q">Q</a>
+                                    <a href="BrowseStore.php#N">N</a>
+                                    <a href="BrowseStore.php#O">O</a>
+                                    <a href="BrowseStore.php#P">P</a>
+                                    <a href="BrowseStore.php#Q">Q</a>
 
-                                    <a href="BrowseStore.html#R">R</a>
-                                    <a href="BrowseStore.html#S">S</a>
-                                    <a href="BrowseStore.html#T">T</a>
-                                    <a href="BrowseStore.html#U">U</a>
+                                    <a href="BrowseStore.php#R">R</a>
+                                    <a href="BrowseStore.php#S">S</a>
+                                    <a href="BrowseStore.php#T">T</a>
+                                    <a href="BrowseStore.php#U">U</a>
 
-                                    <a href="BrowseStore.html#V">V</a>
-                                    <a href="BrowseStore.html#W">W</a>
-                                    <a href="BrowseStore.html#X">X</a>
-                                    <a href="BrowseStore.html#Y">Y</a>
-                                    <a href="BrowseStore.html#Z">Z</a>
+                                    <a href="BrowseStore.php#V">V</a>
+                                    <a href="BrowseStore.php#W">W</a>
+                                    <a href="BrowseStore.php#X">X</a>
+                                    <a href="BrowseStore.php#Y">Y</a>
+                                    <a href="BrowseStore.php#Z">Z</a>
                                 </div>
                             </div>
                         </ul>
@@ -668,10 +668,10 @@ session_start();
             </div>
             <div class="shop">
                 <h1>Top Category</h1>
-                <a href="BrowseStore.html">
+                <a href="BrowseStore.php">
                     <li>Book Stores</li>
                 </a>
-                <a href="BrowseStore.html">
+                <a href="BrowseStore.php">
                     <li>Toy Stores</li>
                 </a>
             </div>
@@ -714,10 +714,10 @@ session_start();
                 Copyright© Bare Bears 2021
             </section>
             <section class="Policy">
-                <a href="TermOfUse.html">
+                <a href="TermOfUse.php">
                     <li>Term Of Service</li>
                 </a>
-                <a href="PrivacyPolicy.html">
+                <a href="PrivacyPolicy.php">
                     <li>Privacy Policy</li>
                 </a>
             </section>

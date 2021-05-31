@@ -1,4 +1,62 @@
-<?php include('userssever.php') ?>
+<?php 
+session_start();
+//count the times email is found different and the overall loop
+$difEmail=0;
+$loopTime=0;
+//to display message
+$emailFailed=false;
+$passWordFailed=false;
+if(isset($_GET['send']))
+{
+    $email=strval($_GET['emailUser']);
+    $pass=$_GET['password'];
+    if(file_exists("../../contacts.csv"))
+    {
+    if(($file=fopen("../../contacts.csv","r"))!=false)
+    {
+      while(($data=fgetcsv($file,1000,","))!=false)//email-password-IsAdmin
+      {
+        $loopTime++;
+        $curEmail=$data[0];
+        if($email==$curEmail)//looking for the saved email
+        {
+          $hash=$data[1];
+          if(password_verify($pass,$hash))
+          {
+            $_SESSION['loggedIn']=true;
+            $_SESSION['userID']=$data[3];
+            if($data[2]=="TRUE")
+            {
+              header('Location:DashBoard.php');
+            }
+            else{
+              header('Location:MyAccount-Logged.php');
+            }
+            break;//cancel loop
+          }
+          else{
+            $passWordFailed=true;
+          }
+        }
+        else{
+          //will not count the the email is found
+          //so it will be different that $looptime
+          $difEmail++;
+        }
+      }
+      //check if the email is unfound
+      if($difEmail===$loopTime)
+      {
+        //email not found
+        $emailFailed=true;
+      }
+      //print("Wrong Email");
+      fclose($file);
+    }    
+    } 
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -175,7 +233,7 @@
   <div class="background">
   </div>
   <div class="LoginForm">
-    <form action="MyAccount-Logged.html" method="get" onsubmit="event.preventDefault(); Login()">
+    <form action="MyAccount-Login.php" method="get" onsubmit="Login(e)">
       <div class="FormHeader">
         <img src="../Image/Essen/barebear.png" alt="" class="logo">
         <h2>Bare Bears</h2>
@@ -188,10 +246,22 @@
         <input type="email" name="emailUser" placeholder=" " required id="emailInput" />
         <span>Email</span>
       </div>
+      <?php 
+      if($emailFailed)
+      {
+        echo'<div class="notice"> The email user does not exist</div>';
+      } ?>
       <div class="inputBox" action="cms.php">
         <input type="password" name="password" placeholder=" " required id="passwordInput" />
         <span>Password</span>
       </div>
+      <?php 
+      if($passWordFailed)
+      {
+        echo' <div class="notice"> Wrong password</div>';
+      }
+      ?>
+
       <div class="lowerBar">
         <div class="checkBox">
           <input type="checkbox" name="rememberMe" id="RememeberMe" />

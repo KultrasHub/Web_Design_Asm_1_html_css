@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -172,27 +175,88 @@
   </header>
   <div class="Profile">
     <span class="profile">My Profile</span>
-    <img src="../Image/Profolio/profile-user.png" alt="Profile Photo">
-    <span class="userName">Anonymous User</span>
+    <?php 
+      $id=0;
+      $avatarLink="../Image/Profolio/profile-user.png";
+
+      if(isset($_SESSION['userID']))
+      {
+        $id= (int)$_SESSION['userID'];
+        if($id!=0)
+        {
+          //get photo
+          if(($file=fopen("../userinfo.csv","r"))!=false)
+          {
+            while(($data=fgetcsv($file,1000,","))!=false)
+            {
+              $curId=(int)$data[0];
+              if($id===$curId)
+              {
+                $avatarLink=$data[8];
+                echo'
+                <img src='.$avatarLink.' alt="Profile Photo">
+                ';
+                $firstName=$data[1];
+                $lastName=$data[2];
+                $name=$firstName.' '.$lastName;
+                echo'
+                <span class="userName">'.$name.'</span>
+                ';
+              }
+            }
+            fclose($file);
+          }
+        }
+      }
+    ?>
+
   </div>
   <div class="Detail">
     <!--Personal Info-->
     <div class="container">
+    <?php 
+
+      $userName="";
+      $phone="";
+      $email="";
+      $address="";
+      if($id!=0)
+      {
+        //get photo
+        if(($file=fopen("../userinfo.csv","r"))!=false)
+        {
+          while(($data=fgetcsv($file,1000,","))!=false)
+          {
+            $curId=(int)$data[0];
+            if($id===$curId)
+            {
+              $userName=$data[1]." ".$data[2];
+              $phone=$data[4];
+              $email=$data[3];
+              $address=$data[5];
+            }
+          }
+          fclose($file);
+        }
+      }
+      
+    ?>
     <div class="box">
       <span class="info">User Name</span>
-      <span class="detail" id="userName">bear_6s9g</span>
+      <?php  ?>
+      <span class="detail" id="userName"> <?php echo$userName; ?> </span>
     </div>
     <div class="box">
       <span class="info">Phone</span>
-      <span class="detail" id="phone">0123 456 789</span>
+      <span class="detail" id="phone"><?php echo$phone; ?></span>
     </div>
     <div class="box">
       <span class="info">Email</span>
-      <span class="detail" id="email">baka@gmail.com</span>
+      <span class="detail" id="email"><?php echo$email; ?></span>
     </div>
     <div class="box">
       <span class="info">Address</span>
-      <span class="detail" id="address">Space Grove</span>
+      <span class="detail" id="address"><?php echo$address; ?></span>
     </div>
     <div class="box">
       <span class="info">Gender</span>

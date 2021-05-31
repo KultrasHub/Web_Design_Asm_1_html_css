@@ -147,6 +147,10 @@ body {
 #notify.advice {
   background-color: #35c7b3;
 }
+.notice{
+  font-size: 12px;
+  color:crimson;
+}
 @media screen and (max-width: 500px) {
   .LoginForm {
     position: relative;

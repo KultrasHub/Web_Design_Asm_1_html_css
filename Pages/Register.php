@@ -1,4 +1,3 @@
-<?php include('userssever.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -182,7 +181,7 @@
     </div>
   </div>
   <div class="LoginForm">
-    <form action="Register_Image.html" method="get" onsubmit="event.preventDefault(); FormValidate();">
+    <form action="userssever.php" method="post" onsubmit="FormValidate(event);">
       <div class="FormHeader">
         <img src="../Image/Essen/barebear.png" alt="" class="logo">
         <h2>Bare Bears</h2>

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,11 +121,38 @@
                 </ul>
             </li>
             <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
-            <a id="myAcount" class="myAcount" onclick="MyAccount()"><img src="../Image/Profolio/user.png" alt=""></a>
+            <?php 
+            $id=0;
+            $avatarLink="../Image/Profolio/profile-user.png";
+      
+            if(isset($_SESSION['userID']))
+            {
+              $id= (int)$_SESSION['userID'];
+              if($id!=0)
+              {
+                //get photo
+                if(($file=fopen("../userinfo.csv","r"))!=false)
+                {
+                  while(($data=fgetcsv($file,1000,","))!=false)
+                  {
+                    $curId=(int)$data[0];
+                    if($id===$curId)
+                    {
+                      $avatarLink=$data[8];
+                    }
+                  }
+                  fclose($file);
+                }
+              }
+            }
+            ?>
+            <a id="myAcount" class="myAcount" onclick="MyAccount()">
+            <img src=<?php echo$avatarLink; ?> alt="">
+        </a>
         </ul>
         <div class="headerSimulator">
             <div class="holder">
-                <a href="" class="myAcount top_right" onclick="MyAccount()"><img src="../Image/Profolio/user.png"
+                <a href="" class="myAcount top_right" onclick="MyAccount()"><img src=<? echo$avatarLink; ?>
                         alt=""></a>
                 <label class="Ham" for="check" onclick="HamDisplay()">
                     <input type="checkbox" id="check" />

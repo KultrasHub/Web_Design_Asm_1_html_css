@@ -181,14 +181,7 @@
     </div>
   </div>
   <div class="LoginForm">
-    <?php 
-    $link="Register_Save_Img.php";
-    if(isset($_GET["userID"]))
-    {
-      $link="Register_Save_Img.php?userID=".$_GET['userID'];
-    }
-    echo'<form action='.$link.' method="post" enctype="multipart/form-data">';
-    ?>
+    <form action="MyAccount-Login.php" method="get">
       <a class="return" href="Register.php">
         <div class="container">
           <div class="icon"></div>
@@ -209,7 +202,7 @@
         <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
       </div>
       <div class="SendBut">
-        <input type="submit" name="ImageUploader" value="Register">
+        <input type="submit" name="send" value="Register">
       </div>
     </form>
   </div>

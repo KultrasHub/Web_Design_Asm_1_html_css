@@ -350,12 +350,13 @@ header button:hover{
 /*my Account& animation*/
 .myAcount img{
   margin-left: 15px;
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   padding: 3px;
   transition: all 0.3s ease 0s;
   border-radius: 50%;
   background-color: #d1d4d5;
+  cursor: pointer;
 }
 .myAcount img:hover{
 

@@ -2,12 +2,13 @@
 var elem;//warning menu
 var emailText = document.getElementById("emailInput");
 var passwordText = document.getElementById("passwordInput");
-function Login()
-{
-  var valid=CheckValidity();
-  if(valid)
-  {
-    window.location.replace("MyAccount-Logged.php");
+function Login(e) {
+  var valid = CheckValidity();
+  if (valid) {
+    //window.location.replace("MyAccount-Logged.php");
+  }
+  else {
+    e.preventDefault();
   }
 }
 function CheckValidity() {
@@ -49,16 +50,16 @@ function CheckValidity() {
     return false;
   }
   //save email
-  window.localStorage.setItem('userEmail',emailText.value);
-  window.localStorage.setItem('logStatus',true);
+  window.localStorage.setItem('userEmail', emailText.value);
+  window.localStorage.setItem('logStatus', true);
   return true;
   //remove notify
 }
-emailText.addEventListener("input",function(){
-  emailText.className="";
-  elem.style.display="none";
+emailText.addEventListener("input", function () {
+  emailText.className = "";
+  elem.style.display = "none";
 });
-passwordText.addEventListener("input",function(){
-  passwordText.className = ''; 
-  elem.style.display="none";
+passwordText.addEventListener("input", function () {
+  passwordText.className = '';
+  elem.style.display = "none";
 });

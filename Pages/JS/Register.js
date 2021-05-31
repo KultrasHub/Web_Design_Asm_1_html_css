@@ -1,9 +1,11 @@
 var elem;
-function FormValidate() {
+function FormValidate(e) {
   var valid = infoFunc();
   if (valid) {
-
-    window.location.replace("Register_Image.php");
+    //be useless
+  }
+  else {
+    e.preventDefault();
   }
 }
 window.onload = function () {
@@ -58,9 +60,8 @@ window.onload = function () {
     }
   })
   zip.addEventListener("input", function () {
-    if(elem!=null)
-    {
-    elem.style.display = 'none';
+    if (elem != null) {
+      elem.style.display = 'none';
     }
   })
 

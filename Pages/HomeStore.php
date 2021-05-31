@@ -44,9 +44,9 @@
         ?>
         </a>
         <ul class="navLinks" id="navBar">
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="Home.php">Home</a></li>
             <!--change link to one of your store-->
-            <li><a href="AboutUs_BookWorld.html">About Us</a></li>
+            <li><a href=<?php echo"AboutUs_Store.php?storeID=".$id ?>>About Us</a></li>
 
             <li class="BrowseButton" id="buttonBrowse">
                 <input type="checkbox" id="DropDown" />
@@ -61,19 +61,19 @@
                         </label>
                         <!--Change amount and category names-->
                         <ul class="DropDownContainer">
-                            <li class="DropDownDetail" onclick="todo('BookWorld.html#LightNovel')">
+                            <li class="DropDownDetail" >
                                 <span> Light Novel</span>
                             </li>
-                            <li class="DropDownDetail" onclick="todo('BookWorld.html#Economy')">
+                            <li class="DropDownDetail" >
                                 <span> Economy</span>
                             </li>
-                            <li class="DropDownDetail" onclick="todo('BookWorld.html#Detective&Mysterious')">
+                            <li class="DropDownDetail" >
                                 <span> Detective & Mystery</span>
                             </li>
-                            <li class="DropDownDetail" onclick="todo('BookWorld.html#Scifi&Fantasy')">
+                            <li class="DropDownDetail" >
                                 <span> Science Fiction & Fantasy</span>
                             </li>
-                            <li class="DropDownDetail" onclick="todo('BookWorld.html#SelfImprovement')">
+                            <li class="DropDownDetail" >
                                 <span> Self Improvement</span>
                             </li>
                         </ul>
@@ -108,7 +108,7 @@
                     </li>
                 </ul>
             </li>
-            <a href="Contact_BookWorld.html" class="contact">
+            <a href=<?php echo"Contact_Store.php?storeID=".$id ?> class="contact">
                 <button type="button" name="button">Contact</button></a>
         </ul>
         <!--Chnage link to one of your store-->

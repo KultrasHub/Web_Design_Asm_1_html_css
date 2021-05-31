@@ -14,116 +14,113 @@
 <body>
     <!--Header-->
     <header>
-      <!--change icon and name base on shop-->
-      <a class="LogoName"><img class="logo" src="../Image/Logo/BookCafe.png" alt="logo"><span>Book World</span></a>
-      <div class="backgroundLock">
-        <div class="background">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-              <path fill="#cccccc" fill-opacity="1"
-                d="M0,320L24,298.7C48,277,96,235,144,197.3C192,160,240,128,288,149.3C336,171,384,245,432,261.3C480,277,528,235,576,218.7C624,203,672,213,720,218.7C768,224,816,224,864,218.7C912,213,960,203,1008,208C1056,213,1104,235,1152,208C1200,181,1248,107,1296,96C1344,85,1392,139,1416,165.3L1440,192L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
-              </path>
-            </svg>
-          </div>
-        </div>
-      </div>
+        <!--change icon and name base on shop-->
+        <a class="LogoName" href="#"><img class="logo" src="../Image/Logo/BookCafe.png" alt="logo" />
+            <?php 
+            $id=0;
+          if(isset($_GET['storeID']))
+          {
+            $id=strval($_GET['storeID']);
+            if(($file=fopen("../Data/stores.csv","r"))!=false){
+              $headingRead=false;
+              while(($data=fgetcsv($file,1000,","))!=false)
+              {
+                if($headingRead==true)//ignore the title line
+                {
+                  $storedID=strval($data[0]);
+                  if($id===$storedID)
+                  {
+                    echo"<span>".$data[1]."</span>";
+                    break;
+                  }
+                }
+                $headingRead=true;
+              }
+              fclose($file);
+            }
+          }
+        ?>
+        </a>
         <ul class="navLinks" id="navBar">
-          <li><a href="Home.html">Home</a></li>
-          <!--change link to one of your store-->
-          <li><a href="AboutUs_BookWorld.html">About Us</a></li>
-          <li class="Browse">
-            <k class="BrowseText">Browse</k>
-            <ul class="DropDown">
-              <li class="DropDownContent">Browse Stores by Category
-                <!--Change amount and category names-->
-                <ul class="DropDownContainer">
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#LightNovel'">
-                    <span> Light Novel</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#Economy'">
-                    <span> Economy</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#Detective&Mysterious'">
-                    <span> Detective & Mystery</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#Scifi&Fantasy'">
-                    <span> Science Fiction & Fantasy</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#SelfImprovement'">
-                    <span> Self Improvement</span>
-                  </li>
+            <li><a href="Home.php">Home</a></li>
+            <!--change link to one of your store-->
+            <li><a href=<?php echo"AboutUs_Store.php?storeID=".$id ?>>About Us</a></li>
+
+            <li class="BrowseButton" id="buttonBrowse">
+                <input type="checkbox" id="DropDown" />
+                <label for="DropDown" class="BrowseText">
+                    <div>Browse</div>
+                </label>
+                <ul class="DropDown">
+                    <li class="DropDownContent">
+                        <input type="checkbox" id="BrowseContent" />
+                        <label for="BrowseContent">
+                            <div>Browse Products by Category</div>
+                        </label>
+                        <!--Change amount and category names-->
+                        <ul class="DropDownContainer">
+                            <li class="DropDownDetail" >
+                                <span> Light Novel</span>
+                            </li>
+                            <li class="DropDownDetail" >
+                                <span> Economy</span>
+                            </li>
+                            <li class="DropDownDetail" >
+                                <span> Detective & Mystery</span>
+                            </li>
+                            <li class="DropDownDetail" >
+                                <span> Science Fiction & Fantasy</span>
+                            </li>
+                            <li class="DropDownDetail" >
+                                <span> Self Improvement</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="DropDownContent DropDownEnd">
+                        <input type="checkbox" id="BrowseContentByTime" />
+                        <label for="BrowseContentByTime">
+                            <div>Browse Products by Time</div>
+                        </label>
+                        <ul class="DropDownContainer">
+                            <!--change link to one of your store-->
+                            <?php $link="BrowseProducts.php?storeID=".$id."&pageID=1&dir=0" ;
+                             echo '<a href='.$link.'>';
+                            ?>
+                            <li class="DropDownDetail">
+                                <span> Newest</span>
+                            </li>
+                            <?php 
+                             echo'</a>';
+                            ?>
+                            <?php $link="BrowseProducts.php?storeID=".$id."&pageID=1&dir=1" ;
+                             echo '<a href='.$link.'>';
+                            ?>
+                            <!--change link to one of your store-->
+                            <li class="DropDownDetail" >
+                                <span> Oldest</span>
+                            </li>
+                            <?php 
+                             echo'</a>';
+                            ?>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-              <li class="DropDownContent DropDownEnd">Browse Products by Time
-                <ul class="DropDownContainer">
-                  <!--change link to one of your store-->
-                  <li class="DropDownDetail" onclick="location.href='BrowseProducts_BookWorld.html'">
-                    <span> Newest</span>
-                  </li>
-                  <!--change link to one of your store-->
-                  <li class="DropDownDetail" onclick="location.href='BrowseStore_BookWorld.html'">
-                    <span> Oldest</span>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="BrowseButton">
-            <input type="checkbox" id="checkBrowseBox" >
-            <label for="checkBrowseBox" class="BrowseText"> <div>Browse</div></label>
-            <ul class="DropDown">
-              <li class="DropDownContent">
-                <input type="checkbox" id="BrowseContent" >
-                <label for="BrowseContent"> <div>Browse Products by Category</div></label>
-                <!--Change amount and category names-->
-                <ul class="DropDownContainer">
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#LightNovel'">
-                    <span> Light Novel</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#Economy'">
-                    <span> Economy</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#Detective&Mysterious'">
-                    <span> Detective & Mystery</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#Scifi&Fantasy'">
-                    <span> Science Fiction & Fantasy</span>
-                  </li>
-                  <li class="DropDownDetail" onclick="location.href='BookWorld.html#SelfImprovement'">
-                    <span> Self Improvement</span>
-                  </li>
-                </ul>
-              </li>
-              <li class="DropDownContent DropDownEnd">
-                <input type="checkbox" id="BrowseContentByTime" >
-                <label for="BrowseContentByTime"> <div>Browse Products by Time</div></label>
-                <ul class="DropDownContainer">
-                  <!--change link to one of your store-->
-                  <li class="DropDownDetail" onclick="location.href='BrowseProducts_BookWorld.html'">
-                    <span> Newest</span>
-                  </li>
-                  <!--change link to one of your store-->
-                  <li class="DropDownDetail" onclick="location.href='BrowseStore_BookWorld.html'">
-                    <span> Oldest</span>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <a href="Contact_BookWorld.html" class="contact"> <button type="button" name="button">Contact</button></a>
+            </li>
+            <a href=<?php echo"Contact_Store.php?storeID=".$id ?> class="contact">
+                <button type="button" name="button">Contact</button></a>
         </ul>
-      <!--Chnage link to one of your store-->
-  
-      <div class="headerSimulator">
-        <div class="holder">
-          <input type="checkbox" id="check" />
-        <label class="Ham" for="check" onclick="DisplayNavBar()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-      </div>
+        <!--Chnage link to one of your store-->
+
+        <div class="headerSimulator">
+            <div class="holder">
+                <input type="checkbox" id="check" />
+                <label class="Ham" for="check" onclick="DisplayNavBar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
     </header>
      <!--content-->
   <div class="content">

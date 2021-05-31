@@ -16,152 +16,108 @@ session_start();
 </head>
 
 <body>
-    <header>
-        <a href="Home.php" class="LogoName">
-            <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
-            <span>Bare Bears</span>
+<header>
+        <!--change icon and name base on shop-->
+        <a class="LogoName" href="#"><img class="logo" src="../Image/Logo/BookCafe.png" alt="logo" />
+            <?php 
+            $id=0;
+          if(isset($_GET['storeID']))
+          {
+            $id=strval($_GET['storeID']);
+            if(($file=fopen("../Data/stores.csv","r"))!=false){
+              $headingRead=false;
+              while(($data=fgetcsv($file,1000,","))!=false)
+              {
+                if($headingRead==true)//ignore the title line
+                {
+                  $storedID=strval($data[0]);
+                  if($id===$storedID)
+                  {
+                    echo"<span>".$data[1]."</span>";
+                    break;
+                  }
+                }
+                $headingRead=true;
+              }
+              fclose($file);
+            }
+          }
+        ?>
         </a>
+        <ul class="navLinks" id="navBar">
+            <li><a href="Home.php">Home</a></li>
+            <!--change link to one of your store-->
+            <li><a href="AboutUs_Store.php">About Us</a></li>
 
-        <ul class="navLinks" id="navigationBar">
-            <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
-            <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
-            <li onclick="location.href='Fees.php'"><a href="Fees.php">Fees</a></li>
-            <li onclick="location.href='FAQs.php'"><a href="FAQs.php">FAQs</a></li>
-            <!--Browse-->
-            <li id="buttonBrowse">
-                <input type="checkbox" id='DropDown'>
-                <label class="BrowseText" for="DropDown">
+            <li class="BrowseButton" id="buttonBrowse">
+                <input type="checkbox" id="DropDown" />
+                <label for="DropDown" class="BrowseText">
                     <div>Browse</div>
                 </label>
-
                 <ul class="DropDown">
                     <li class="DropDownContent">
-                        <input type="checkbox" id='LettersDropDown'>
-                        <label for="LettersDropDown" class="DropDownLabel">
-                            <div>Browse Stores by Name</div>
+                        <input type="checkbox" id="BrowseContent" />
+                        <label for="BrowseContent">
+                            <div>Browse Products by Category</div>
                         </label>
-                        <!--Box-->
+                        <!--Change amount and category names-->
                         <ul class="DropDownContainer">
-                            <div class="Holder">
-                                <h3>Letters</h3>
-                                <div class="letters">
-                                    <a href="BrowseStore.php#A">A</a>
-                                    <a href="BrowseStore.php#B">B</a>
-                                    <a href="BrowseStore.php#C">C</a>
-                                    <a href="BrowseStore.php#D">D</a>
-                                    <a href="BrowseStore.php#E">E</a>
-                                    <a href="BrowseStore.php#F">F</a>
-                                    <a href="BrowseStore.php#G">G</a>
-
-                                    <a href="BrowseStore.php#H">H</a>
-                                    <a href="BrowseStore.php#I">I</a>
-
-                                    <a href="BrowseStore.php#J">J</a>
-                                    <a href="BrowseStore.php#K">K</a>
-                                    <a href="BrowseStore.php#L">L</a>
-                                    <a href="BrowseStore.php#M">M</a>
-
-                                    <a href="BrowseStore.php#N">N</a>
-                                    <a href="BrowseStore.php#O">O</a>
-                                    <a href="BrowseStore.php#P">P</a>
-                                    <a href="BrowseStore.php#Q">Q</a>
-
-                                    <a href="BrowseStore.php#R">R</a>
-                                    <a href="BrowseStore.php#S">S</a>
-                                    <a href="BrowseStore.php#T">T</a>
-                                    <a href="BrowseStore.php#U">U</a>
-
-                                    <a href="BrowseStore.php#V">V</a>
-                                    <a href="BrowseStore.php#W">W</a>
-                                    <a href="BrowseStore.php#X">X</a>
-                                    <a href="BrowseStore.php#Y">Y</a>
-                                    <a href="BrowseStore.php#Z">Z</a>
-                                </div>
-                            </div>
+                            <li class="DropDownDetail" onclick="todo('BookWorld.html#LightNovel')">
+                                <span> Light Novel</span>
+                            </li>
+                            <li class="DropDownDetail" onclick="todo('BookWorld.html#Economy')">
+                                <span> Economy</span>
+                            </li>
+                            <li class="DropDownDetail" onclick="todo('BookWorld.html#Detective&Mysterious')">
+                                <span> Detective & Mystery</span>
+                            </li>
+                            <li class="DropDownDetail" onclick="todo('BookWorld.html#Scifi&Fantasy')">
+                                <span> Science Fiction & Fantasy</span>
+                            </li>
+                            <li class="DropDownDetail" onclick="todo('BookWorld.html#SelfImprovement')">
+                                <span> Self Improvement</span>
+                            </li>
                         </ul>
                     </li>
-                    <!--Box-->
                     <li class="DropDownContent DropDownEnd">
-                        <input type="checkbox" id='CateDropDown'>
-                        <label for="CateDropDown" class="DropDownLabel">
-                            <div>Browse Stores by Category</div>
+                        <input type="checkbox" id="BrowseContentByTime" />
+                        <label for="BrowseContentByTime">
+                            <div>Browse Products by Time</div>
                         </label>
                         <ul class="DropDownContainer">
-                            <!--Detail-->
-                            <?php 
-                            if(($file=fopen("../Data/categories.csv","r"))!=false){
-                                $headingRead=false;
-                                while(($data=fgetcsv($file,1000,","))!=false)
-                                {
-                                  if($headingRead==true)
-                                  {
-                                  //ignore the first line
-                                    $info=$data[1];
-                                    $link="BrowseStoreCate.php#".$info;
-                                    echo'
-                                    <a href='.$link.'>
-                                    <li class="DropDownDetail">
-                                        <span> '.$info.'</span>
-                                    </li>
-                                    </a>
-                                    ';
-                                  }
-                                  $headingRead=true;
-                                }
-                                fclose($file);
-                              }
+                            <!--change link to one of your store-->
+                            <?php $link="BrowseProducts.php?storeID=".$id."&pageID=1&dir=0" ;
+                             echo '<a href='.$link.'>';
                             ?>
-
-
-
+                            <li class="DropDownDetail">
+                                <span> Newest</span>
+                            </li>
+                            <?php 
+                             echo'</a>';
+                            ?>
+                            <?php $link="BrowseProducts.php?storeID=".$id."&pageID=1&dir=1" ;
+                             echo '<a href='.$link.'>';
+                            ?>
+                            <!--change link to one of your store-->
+                            <li class="DropDownDetail" >
+                                <span> Oldest</span>
+                            </li>
+                            <?php 
+                             echo'</a>';
+                            ?>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
-            <?php 
-            $id=0;
-            $avatarLink="../Image/Profolio/profile-user.png";
-      
-            if(isset($_SESSION['userID']))
-            {
-              $id= (int)$_SESSION['userID'];
-              if($id!=0)
-              {
-                //get photo
-                if(($file=fopen("../userinfo.csv","r"))!=false)
-                {
-                  while(($data=fgetcsv($file,1000,","))!=false)
-                  {
-                    $curId=(int)$data[0];
-                    if($id===$curId)
-                    {
-                      $avatarLink=$data[8];
-                    }
-                  }
-                  fclose($file);
-                }
-              }
-            }
-            $loggedIn=false;
-            $myAccountLink="MyAccount-Login.php";
-            if(isset($_SESSION['loggedIn'])&&$_SESSION['loggedIn']==TRUE)
-            {
-                $loggedIn=true;
-                $myAccountLink="MyAccount-Logged.php";
-            }
-            
-            ?>
-            <a id="myAcount" class="myAcount" href =<?php echo$myAccountLink;  ?> >
-            <img src=<?php echo$avatarLink; ?> alt="">
-        </a>
+            <a href="Contact_Store.php" class="contact">
+                <button type="button" name="button">Contact</button></a>
         </ul>
+        <!--Chnage link to one of your store-->
+
         <div class="headerSimulator">
             <div class="holder">
-                <a href="" class="myAcount top_right" href =<?php echo$myAccountLink;  ?>><img src=<? echo$avatarLink; ?>
-                        alt=""></a>
-                <label class="Ham" for="check" onclick="HamDisplay()">
-                    <input type="checkbox" id="check" />
+                <input type="checkbox" id="check" />
+                <label class="Ham" for="check" onclick="DisplayNavBar()">
                     <span></span>
                     <span></span>
                     <span></span>

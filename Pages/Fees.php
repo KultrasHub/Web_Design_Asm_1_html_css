@@ -1,16 +1,20 @@
-
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank you</title>
-    <link rel="stylesheet" href="CSS/ThankYouPageStyle.css">
-    <link rel="stylesheet" href="CSS/BareBearsStyle.css">
-    <link rel="stylesheet" href="CSS/Cookie.css">
-    <script src="JS/BareBearsJavascript.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fees</title>
+  <link rel="stylesheet" href="CSS/FeesStyle.css">
+  <link rel="stylesheet" href="CSS/BareBearsStyle.css">
+  <link rel="stylesheet" href="CSS/Cookie.css">
+  <script src="JS/BareBearsJavascript.js"></script>
 </head>
+
 <body>
   <header>
     <a href="Home.php" class="LogoName">
@@ -165,20 +169,74 @@
         </div>
     </div>
   </header>
-    <div class="content">
-        <div class="box">
-        <img src="../Image/BariEmote.png" alt="">
-        <h3>Thank for supporting Us</h3>
-        <h4>Your order has been placed.</h4>
-        <span>You will receive your order as soon as possible, and again a special and faithful thank to you. We hope our products can make your days a little more enjoyable.</span>
-        <a href="Home.html">Back to Home</a>
-        </div>
-        <div class="bearFact">
-            <h4>Bears' fact</h4>
-            <span>Bears have excellent senses of smell, sight and hearing. They can smell food, cubs, a mate or predators from miles away. Their great eyesight allows them to detect when fruits are ripe. <br><br> Just like us we can detect customer from miles away!!!  </span>
-        </div>
-    </div>
-    <!--Cookies-->
+  <h1 class="Title">Select your plan</h1>
+  <table class="feesTable">
+    <thead>
+      <tr>
+        <th>Seller Classs</th>
+        <th>Monthly Fee</th>
+        <th>Commission Fee</th>
+        <th>Financial Eligibility</th>
+        <th>Storage usage</th>
+        <th>License Requirement</th>
+        <th>Core Analytics</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td data-label="Seller Class">Personal</td>
+        <td data-label="Monthly Fee">free</td>
+        <td data-label="Commission Fee">free</td>
+        <td data-label="Financial Eligibility">Eligible if revenue or funding is less than $10k in the last 12 months
+        </td>
+        <td data-label="Storgae Usage">-</td>
+        <td data-label="License Requirement">-</td>
+        <td data-label="Core Analytics">-</td>
+      </tr>
+      <tr>
+        <td data-label="Seller Class">Professional Seller</td>
+        <td data-label="Monthly Fee">$19.99</td>
+        <td data-label="Commission Fee">free</td>
+        <td data-label="Financial Eligibility">Eligible if revenue or funding is less than $20k in the last 12 months
+        </td>
+        <td data-label="Storgae Usage">-</td>
+        <td data-label="License Requirement">✓</td>
+        <td data-label="Core Analytics">✓</td>
+      </tr>
+      <tr>
+        <td data-label="Seller Class">Fullfillment by BareBears</td>
+        <td data-label="Monthly Fee">$24.99</td>
+        <td data-label="Commission Fee">$24.99</td>
+        <td data-label="Financial Eligibility">Eligible if revenue or funding is greater than $20k in the last 12
+          months, you are required to use Fullfillment option</td>
+        <td data-label="Storgae Usage">✓</td>
+        <td data-label="License Requirement">✓</td>
+        <td data-label="Core Analytics">✓</td>
+      </tr>
+      <tr>
+        <td data-label="Seller Class">Fullfillment by Merchant</td>
+        <td data-label="Monthly Fee">$19.99</td>
+        <td data-label="Commission Fee">$8.99</td>
+        <td data-label="Financial Eligibility">Eligible if revenue or funding is greater than $20k in the last 12
+          months, you are required to use Fullfillment option</td>
+        <td data-label="Storgae Usage">-</td>
+        <td data-label="License Requirement">✓</td>
+        <td data-label="Core Analytics">✓</td>
+      </tr>
+      <tr>
+        <td data-label="Seller Class">Bare Bears Vendor</td>
+        <td data-label="Monthly Fee">free</td>
+        <td data-label="Commission Fee">free</td>
+        <td data-label="Financial Eligibility">You sell your products directly to Bare Bears as a first-party vendor. We
+          will handles shipping costs, merchandising and controlling customer service.</td>
+        <td data-label="Storgae Usage">-</td>
+        <td data-label="License Requirement">-</td>
+        <td data-label="Core Analytics">-</td>
+      </tr>
+    </tbody>
+  </table>
+  <!--Cookies-->
 <div class="cookiesBar" id="cookies">
   <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
   <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
@@ -247,5 +305,6 @@
   </div>
 </footer>
 </body>
+
 </html>
 <script type="text/javascript" src="JS/Cookies.js"></script> 

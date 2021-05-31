@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+<header>
         <a href="Home.php" class="LogoName">
             <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
             <span>Bare Bears</span>
@@ -25,8 +25,8 @@
         <ul class="navLinks" id="navigationBar">
             <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
             <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
-            <li onclick="location.href='Fees.html'"><a href="Fees.html">Fees</a></li>
-            <li onclick="location.href='FAQs.html'"><a href="FAQs.html">FAQs</a></li>
+            <li onclick="location.href='Fees.php'"><a href="Fees.php">Fees</a></li>
+            <li onclick="location.href='FAQs.php'"><a href="FAQs.php">FAQs</a></li>
             <!--Browse-->
             <li id="buttonBrowse">
                 <input type="checkbox" id='DropDown'>

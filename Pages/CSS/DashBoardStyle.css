@@ -49,6 +49,14 @@ header .right {
   justify-content: center;
   align-items: center;
 }
+header .right .home{
+  text-decoration: none;
+  color:#fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 20px;
+}
 header .right .SearchBox {
   margin-right: 20px;
   color: #888;

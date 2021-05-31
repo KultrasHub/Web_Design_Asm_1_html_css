@@ -91,6 +91,7 @@
             <span class="LogoName">Bare Bears</span>
         </div>
         <div class="right">
+            <a class="home" href="Home.php">Home</a>
             <div class="SearchBox">
                 <input type="text" placeholder="no developed yet">
                 <i class="fa fa-search" aria-hidden="true"></i>

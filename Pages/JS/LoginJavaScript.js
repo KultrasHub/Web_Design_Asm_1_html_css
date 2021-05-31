@@ -13,7 +13,7 @@ function Login(e) {
 }
 function CheckValidity() {
   //password
-  var defaultPassword = "password";
+  // var defaultPassword = "password";
   //pattern
   //only email pattern check for this page -- fun :D
   var emailPat = /^(([a-zA-Z0-9]+[.]?)+[a-zA-Z0-9]*){3,}@(([a-zA-Z0-9]+[.]?)*[a-zA-Z0-9]+)+([.]{1}[a-zA-Z0-9]{2,})+$/;
@@ -22,7 +22,7 @@ function CheckValidity() {
   var inputBox = document.getElementsByClassName("inputBox");
   //input
   var emailText = document.getElementById("emailInput");
-  var passwordText = document.getElementById("passwordInput");
+  // var passwordText = document.getElementById("passwordInput");
   //warning message set up
   elem = document.createElement('div');
   elem.id = 'notify';
@@ -37,18 +37,18 @@ function CheckValidity() {
     return false;
   }
   //now checking password
-  if (passwordText.value == defaultPassword) {
-    //login successfully
-  }
-  else {
-    //wrong password
-    inputBox[1].appendChild(elem);
-    passwordText.className = 'invalid';
-    elem.textContent = "Oopsie wrong password!? did you forget it? try 'forgot password' section"
-    elem.className = 'error';
-    elem.style.display = 'block';
-    return false;
-  }
+  // if (passwordText.value == defaultPassword) {
+  //   //login successfully
+  // }
+  // else {
+  //   //wrong password
+  //   inputBox[1].appendChild(elem);
+  //   passwordText.className = 'invalid';
+  //   elem.textContent = "Oopsie wrong password!? did you forget it? try 'forgot password' section"
+  //   elem.className = 'error';
+  //   elem.style.display = 'block';
+  //   return false;
+  // }
   //save email
   window.localStorage.setItem('userEmail', emailText.value);
   window.localStorage.setItem('logStatus', true);

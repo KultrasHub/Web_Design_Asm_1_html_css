@@ -18,6 +18,7 @@ session_start();
 </head>
 
 <body>
+    
     <header>
         <a href="Home.php" class="LogoName">
             <img class="logo" src="../Image/Essen/barebear.png" alt="logo">

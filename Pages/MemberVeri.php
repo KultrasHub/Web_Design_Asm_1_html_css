@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-include('userssever.php') 
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true)
+{
+    $accessLink="OrderPage.php";
 
-if(isset($SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
-    $accessLink="http://localhost/Web_Design_Asm_1_html_css/Pages/OrderPage.php".$data[0];
 }else{
-    
-}
+    $accessLink="Register.php";
+};

@@ -26,8 +26,8 @@ session_start();
         <ul class="navLinks" id="navigationBar">
             <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
             <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
-            <li onclick="location.href='Fees.php'"><a href="Fees.html">Fees</a></li>
-            <li onclick="location.href='FAQs.php'"><a href="FAQs.html">FAQs</a></li>
+            <li onclick="location.href='Fees.php'"><a href="Fees.php">Fees</a></li>
+            <li onclick="location.href='FAQs.php'"><a href="FAQs.php">FAQs</a></li>
             <!--Browse-->
             <li id="buttonBrowse">
                 <input type="checkbox" id='DropDown'>

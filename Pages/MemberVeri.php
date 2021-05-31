@@ -11,6 +11,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
 
 
 }else{
-    $accessLink="Register.php";
+    $accessLink="Register.php?fromOrder=1";
 
 };

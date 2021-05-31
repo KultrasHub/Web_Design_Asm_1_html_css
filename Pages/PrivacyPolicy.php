@@ -170,12 +170,6 @@ session_start();
         </div>
     </header>
     <!--Return Button-->
-    <div class="Return" onclick="location.href='BookWorld.html'">
-        <!--Change link to your shop-->
-        <div class="Holder">
-            <div></div>
-        </div>
-    </div>
     <div class="background">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

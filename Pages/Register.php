@@ -14,159 +14,159 @@
 </head>
 
 <body>
-<header>
-        <a href="Home.php" class="LogoName">
-            <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
-            <span>Bare Bears</span>
-        </a>
+  <header>
+    <a href="Home.php" class="LogoName">
+        <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
+        <span>Bare Bears</span>
+    </a>
 
-        <ul class="navLinks" id="navigationBar">
-            <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
-            <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
-            <li onclick="location.href='Fees.php'"><a href="Fees.php">Fees</a></li>
-            <li onclick="location.href='FAQs.php'"><a href="FAQs.php">FAQs</a></li>
-            <!--Browse-->
-            <li id="buttonBrowse">
-                <input type="checkbox" id='DropDown'>
-                <label class="BrowseText" for="DropDown">
-                    <div>Browse</div>
-                </label>
+    <ul class="navLinks" id="navigationBar">
+        <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
+        <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
+        <li onclick="location.href='Fees.php'"><a href="Fees.php">Fees</a></li>
+        <li onclick="location.href='FAQs.php'"><a href="FAQs.php">FAQs</a></li>
+        <!--Browse-->
+        <li id="buttonBrowse">
+            <input type="checkbox" id='DropDown'>
+            <label class="BrowseText" for="DropDown">
+                <div>Browse</div>
+            </label>
 
-                <ul class="DropDown">
-                    <li class="DropDownContent">
-                        <input type="checkbox" id='LettersDropDown'>
-                        <label for="LettersDropDown" class="DropDownLabel">
-                            <div>Browse Stores by Name</div>
-                        </label>
-                        <!--Box-->
-                        <ul class="DropDownContainer">
-                            <div class="Holder">
-                                <h3>Letters</h3>
-                                <div class="letters">
-                                    <a href="BrowseStore.php#A">A</a>
-                                    <a href="BrowseStore.php#B">B</a>
-                                    <a href="BrowseStore.php#C">C</a>
-                                    <a href="BrowseStore.php#D">D</a>
-                                    <a href="BrowseStore.php#E">E</a>
-                                    <a href="BrowseStore.php#F">F</a>
-                                    <a href="BrowseStore.php#G">G</a>
-
-                                    <a href="BrowseStore.php#H">H</a>
-                                    <a href="BrowseStore.php#I">I</a>
-
-                                    <a href="BrowseStore.php#J">J</a>
-                                    <a href="BrowseStore.php#K">K</a>
-                                    <a href="BrowseStore.php#L">L</a>
-                                    <a href="BrowseStore.php#M">M</a>
-
-                                    <a href="BrowseStore.php#N">N</a>
-                                    <a href="BrowseStore.php#O">O</a>
-                                    <a href="BrowseStore.php#P">P</a>
-                                    <a href="BrowseStore.php#Q">Q</a>
-
-                                    <a href="BrowseStore.php#R">R</a>
-                                    <a href="BrowseStore.php#S">S</a>
-                                    <a href="BrowseStore.php#T">T</a>
-                                    <a href="BrowseStore.php#U">U</a>
-
-                                    <a href="BrowseStore.php#V">V</a>
-                                    <a href="BrowseStore.php#W">W</a>
-                                    <a href="BrowseStore.php#X">X</a>
-                                    <a href="BrowseStore.php#Y">Y</a>
-                                    <a href="BrowseStore.php#Z">Z</a>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
+            <ul class="DropDown">
+                <li class="DropDownContent">
+                    <input type="checkbox" id='LettersDropDown'>
+                    <label for="LettersDropDown" class="DropDownLabel">
+                        <div>Browse Stores by Name</div>
+                    </label>
                     <!--Box-->
-                    <li class="DropDownContent DropDownEnd">
-                        <input type="checkbox" id='CateDropDown'>
-                        <label for="CateDropDown" class="DropDownLabel">
-                            <div>Browse Stores by Category</div>
-                        </label>
-                        <ul class="DropDownContainer">
-                            <!--Detail-->
-                            <?php 
-                            if(($file=fopen("../Data/categories.csv","r"))!=false){
-                                $headingRead=false;
-                                while(($data=fgetcsv($file,1000,","))!=false)
-                                {
-                                  if($headingRead==true)
-                                  {
-                                  //ignore the first line
-                                    $info=$data[1];
-                                    $link="BrowseStoreCate.php#".$info;
-                                    echo'
-                                    <a href='.$link.'>
-                                    <li class="DropDownDetail">
-                                        <span> '.$info.'</span>
-                                    </li>
-                                    </a>
-                                    ';
-                                  }
-                                  $headingRead=true;
-                                }
-                                fclose($file);
+                    <ul class="DropDownContainer">
+                        <div class="Holder">
+                            <h3>Letters</h3>
+                            <div class="letters">
+                                <a href="BrowseStore.php#A">A</a>
+                                <a href="BrowseStore.php#B">B</a>
+                                <a href="BrowseStore.php#C">C</a>
+                                <a href="BrowseStore.php#D">D</a>
+                                <a href="BrowseStore.php#E">E</a>
+                                <a href="BrowseStore.php#F">F</a>
+                                <a href="BrowseStore.php#G">G</a>
+
+                                <a href="BrowseStore.php#H">H</a>
+                                <a href="BrowseStore.php#I">I</a>
+
+                                <a href="BrowseStore.php#J">J</a>
+                                <a href="BrowseStore.php#K">K</a>
+                                <a href="BrowseStore.php#L">L</a>
+                                <a href="BrowseStore.php#M">M</a>
+
+                                <a href="BrowseStore.php#N">N</a>
+                                <a href="BrowseStore.php#O">O</a>
+                                <a href="BrowseStore.php#P">P</a>
+                                <a href="BrowseStore.php#Q">Q</a>
+
+                                <a href="BrowseStore.php#R">R</a>
+                                <a href="BrowseStore.php#S">S</a>
+                                <a href="BrowseStore.php#T">T</a>
+                                <a href="BrowseStore.php#U">U</a>
+
+                                <a href="BrowseStore.php#V">V</a>
+                                <a href="BrowseStore.php#W">W</a>
+                                <a href="BrowseStore.php#X">X</a>
+                                <a href="BrowseStore.php#Y">Y</a>
+                                <a href="BrowseStore.php#Z">Z</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <!--Box-->
+                <li class="DropDownContent DropDownEnd">
+                    <input type="checkbox" id='CateDropDown'>
+                    <label for="CateDropDown" class="DropDownLabel">
+                        <div>Browse Stores by Category</div>
+                    </label>
+                    <ul class="DropDownContainer">
+                        <!--Detail-->
+                        <?php 
+                        if(($file=fopen("../Data/categories.csv","r"))!=false){
+                            $headingRead=false;
+                            while(($data=fgetcsv($file,1000,","))!=false)
+                            {
+                              if($headingRead==true)
+                              {
+                              //ignore the first line
+                                $info=$data[1];
+                                $link="BrowseStoreCate.php#".$info;
+                                echo'
+                                <a href='.$link.'>
+                                <li class="DropDownDetail">
+                                    <span> '.$info.'</span>
+                                </li>
+                                </a>
+                                ';
                               }
-                            ?>
+                              $headingRead=true;
+                            }
+                            fclose($file);
+                          }
+                        ?>
 
 
 
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
-            <?php 
-            $id=0;
-            $avatarLink="../Image/Profolio/profile-user.png";
-      
-            if(isset($_SESSION['userID']))
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+        <?php 
+        $id=0;
+        $avatarLink="../Image/Profolio/profile-user.png";
+  
+        if(isset($_SESSION['userID']))
+        {
+          $id= (int)$_SESSION['userID'];
+          if($id!=0)
+          {
+            //get photo
+            if(($file=fopen("../userinfo.csv","r"))!=false)
             {
-              $id= (int)$_SESSION['userID'];
-              if($id!=0)
+              while(($data=fgetcsv($file,1000,","))!=false)
               {
-                //get photo
-                if(($file=fopen("../userinfo.csv","r"))!=false)
+                $curId=(int)$data[0];
+                if($id===$curId)
                 {
-                  while(($data=fgetcsv($file,1000,","))!=false)
-                  {
-                    $curId=(int)$data[0];
-                    if($id===$curId)
-                    {
-                      $avatarLink=$data[8];
-                    }
-                  }
-                  fclose($file);
+                  $avatarLink=$data[8];
                 }
               }
+              fclose($file);
             }
-            $loggedIn=false;
-            $myAccountLink="MyAccount-Login.php";
-            if(isset($_SESSION['loggedIn'])&&$_SESSION['loggedIn']==TRUE)
-            {
-                $loggedIn=true;
-                $myAccountLink="MyAccount-Logged.php";
-            }
-            
-            ?>
-            <a id="myAcount" class="myAcount" href =<?php echo$myAccountLink;  ?> >
-            <img src=<?php echo$avatarLink; ?> alt="">
-        </a>
-        </ul>
-        <div class="headerSimulator">
-            <div class="holder">
-                <a href="" class="myAcount top_right" href =<?php echo$myAccountLink;  ?>><img src=<? echo$avatarLink; ?>
-                        alt=""></a>
-                <label class="Ham" for="check" onclick="HamDisplay()">
-                    <input type="checkbox" id="check" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
+          }
+        }
+        $loggedIn=false;
+        $myAccountLink="MyAccount-Login.php";
+        if(isset($_SESSION['loggedIn'])&&$_SESSION['loggedIn']==TRUE)
+        {
+            $loggedIn=true;
+            $myAccountLink="MyAccount-Logged.php";
+        }
+        
+        ?>
+        <a id="myAcount" class="myAcount" href =<?php echo$myAccountLink;  ?> >
+        <img src=<?php echo$avatarLink; ?> alt="">
+    </a>
+    </ul>
+    <div class="headerSimulator">
+        <div class="holder">
+            <a href="" class="myAcount top_right" href =<?php echo$myAccountLink;  ?>><img src=<? echo$avatarLink; ?>
+                    alt=""></a>
+            <label class="Ham" for="check" onclick="HamDisplay()">
+                <input type="checkbox" id="check" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
-    </header>
+    </div>
+  </header>
   <div class="background">
     <div>
       <svg viewBox="0 0 1440 320">
@@ -177,7 +177,19 @@
     </div>
   </div>
   <div class="LoginForm">
-    <form action="userssever.php" method="post" onsubmit="FormValidate(event);">
+    <?php 
+    //check if this link is from Order page
+    $link="userssever.php";
+    if(isset($_GET["fromOrder"]))
+    {
+      if($_GET["fromOrder"]=="1")
+      {
+        //user has accessed this via order
+        $link="userssever.php?fromOrder=1";
+      }
+    }
+    ?>
+    <form action=<?php echo$link ?> method="post" onsubmit="FormValidate(event);">
       <div class="FormHeader">
         <img src="../Image/Essen/barebear.png" alt="" class="logo">
         <h2>Bare Bears</h2>

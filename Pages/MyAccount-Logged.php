@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<header>
+  <header>
         <a href="Home.php" class="LogoName">
             <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
             <span>Bare Bears</span>
@@ -168,7 +168,7 @@
                 </label>
             </div>
         </div>
-    </header>
+  </header>
   <div class="Profile">
     <span class="profile">My Profile</span>
     <?php 
@@ -259,7 +259,6 @@
       <span class="detail" id="gender">Male</span>
     </div>
   </div>
-
   <div class="Shop_Setting">
     <!--Shop Info-->
     <div class="container">
@@ -284,8 +283,14 @@
       </div>
     </div>
   </div>
-</div>
 
+</div>
+  <!--Logout-->
+  <div class="full">
+    <form action="Logout.php" method="get">
+      <input type="submit" value="LogOut" name="logout" id="">
+    </form>
+  </div>
   <!--Cookies-->
   <div class="cookiesBar" id="cookies">
     <img src="../Image/FreeCookies.jpg" alt="cookies Logo">

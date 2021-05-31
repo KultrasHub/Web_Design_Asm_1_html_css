@@ -185,6 +185,14 @@ session_start();
     if(isset($_GET["userID"]))
     {
       $link="Register_Save_Img.php?userID=".$_GET['userID'];
+      if(isset($_GET["fromOrder"]))
+      {
+        if($_GET["fromOrder"]=="1")
+        {
+          //user has accessed this via order
+          $link="Register_Save_Img.php?userID=".$_GET['userID']."&fromOrder=1";
+        }
+      }
     }
     echo'<form action='.$link.' method="post" enctype="multipart/form-data">';
     ?>

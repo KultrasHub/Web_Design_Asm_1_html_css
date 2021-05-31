@@ -12,7 +12,16 @@ if(isset($_POST["ImageUploader"]))
             $fileTmp=$_FILES['profile_photo']['tmp_name'];
             move_uploaded_file($fileTmp,$targetDir);
             print("successful");
-            header('Location:MyAccount-Login.php');
+            $link="Location:MyAccount-Login.php";
+            if(isset($_GET["fromOrder"]))
+            {
+              if($_GET["fromOrder"]=="1")
+              {
+                //user has accessed this via order
+                $link="Location:MyAccount-Login.php?fromOrder=1";
+              }
+            }
+            header($link);
         }
         else{
             print("cant find photo");

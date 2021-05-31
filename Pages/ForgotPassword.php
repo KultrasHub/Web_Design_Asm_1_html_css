@@ -184,7 +184,7 @@ session_start();
     </div>
   </div>
   <div class="LoginForm">
-    <a class="return" href="MyAccount-Login.html">
+    <a class="return" href="MyAccount-Login.php">
       <div class="container">
         <div class="icon"></div>
       </div>

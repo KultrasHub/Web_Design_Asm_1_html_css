@@ -78,6 +78,31 @@ box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
     box-shadow: -2px 6px 15px -1px rgba(0,0,0,0.35);
     width: 100%;
 }
+.full{
+    width: 100%;
+    align-self: center;
+}
+.full form{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.full form input{
+    background-color: #212121;
+    color:#fff;
+    border: 2px solid #212121;
+    border-radius: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding:10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+.full form input:hover{
+    background-color: unset;
+    color:#212121;
+}
 @media screen and (max-width:1050px)
 {
     .Detail .Shop_Setting{

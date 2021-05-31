@@ -154,7 +154,16 @@ if (isset($_POST["send"])) {
         fputcsv($loginFile,$loginContent);
         fclose($loginFile);
         print("Register Succeessfully!");
-        header('Location: Register_Image.php?userID='.$no_row);
+        $link='Location: Register_Image.php?userID='.$no_row;
+        if(isset($_GET["fromOrder"]))
+        {
+        if($_GET["fromOrder"]=="1")
+        {
+            //user has accessed this via order
+            $link='Location: Register_Image.php?userID='.$no_row.'&fromOrder=1';
+        }
+        }
+        header($link);
     }
     else{
         print("Register Failed!, pls try again");

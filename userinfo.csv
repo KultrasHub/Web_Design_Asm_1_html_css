@@ -1,3 +1,4 @@
 id,FirstName,LastName,Email,PhoneNumber,address,city,zip,Avatar
 1,Khoa,Tran,kultras1808@gmail.com,0914792101,"Da lat",Dalat,123241,../Uploads/UserAvatar/1.png
 2,Phong,Hoo,phongho63@gmail.com,1283238400,"something something","something something",283479,../Uploads/UserAvatar/2.png
+3,Khoa,Tran,Phong@gmail.com,0914792102,"Da lat",Dalat,123241,../Uploads/UserAvatar/3.png

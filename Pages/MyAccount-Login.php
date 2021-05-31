@@ -6,10 +6,10 @@ $loopTime=0;
 //to display message
 $emailFailed=false;
 $passWordFailed=false;
-if(isset($_GET['send']))
+if(isset($_POST['send']))
 {
-    $email=strval($_GET['emailUser']);
-    $pass=$_GET['password'];
+    $email=strval($_POST['emailUser']);
+    $pass=$_POST['password'];
     if(file_exists("../../contacts.csv"))
     {
     if(($file=fopen("../../contacts.csv","r"))!=false)
@@ -30,7 +30,16 @@ if(isset($_GET['send']))
               header('Location:DashBoard.php');
             }
             else{
-              header('Location:MyAccount-Logged.php');
+              $link="Location:MyAccount-Logged.php";
+              if(isset($_GET["fromOrder"]))
+              {
+                if($_GET["fromOrder"]=="1")
+                {
+                  //user has accessed this via order
+                  $link="Location:OrderPage.php";
+                }
+              }
+              header($link);
             }
             break;//cancel loop
           }
@@ -73,7 +82,7 @@ if(isset($_GET['send']))
 </head>
 
 <body>
-<header>
+  <header>
         <a href="Home.php" class="LogoName">
             <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
             <span>Bare Bears</span>
@@ -225,11 +234,22 @@ if(isset($_GET['send']))
                 </label>
             </div>
         </div>
-    </header>
+  </header>
   <div class="background">
   </div>
   <div class="LoginForm">
-    <form action="MyAccount-Login.php" method="get" onsubmit="Login(e)">
+    <?php 
+      $resetLink="MyAccount-Login.php";
+      if(isset($_GET["fromOrder"]))
+      {
+        if($_GET["fromOrder"]=="1")
+        {
+          //user has accessed this via order
+          $resetLink="MyAccount-Login.php?fromOrder=1";
+        }
+      } 
+    ?>
+    <form action=<?php echo$resetLink ?> method="post" onsubmit="Login(e)">
       <div class="FormHeader">
         <img src="../Image/Essen/barebear.png" alt="" class="logo">
         <h2>Bare Bears</h2>
@@ -263,7 +283,7 @@ if(isset($_GET['send']))
           <input type="checkbox" name="rememberMe" id="RememeberMe" />
           <label for="RememeberMe">Rememeber Me</label>
         </div>
-        <a href="ForgotPassword.html">Forgot Password</a>
+        <a href="ForgotPassword.php">Forgot Password</a>
       </div>
       <div class="SendBut">
         <input type="submit" name="send" value="Send">

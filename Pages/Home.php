@@ -1,3 +1,11 @@
+<?php 
+
+//Checking to see if install.php still exists or not
+
+if(file_exists("../install.php")){
+    die("Please locate the existing file called 'install.php' and remove it, then attempt to restart the website again.");
+}; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

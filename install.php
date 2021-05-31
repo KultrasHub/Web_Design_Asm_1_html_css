@@ -86,7 +86,8 @@
       </div>
 
       <div class="SendBut">
-        <input type="submit" name="adminSend" value="Send">
+        <input type="submit" name="adminSend" value="Create Account">
+        <a class="loginpart" href="Pages/MyAccount-Login.php">Login</a>
       </div>
     </form>
   </div>

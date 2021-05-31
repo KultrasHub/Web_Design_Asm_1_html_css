@@ -1,11 +1,31 @@
 # WebDesignAsm_1
 GitHub: https://github.com/KultrasHub/Web_Design_Asm_1_html_css
-Website:https://kultrashub.github.io/Web_Design_Asm_1_html_css/index.html
+Website:https://kultrashub.github.io/Web_Design_Asm_1_html_css
 
 Members:
 -Tran Nguyen Anh Khoa s3863956
 -Ho Buu Quoc Phong s3803566
 -Lu Minh Khang s3863969
+//Assignment 3
+-Tran Nguyen Anh Khoa s3863956      35%;
+-Ho Buu Quoc Phong    s3803566      35%;
+-Lu Minh Khang        s3863969      30%;
+
+To create admin account you need to access install.php via URL only
+You should create an email instead of userName Khoa@admin would work
+To make the system run, you need to delete the install.php file manualy
+//login Section
+To login either your normal account or login admin account, PLS access MyAccount-Login.php
+In register section, it asks for password, In case the condition is hard you could use, Bre@k0ut as your password.
+//Home Mall
+We use different photo to demonstrate our products and shops because it was boring looking at the same picture.
+You may notice new products are not in time order, but they are selected as the most 10 recent products.
+When you are logged and  press "order now" in a product page, you will be redirect the order page with no display when there are nothing in your cart. We want to address this issue but we temporarily cant because the adding features was developed using javascript.
+
+The index.php may not work properly since it is a duplicate version of Home.php to address a requirement. So you should access Home.php first.
+
+Recommendation section in product pages works using random number generator.
+
 
 //Assignmen 2
 Contribution:

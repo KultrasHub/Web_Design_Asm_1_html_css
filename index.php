@@ -9,26 +9,26 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    <link rel="stylesheet" href="CSS/HomeStyle.css">
-    <link rel="stylesheet" href="CSS/BareBearsStyle.css">
-    <link rel="stylesheet" href="CSS/Cookie.css">
+    <link rel="stylesheet" href="Pages/CSS/HomeStyle.css">
+    <link rel="stylesheet" href="Pages/CSS/BareBearsStyle.css">
+    <link rel="stylesheet" href="Pages/CSS/Cookie.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="JS/BareBearsJavascript.js"></script>
+    <script type="text/javascript" src="Pages/JS/BareBearsJavascript.js"></script>
 
 </head>
 
 <body>  
     <header>
-        <a href="Home.php" class="LogoName">
-            <img class="logo" src="../Image/Essen/barebear.png" alt="logo">
+        <a href="Pages/Home.php" class="LogoName">
+            <img class="logo" src="Image/Essen/barebear.png" alt="logo">
             <span>Bare Bears</span>
         </a>
 
         <ul class="navLinks" id="navigationBar">
-            <li onclick="location.href='Home.php'"><a href="Home.php">Home</a></li>
-            <li onclick="location.href='AboutUs.php'"><a href="AboutUs.php">About Us</a></li>
-            <li onclick="location.href='Fees.php'"><a href="Fees.php">Fees</a></li>
-            <li onclick="location.href='FAQs.php'"><a href="FAQs.php">FAQs</a></li>
+            <li onclick="location.href='Pages/Home.php'"><a href="Pages/Home.php">Home</a></li>
+            <li onclick="location.href='Pages/AboutUs.php'"><a href="Pages/AboutUs.php">About Us</a></li>
+            <li onclick="location.href='Pages/Fees.php'"><a href="Pages/Fees.php">Fees</a></li>
+            <li onclick="location.href='Pages/FAQs.php'"><a href="Pages/FAQs.php">FAQs</a></li>
             <!--Browse-->
             <li id="buttonBrowse">
                 <input type="checkbox" id='DropDown'>
@@ -47,37 +47,37 @@ session_start();
                             <div class="Holder">
                                 <h3>Letters</h3>
                                 <div class="letters">
-                                    <a href="BrowseStore.php#A">A</a>
-                                    <a href="BrowseStore.php#B">B</a>
-                                    <a href="BrowseStore.php#C">C</a>
-                                    <a href="BrowseStore.php#D">D</a>
-                                    <a href="BrowseStore.php#E">E</a>
-                                    <a href="BrowseStore.php#F">F</a>
-                                    <a href="BrowseStore.php#G">G</a>
+                                    <a href="Pages/BrowseStore.php#A">A</a>
+                                    <a href="Pages/BrowseStore.php#B">B</a>
+                                    <a href="Pages/BrowseStore.php#C">C</a>
+                                    <a href="Pages/BrowseStore.php#D">D</a>
+                                    <a href="Pages/BrowseStore.php#E">E</a>
+                                    <a href="Pages/BrowseStore.php#F">F</a>
+                                    <a href="Pages/BrowseStore.php#G">G</a>
 
-                                    <a href="BrowseStore.php#H">H</a>
-                                    <a href="BrowseStore.php#I">I</a>
+                                    <a href="Pages/BrowseStore.php#H">H</a>
+                                    <a href="Pages/BrowseStore.php#I">I</a>
 
-                                    <a href="BrowseStore.php#J">J</a>
-                                    <a href="BrowseStore.php#K">K</a>
-                                    <a href="BrowseStore.php#L">L</a>
-                                    <a href="BrowseStore.php#M">M</a>
+                                    <a href="Pages/BrowseStore.php#J">J</a>
+                                    <a href="Pages/BrowseStore.php#K">K</a>
+                                    <a href="Pages/BrowseStore.php#L">L</a>
+                                    <a href="Pages/BrowseStore.php#M">M</a>
 
-                                    <a href="BrowseStore.php#N">N</a>
-                                    <a href="BrowseStore.php#O">O</a>
-                                    <a href="BrowseStore.php#P">P</a>
-                                    <a href="BrowseStore.php#Q">Q</a>
+                                    <a href="Pages/BrowseStore.php#N">N</a>
+                                    <a href="Pages/BrowseStore.php#O">O</a>
+                                    <a href="Pages/BrowseStore.php#P">P</a>
+                                    <a href="Pages/BrowseStore.php#Q">Q</a>
 
-                                    <a href="BrowseStore.php#R">R</a>
-                                    <a href="BrowseStore.php#S">S</a>
-                                    <a href="BrowseStore.php#T">T</a>
-                                    <a href="BrowseStore.php#U">U</a>
+                                    <a href="Pages/BrowseStore.php#R">R</a>
+                                    <a href="Pages/BrowseStore.php#S">S</a>
+                                    <a href="Pages/BrowseStore.php#T">T</a>
+                                    <a href="Pages/BrowseStore.php#U">U</a>
 
-                                    <a href="BrowseStore.php#V">V</a>
-                                    <a href="BrowseStore.php#W">W</a>
-                                    <a href="BrowseStore.php#X">X</a>
-                                    <a href="BrowseStore.php#Y">Y</a>
-                                    <a href="BrowseStore.php#Z">Z</a>
+                                    <a href="Pages/BrowseStore.php#V">V</a>
+                                    <a href="Pages/BrowseStore.php#W">W</a>
+                                    <a href="Pages/BrowseStore.php#X">X</a>
+                                    <a href="Pages/BrowseStore.php#Y">Y</a>
+                                    <a href="Pages/BrowseStore.php#Z">Z</a>
                                 </div>
                             </div>
                         </ul>
@@ -91,7 +91,7 @@ session_start();
                         <ul class="DropDownContainer">
                             <!--Detail-->
                             <?php 
-                            if(($file=fopen("../Data/categories.csv","r"))!=false){
+                            if(($file=fopen("Data/categories.csv","r"))!=false){
                                 $headingRead=false;
                                 while(($data=fgetcsv($file,1000,","))!=false)
                                 {
@@ -99,7 +99,7 @@ session_start();
                                   {
                                   //ignore the first line
                                     $info=$data[1];
-                                    $link="BrowseStoreCate.php#".$info;
+                                    $link="Pages/BrowseStoreCate.php#".$info;
                                     echo'
                                     <a href='.$link.'>
                                     <li class="DropDownDetail">
@@ -120,10 +120,10 @@ session_start();
                     </li>
                 </ul>
             </li>
-            <a href="Contact.php" class="contact"> <button type="button" name="button">Contact</button></a>
+            <a href="Pages/Contact.php" class="contact"> <button type="button" name="button">Contact</button></a>
             <?php 
             $id=0;
-            $avatarLink="../Image/Profolio/profile-user.png";
+            $avatarLink="Image/Profolio/profile-user.png";
       
             if(isset($_SESSION['userID']))
             {
@@ -131,7 +131,7 @@ session_start();
               if($id!=0)
               {
                 //get photo
-                if(($file=fopen("../userinfo.csv","r"))!=false)
+                if(($file=fopen("userinfo.csv","r"))!=false)
                 {
                   while(($data=fgetcsv($file,1000,","))!=false)
                   {
@@ -139,6 +139,7 @@ session_start();
                     if($id===$curId)
                     {
                       $avatarLink=$data[8];
+                        $avatarLink=substr($avatarLink,3);
                     }
                   }
                   fclose($file);
@@ -146,11 +147,11 @@ session_start();
               }
             }
             $loggedIn=false;
-            $myAccountLink="MyAccount-Login.php";
+            $myAccountLink="Pages/MyAccount-Login.php";
             if(isset($_SESSION['loggedIn'])&&$_SESSION['loggedIn']==TRUE)
             {
                 $loggedIn=true;
-                $myAccountLink="MyAccount-Logged.php";
+                $myAccountLink="Pages/MyAccount-Logged.php";
             }
             
             ?>
@@ -173,7 +174,7 @@ session_start();
     </header>
     <!--banner-->
     <div class="Banner">
-        <img src="../Image/WeatheringWithYouBanner.jpg" alt="">
+        <img src="Image/WeatheringWithYouBanner.jpg" alt="">
         <h1>2020</h1>
         <h3>Weathering with you</h3>
         <h4>I want you more than any blue sky...</h4>
@@ -246,7 +247,7 @@ session_start();
                 return false;
               }
               //find 10 most recent stores
-              if(($file=fopen("../Data/stores.csv","r"))!=false){
+              if(($file=fopen("Data/stores.csv","r"))!=false){
                 $headingRead=false;
                 while(($data=fgetcsv($file,1000,","))!=false)
                 {
@@ -271,13 +272,13 @@ session_start();
               // }
               //Unnecessary-----------------------------------
               //display different products and logo 
-              $productPath="../Image/GeneralProduct/";
-              $logoPath="../Image/Logo/";
+              $productPath="Image/GeneralProduct/";
+              $logoPath="Image/Logo/";
               $products=array("Yourname.jpg","Coke.jpeg","chip.jpeg","Perfume.jpg","toyota.jpeg","card1.jpg","bag.jpeg","xBox.jpeg","shoe.jpg","router.jpeg");
               $logos=array("BookCafe.png","CocaCola.jpg","frito.png","Gucci.jpeg","logo-toyota.jpeg","logoshop2.png","louis.jpeg","MicroSoftLogo.jpg","Out-Sneaking.png","verizon-logo.jpeg");
               $running=0;
               //read file again to extract data for boxes
-              if(($file=fopen("../Data/stores.csv","r"))!=false){
+              if(($file=fopen("Data/stores.csv","r"))!=false){
                 $headingRead=false;
                 while(($data=fgetcsv($file,1000,","))!=false)
                 {
@@ -296,7 +297,7 @@ session_start();
                       {
                         $running=0;
                       }
-                      $link='HomeStore.php?storeID='.$data[0];
+                      $link='Pages/HomeStore.php?storeID='.$data[0];
                       //extract data
                       //<!--box/!-->
                       echo'<div class="box" onclick="location.href='.$link.'">
@@ -356,7 +357,7 @@ session_start();
               $mostRecentID=array("0","0","0","0","0","0","0","0","0","0");//at most 10 stores
 
               //find 10 most recent stores
-              if(($file=fopen("../Data/products.csv","r"))!=false){
+              if(($file=fopen("Data/products.csv","r"))!=false){
                 $headingRead=false;
                 while(($data=fgetcsv($file,1000,","))!=false)
                 {
@@ -381,12 +382,12 @@ session_start();
               }
               //Unnecessary-----------------------------------
               //display different products and logo 
-              $productPath="../Image/NewProducts/";
+              $productPath="Image/NewProducts/";
               $products=array("DanMachi_3.jpg","Yourname.jpg","Dumbell.jpg","gun.jpg","hipplush1.jpg","jam.jpg","RichDadPoorDad.jpg","Shoes.jpg","Shoes2.jpg","pink.jpg");
              
               $running=0;
               //read file again to extract data for boxes
-              if(($file=fopen("../Data/products.csv","r"))!=false){
+              if(($file=fopen("Data/products.csv","r"))!=false){
                 $headingRead=false;
                 while(($data=fgetcsv($file,1000,","))!=false)
                 {
@@ -405,7 +406,7 @@ session_start();
                         $running=0;
                       }
                       //extract data
-                      $link="ProductPage.php?productID=".$data[0];
+                      $link="Pages/ProductPage.php?productID=".$data[0];
                       //<!--box/!-->
                       echo'<div class="ProductBox">
                       <img src='.$path1.' alt="">
@@ -472,7 +473,7 @@ session_start();
                 </div>
 
             </div>
-            <img src="../Image/KentSneaker/Jordan1/Jordan1LowSmokeGrey.jpg" alt="">
+            <img src="Image/KentSneaker/Jordan1/Jordan1LowSmokeGrey.jpg" alt="">
         </div>
         <div class="Desciption">
             <h4 class="DiscountTitle"> Jordan Low Smoke Grey</h4>
@@ -503,15 +504,15 @@ session_start();
             <!--1 ----------------------------------->
             <?php 
               //open files
-              if(($file=fopen("../Data/stores.csv","r"))!=false){
+              if(($file=fopen("Data/stores.csv","r"))!=false){
                 $headingRead=false;
                 //featured stores
                 $maxAmount=10;
                 $count=0;
                 //image path
                 //display different products and logo 
-              $productPath="../Image/GeneralProduct/";
-              $logoPath="../Image/Logo/";
+              $productPath="Image/GeneralProduct/";
+              $logoPath="Image/Logo/";
               $products=array("Yourname.jpg","Coke.jpeg","chip.jpeg","Perfume.jpg","toyota.jpeg","card1.jpg","bag.jpeg","xBox.jpeg","shoe.jpg","router.jpeg");
               $logos=array("BookCafe.png","CocaCola.jpg","frito.png","Gucci.jpeg","logo-toyota.jpeg","logoshop2.png","louis.jpeg","MicroSoftLogo.jpg","Out-Sneaking.png","verizon-logo.jpeg");
               $imgCount=4;
@@ -529,7 +530,7 @@ session_start();
                       $imgCount=0;
                     }
                     $count+=1;
-                    $link='HomeStore.php?storeID='.$data[0];
+                    $link='Pages/HomeStore.php?storeID='.$data[0];
                     //<!--box/!-->
                     echo'
                       <div class="box" onclick="location.href='.$link.'">
@@ -585,14 +586,14 @@ session_start();
         <div class="container" id="newShop">
             <?php 
               //open files
-              if(($file=fopen("../Data/products.csv","r"))!=false){
+              if(($file=fopen("Data/products.csv","r"))!=false){
                 $headingRead=false;
                 //featured stores
                 $maxAmount=10;
                 $count=0;
                 //image path
                 //display different products and logo 
-              $productPath="../Image/GeneralProduct/";
+              $productPath="Image/GeneralProduct/";
               $products=array("Yourname.jpg","Coke.jpeg","chip.jpeg","Perfume.jpg","toyota.jpeg","card1.jpg","bag.jpeg","xBox.jpeg","shoe.jpg","router.jpeg");
               $imgCount=4;
                 while(($data=fgetcsv($file,1000,","))!=false)
@@ -609,7 +610,7 @@ session_start();
                     }
                     $count+=1;
                     //<!--box/!-->
-                    $link="ProductPage.php?productID=".$data[0];
+                    $link="Pages/ProductPage.php?productID=".$data[0];
                     echo'<div class="ProductBox">
                       <img src='.$path1.' alt="">
                       <h3 class="ProTitle">'.$data[1].'</h3>
@@ -655,9 +656,9 @@ session_start();
     </div>
     <!--Cookies-->
     <div class="cookiesBar" id="cookies">
-        <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
+        <img src="Image/FreeCookies.jpg" alt="cookies Logo">
         <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find
-            out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+            out more, read <a href="Pages/PrivacyPolicy.php">privacy plicy</a> and <a href="">cookie Policy</a></span>
         <div onclick="HideCookie()"> <span>I understand</span></div>
     </div>
     <!--End Cookies-->
@@ -714,10 +715,10 @@ session_start();
                 Copyright© Bare Bears 2021
             </section>
             <section class="Policy">
-                <a href="TermOfUse.php">
+                <a href="Pages/TermOfUse.php">
                     <li>Term Of Service</li>
                 </a>
-                <a href="PrivacyPolicy.php">
+                <a href="Pages/PrivacyPolicy.php">
                     <li>Privacy Policy</li>
                 </a>
             </section>
@@ -726,6 +727,6 @@ session_start();
 </body>
 
 </html>
-<script type="text/javascript" src="JS/BrowseBox.js"></script>
-<script type="text/javascript" src="JS/HomeCarousel.js"></script>
-<script type="text/javascript" src="JS/Cookies.js"></script>
+<script type="text/javascript" src="Pages/JS/BrowseBox.js"></script>
+<script type="text/javascript" src="Pages/JS/HomeCarousel.js"></script>
+<script type="text/javascript" src="Pages/JS/Cookies.js"></script>

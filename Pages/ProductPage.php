@@ -216,8 +216,8 @@ session_start();
               {
                 //name
                 echo'
-                <h1>'.$data[1].'</h1>
-                <h2 id="productID">octo</h2>';
+                <h1 id="productName">'.$data[1].'</h1>
+                <h2 id="productID">'.$data[0].'</h2>';
                 $shopID=$data[4];
                 $price=$data[2];
                 break;//only display one
@@ -266,7 +266,7 @@ session_start();
       <div class="prices">
         <span class="originalPrice">10.99</span>
 
-        <span class="currentPrice">
+        <span class="currentPrice" id="productPrice">
           <?php echo $price ?>
         </span>
       </div>
@@ -276,18 +276,13 @@ session_start();
         </div>
         <div class="inputBut"id="inputBut">
           <div id="buttonBox">
-
-          <?php echo"<a href='$accessLink'>" ?>
-
-          <button onclick="AddToCart(0,true)">Order Now</button>
-
-          <?php echo"</a>"; ?>
+            <span class="orderButt" id="hiddenLink"><?php echo $accessLink ?></span>
+              <button onclick="Goto()">Order Now</button>
           </div>
-          <span class="orderButt"><?php echo $accessLink ?></span>
 
 
           <div id="buttonBox">
-            <button onclick="AddToCart(0,false)">Add</button>
+            <button onclick="AddToCart()">Add</button>
           </div>
         </div>
       </div>

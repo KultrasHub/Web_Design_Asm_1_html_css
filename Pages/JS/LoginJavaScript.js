@@ -24,7 +24,9 @@ function CheckValidity() {
   var emailText = document.getElementById("emailInput");
   // var passwordText = document.getElementById("passwordInput");
   //warning message set up
-  elem = document.createElement('div');
+  if (elem == null) {
+    elem = document.createElement('div');
+  }
   elem.id = 'notify';
   elem.style.display = 'none';
   //start checking
@@ -57,9 +59,13 @@ function CheckValidity() {
 }
 emailText.addEventListener("input", function () {
   emailText.className = "";
-  elem.style.display = "none";
+  if (elem != null) {
+    elem.style.display = "none";
+  }
 });
 passwordText.addEventListener("input", function () {
   passwordText.className = '';
-  elem.style.display = "none";
+  if (elem != null) {
+    elem.style.display = "none";
+  }
 });

@@ -1,7 +1,7 @@
 <?php 
 session_start();
 ?>
-<?php $thankLink="ThankYouPage.html"; ?>
+<?php $thankLink="ThankYouPage.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -211,7 +211,7 @@ session_start();
           </div>
         </div>
         <div class="button">
-          <a class="Order" href="ThankYouPage.html">Order</a>
+          <a class="Order" href="ThankYouPage.php">Order</a>
           <a class="Continue" href="#">Continue Shopping</a>
           <span class="subOrder">*VAT included</span>
         </div>
@@ -242,7 +242,7 @@ session_start();
   <div class="cookiesBar" id="cookies">
     <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
     <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out
-      more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+      more, read <a href="PrivacyPolicy.php">privacy plicy</a> and <a href="">cookie Policy</a></span>
     <div onclick="HideCookie()"> <span>I understand</span></div>
   </div>
   <!--End Cookies-->

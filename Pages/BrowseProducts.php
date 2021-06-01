@@ -128,6 +128,25 @@
       <h3>Looking for latest products?</h3>
       <p>Browse Products by Date</p>
     </div>
+    <?php 
+      $link="location.href='HomeStore.php'";
+       if(isset($_GET["storeID"]))
+       {
+         $storeID=(int)$_GET["storeID"];
+         if($storedID>0)
+         {
+           $link="location.href='HomeStore.php?storeID=".$storedID."'";
+         }
+       }
+    ?>
+    <div class="return" onclick=<?php echo$link ?>> 
+    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          <div class="returninfo">
+            
+            <span class="store">storeName</span>
+            <span class="normal">Back to store</span>
+          </div>
+      </div>
     <div class="container">
       <div class="LetterBox"> 
         <?php 
@@ -136,6 +155,68 @@
             $storeID=(int)$_GET["storeID"];
             $dir=$_GET["dir"];
             $pageID=(int)$_GET["pageID"];
+            //function to add in new days and move days back
+            function DateCheck($dateToCheck,$array,$idToCheck,$idList,$dir){
+              $unfound=false;
+              $mostTempRecent=$array;
+              $tempIDList=$idList;
+              //Set up original value
+              $previousDate=$mostTempRecent[0];
+              $previousId=$tempIDList[0];
+              for($i=0;$i<count($mostTempRecent);$i++)
+              {
+                if(!$unfound)//control if a value has been saved to the list
+                {
+                  if($dir==0)
+                  {
+                    if($dateToCheck>=$mostTempRecent[$i])
+                    {
+                    //replace the current one with date to check
+                    //save the value of the previous
+                    $temp=$mostTempRecent[$i];
+                    $mostTempRecent[$i]=$dateToCheck;
+                    $previousDate=$temp;
+                    $unfound=true;
+                    //save and replace id
+                    $tempID=$tempIDList[$i];
+                    $tempIDList[$i]=$idToCheck;
+                    $previousId=$tempID;
+                    //this only run once
+                    }
+                  }
+                  if($dir==1)
+                  {
+                    if($dateToCheck<=$mostTempRecent[$i])
+                    {
+                    //replace the current one with date to check
+                    //save the value of the previous
+                    $temp=$mostTempRecent[$i];
+                    $mostTempRecent[$i]=$dateToCheck;
+                    $previousDate=$temp;
+                    $unfound=true;
+                    //save and replace id
+                    $tempID=$tempIDList[$i];
+                    $tempIDList[$i]=$idToCheck;
+                    $previousId=$tempID;
+                    //this only run once
+                    }
+                  }
+              }
+              else{
+                //if replace the current one with the previous value
+                //in general swap value with $previous date
+                $temp=$mostTempRecent[$i];
+                $mostTempRecent[$i]=$previousDate;
+                $previousDate=$temp;
+                //replace the current id with the previous ID
+                //echo"id Value: ".$tempIDList[$i]." at".$i;
+                $tempID=$tempIDList[$i];
+                $tempIDList[$i]=$previousId;
+                $previousId=$tempID;
+              }
+              } 
+              return array('date'=>$mostTempRecent,'id'=>$tempIDList);
+            }
             if($dir==='0')
             {
               //newest
@@ -199,48 +280,6 @@
               </div></div>';//close container Header
               echo'<div class="storeContainer">';
               //search products
-               //function to add in new days and move days back
-               function DateCheck($dateToCheck,$array,$idToCheck,$idList){
-                $unfound=false;
-                $mostTempRecent=$array;
-                $tempIDList=$idList;
-                //Set up original value
-                $previousDate=$mostTempRecent[0];
-                $previousId=$tempIDList[0];
-                for($i=0;$i<count($mostTempRecent);$i++)
-                {
-                  if(!$unfound)//control if a value has been saved to the list
-                  {
-                    if($dateToCheck>$mostTempRecent[$i])
-                    {
-                    //replace the current one with date to check
-                    //save the value of the previous
-                    $temp=$mostTempRecent[$i];
-                    $mostTempRecent[$i]=$dateToCheck;
-                    $previousDate=$temp;
-                    $unfound=true;
-                    //save and replace id
-                    $tempID=$tempIDList[$i];
-                    $tempIDList[$i]=$idToCheck;
-                    $previousId=$tempID;
-                    //this only run once
-                    }
-                  }
-                  else{
-                    //if replace the current one with the previous value
-                    //in general swap value with $previous date
-                    $temp=$mostTempRecent[$i];
-                    $mostTempRecent[$i]=$previousDate;
-                    $previousDate=$temp;
-                    //replace the current id with the previous ID
-                    //echo"id Value: ".$tempIDList[$i]." at".$i;
-                    $tempID=$tempIDList[$i];
-                    $tempIDList[$i]=$previousId;
-                    $previousId=$tempID;
-                  }
-                } 
-                return array('date'=>$mostTempRecent,'id'=>$tempIDList);
-              }
               //function compare id saved with the id currently on check
               function CheckingID($idToCheck,$idList,$dateList)
               {
@@ -277,7 +316,7 @@
                             $curDate=strtotime($data[3]);
                             $curId=strval($data[0]);
                             //check with 10 most recent
-                            $value=DateCheck($curDate,$mostRecent,$curId,$mostRecentID);
+                            $value=DateCheck($curDate,$mostRecent,$curId,$mostRecentID,0);
                             $mostRecent=$value['date'];
                             $mostRecentID=$value['id'];
                         }
@@ -360,7 +399,171 @@
             }
             else{
               //oldest
-              echo'<h3>Oldest Products</h3>';
+              echo'<div class="containerHeader"> <h3>Oldest Products</h3>';
+              $count=0;
+              $storePerPage=2;
+              $productsList=[];//store all products
+              if(($file=fopen("../Data/products.csv","r"))!=false){//open file
+                $headingRead=false;
+                while(($data=fgetcsv($file,1000,","))!=false)//read file line by line
+                {
+                  if($headingRead==true)//ignore title
+                  {
+                      $tempID=(int)$data[4];
+                      if($storeID===$tempID)
+                      {
+                        $count++;
+                        $productsList[]=array($data[0],$data[1],$data[2],$data[3]);
+                      }
+                  }
+                  $headingRead=true;
+                }
+                fclose($file);
+              }
+              $capacity=ceil($count/$storePerPage);//find out how many page will have
+              $prePageID=(int)$pageID-1;
+              if($prePageID<=0)
+              {
+                $prePageID=1;
+              }
+              $link="BrowseProducts.php?storeID=".$storeID."&pageID=".$prePageID."&dir=".$dir."" ;
+              echo'<div class="pagination">';
+              //left button
+              echo'<a class="cover" href='.$link.'>
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                  </a>';
+                  //links throught numbers
+              for($i=0;$i<$capacity;$i++)
+              {
+                $offset=$i+1;
+                $link="BrowseProducts.php?storeID=".$storeID."&pageID=".$offset."&dir=".$dir."" ;
+                if($offset!=$pageID)
+                {
+                  echo'<a href='.$link.'>'.$offset.'</a>';
+                }
+                else{
+                  echo'<a class="chosen" href='.$link.'>'.$offset.'</a>';
+                }
+ 
+              }
+              //right button
+              $nextPageID=(int)$pageID+1;
+              if($nextPageID>$capacity)
+              {
+                $nextPageID=$capacity;
+              }
+              $link="BrowseProducts.php?storeID=".$storeID."&pageID=".$nextPageID."&dir=".$dir."" ;
+              echo '<a class="cover" href='.$link.'>
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </a>
+              </div></div>';//close container Header
+              echo'<div class="storeContainer">';
+              //search products         
+               //time setup
+               $mostRecent=[];
+               $mostRecentID=[];//at most 2products
+               //find 2 most recent stores
+               $today=time();
+              for($i=0;$i<$count;$i++)
+              {
+                $mostRecent[]=$today;
+                $mostRecentID[]="-1";
+              }
+              //find stores in order
+              if($storeID>0)
+              {
+                if(($file=fopen("../Data/products.csv","r"))!=false){//open file
+                    $headingRead=false;
+                    while(($data=fgetcsv($file,1000,","))!=false)//read file line by line
+                    {
+                    if($headingRead==true)//ignore title
+                    {
+                        $tempID=(int)$data[4];
+                        if($storeID===$tempID)//only save the products belong to this shop
+                        {
+                            $curDate=strtotime($data[3]);
+                            $curId=strval($data[0]);
+                            //check with 10 most recent
+                            $value=DateCheck($curDate,$mostRecent,$curId,$mostRecentID,1);
+                            $mostRecent=$value['date'];
+                            $mostRecentID=$value['id'];
+                        }
+                    }
+                        $headingRead=true;
+                    }
+                    fclose($file);
+                }
+                //display most recent id
+                //  for($i =0;$i<count($mostRecentID);$i++)
+                // {
+                //     echo"-".$mostRecentID[$i]."-".date('Y-m-d H:i:s', $mostRecent[$i])."<br>";
+                // }
+                //Unnecessary-----------------------------------
+                //display different products and logo 
+                $productPath="../Image/NewProducts/";
+                $products=array("DanMachi_3.jpg","Yourname.jpg","Dumbell.jpg","gun.jpg","hipplush1.jpg","jam.jpg","RichDadPoorDad.jpg","Shoes.jpg","Shoes2.jpg","pink.jpg");
+                $running=0;
+                //place to start
+                $whereToStart=((int)$pageID-1)*$storePerPage;
+                
+                $whereToStop=$whereToStart+$storePerPage;
+                //read file again to extract data for boxes
+                for($i=$whereToStart;$i<$whereToStop;$i++)//loop through products id that is in order
+                {
+                  if($i>=count($mostRecentID))
+                  {
+                    break;
+                  }
+                  foreach($productsList as $data)//loop through products in no order
+                  {
+                    if($mostRecentID[$i]==$data[0])
+                    {
+                      //if here run id is corrected
+                      $name=$data[1];
+                      $path=$productPath.$products[$running];
+                      $running++;
+                      $link="ProductPage.php?productID=".$data[0];
+                      if($running>=count($products))
+                      {
+                          $running=0;
+                      }
+                      //extract data
+                      $date=date('Y-m-d H:i:s', $mostRecent[$i]);
+                      //<!--box/!-->
+                      echo'
+                              <div class="box" >
+                                  <img src='.$path.' alt="product photo" />
+                                  <span class="ProductName">'.$data[1].$data[0].'</span>
+                                  <span class="AuthorName"></span>
+                                  <div class="prices">
+                                      <span class="star">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                      </span>
+                                      <span class="current">'.$data[2].'</span>
+                                  </div>
+                                  <div class="addedTime">
+                                  <span>'.$date.'</span>
+                                  </div>
+                                  <div class="HoverEffect">
+                                  <a href='.$link.'>
+                                      <div class="HoverButton">Check</div>
+                                      </a>
+                                  </div>
+                              </div>
+                              ';
+                      //<!--End Box/!-->
+                      break;
+                    }
+                      //if not run Id is failed 
+
+                  }
+                }       
+              }
+              echo'</div>';
             }
           }
         ?><!--the real display-->

@@ -1,5 +1,5 @@
 <?php 
-    if(file_exists("../something.php")){
+    if(file_exists("../install.php")){
     die("Error ENCOUNTER: install.php file exists. Please locate the install.php file in the web folder and delete it before restarting the webpage.");
 }
 

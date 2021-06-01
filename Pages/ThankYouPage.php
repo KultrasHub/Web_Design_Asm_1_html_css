@@ -173,7 +173,7 @@ session_start();
         <h3>Thank for supporting Us</h3>
         <h4>Your order has been placed.</h4>
         <span>You will receive your order as soon as possible, and again a special and faithful thank to you. We hope our products can make your days a little more enjoyable.</span>
-        <a href="Home.html">Back to Home</a>
+        <a href="Home.php">Back to Home</a>
         </div>
         <div class="bearFact">
             <h4>Bears' fact</h4>
@@ -183,7 +183,7 @@ session_start();
     <!--Cookies-->
 <div class="cookiesBar" id="cookies">
   <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
-  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.php">privacy plicy</a> and <a href="">cookie Policy</a></span>
   <div onclick="HideCookie()"> <span>I understand</span></div>
 </div>
 <!--End Cookies-->

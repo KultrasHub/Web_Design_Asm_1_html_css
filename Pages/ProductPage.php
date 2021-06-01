@@ -14,6 +14,7 @@ session_start();
   <link rel="stylesheet" href="CSS/BareBearsStyle.css">
   <link rel="stylesheet" href="CSS/Cookie.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="CSS/ProductPageButt.css">
   <script src="JS/BareBearsJavascript.js"></script>
   <script src="JS/CountProduct.js"></script>
 </head>
@@ -278,11 +279,11 @@ session_start();
 
           <?php echo"<a href='$accessLink'>" ?>
 
-            <button>Order Now</button>
+          <button onclick="AddToCart(0,true)">Order Now</button>
 
           <?php echo"</a>"; ?>
           </div>
-
+          <span class="orderButt"><?php echo $accessLink ?></span>
 
 
           <div id="buttonBox">

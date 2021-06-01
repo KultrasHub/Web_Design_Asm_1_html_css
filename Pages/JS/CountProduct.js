@@ -94,7 +94,7 @@ function AddToCart(productid, toOrder) {
       count += 1;
       //to move to order page 
       if (toOrder) {
-        window.location.replace("OrderPage.html");
+        window.location.replace("OrderPage.php");
       }
     }
   }

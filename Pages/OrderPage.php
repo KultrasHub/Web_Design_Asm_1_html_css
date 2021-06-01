@@ -218,7 +218,7 @@ session_start();
         </div>
         <div class="button">
           <a class="Order" href="ThankYouPage.php">Order</a>
-          <a class="Continue" href="home.php">Continue Shopping</a>
+          <a class="Continue" href="Home.php">Continue Shopping</a>
           <span class="subOrder">*VAT included</span>
         </div>
         <div class="Invoice">

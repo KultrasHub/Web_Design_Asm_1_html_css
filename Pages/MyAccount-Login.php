@@ -1,4 +1,10 @@
 <?php 
+    if(file_exists("../something.php")){
+    die("Error ENCOUNTER: install.php file exists. Please locate the install.php file in the web folder and delete it before restarting the webpage.");
+}
+
+?>
+<?php 
 session_start();
 //count the times email is found different and the overall loop
 $difEmail=0;
@@ -184,7 +190,7 @@ if(isset($_POST['send']))
                     </li>
                 </ul>
             </li>
-            <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+            <a href="Contact.php" class="contact"> <button type="button" name="button">Contact</button></a>
             <?php 
             $id=0;
             $avatarLink="../Image/Profolio/profile-user.png";
@@ -293,7 +299,7 @@ if(isset($_POST['send']))
   <!--Cookies-->
 <div class="cookiesBar" id="cookies">
   <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
-  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.php">privacy policy</a> and <a href="">cookie Policy</a></span>
   <div onclick="HideCookie()"> <span>I understand</span></div>
 </div>
 
@@ -305,10 +311,10 @@ if(isset($_POST['send']))
     </div>
     <div class="shop">
       <h1>Top Category</h1>
-      <a href="BrowseStore.html">
+      <a href="BrowseStore.php">
         <li>Book Stores</li>
       </a>
-      <a href="BrowseStore.html">
+      <a href="BrowseStore.php">
         <li>Toy Stores</li>
       </a>
     </div>
@@ -317,13 +323,13 @@ if(isset($_POST['send']))
       <a href="#">
         <li>Order Status</li>
       </a>
-      <a href="FAQs.html">
+      <a href="FAQs.php">
         <li>FAQs</li>
       </a>
-      <a href="Contact.html">
+      <a href="Contact.php">
         <li>Contact Us</li>
       </a>
-      <a href="Fees.html">
+      <a href="Fees.php">
         <li>Fees</li>
       </a>
       <a href="#">
@@ -349,10 +355,10 @@ if(isset($_POST['send']))
       Copyright© Bare Bears 2021
     </section>
     <section class="Policy">
-      <a href="TermOfUse.html">
+      <a href="TermOfUse.php">
         <li>Term Of Service</li>
       </a>
-      <a href="PrivacyPolicy.html">
+      <a href="PrivacyPolicy.php">
         <li>Privacy Policy</li>
       </a>
     </section>

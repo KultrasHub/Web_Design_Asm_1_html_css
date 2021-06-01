@@ -1,3 +1,9 @@
+<?php 
+    if(file_exists("../something.php")){
+    die("Error ENCOUNTER: install.php file exists. Please locate the install.php file in the web folder and delete it before restarting the webpage.");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,7 +122,7 @@
                 </li>
             </ul>
         </li>
-        <a href="Contact.html" class="contact"> <button type="button" name="button">Contact</button></a>
+        <a href="Contact.php" class="contact"> <button type="button" name="button">Contact</button></a>
         <?php 
         $id=0;
         $avatarLink="../Image/Profolio/profile-user.png";
@@ -199,7 +205,7 @@
         <span>to create your account.</span>
         <br>
         <span>or you already have an acccount?</span>
-        <a href="MyAccount-Login.html"><span>Log in</span></a>
+        <a href="MyAccount-Login.php"><span>Log in</span></a>
       </div>
       <div class="NameBoxes">
         <div class="inputBox">
@@ -304,7 +310,7 @@
   <!--Cookies-->
 <div class="cookiesBar" id="cookies">
   <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
-  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.php">privacy policy</a> and <a href="">cookie Policy</a></span>
   <div onclick="HideCookie()"> <span>I understand</span></div>
 </div>
 <!--End Cookies-->
@@ -314,10 +320,10 @@
       </div>
       <div class="shop">
         <h1>Top Category</h1>
-        <a href="BrowseStore.html">
+        <a href="BrowseStore.php">
           <li>Book Stores</li>
         </a>
-        <a href="BrowseStore.html">
+        <a href="BrowseStore.php">
           <li>Toy Stores</li>
         </a>
       </div>
@@ -327,13 +333,13 @@
         <a href="#">
           <li>Order Status</li>
         </a>
-        <a href="FAQs.html">
+        <a href="FAQs.php">
           <li>FAQs</li>
         </a>
-        <a href="Contact.html">
+        <a href="Contact.php">
           <li>Contact Us</li>
         </a>
-        <a href="Fees.html">
+        <a href="Fees.php">
           <li>Fees</li>
         </a>
         <a href="#">
@@ -360,10 +366,10 @@
         Copyright© Bare Bears 2021
       </section>
       <section class="Policy">
-        <a href="TermOfUse.html">
+        <a href="TermOfUse.php">
           <li>Term Of Service</li>
         </a>
-        <a href="PrivacyPolicy.html">
+        <a href="PrivacyPolicy.php">
           <li>Privacy Policy</li>
         </a>
       </section>

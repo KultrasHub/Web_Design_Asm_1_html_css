@@ -1,4 +1,10 @@
 <?php 
+    if(file_exists("../something.php")){
+    die("Error ENCOUNTER: install.php file exists. Please locate the install.php file in the web folder and delete it before restarting the webpage.");
+}
+
+?>
+<?php 
 session_start();
 ?>
 <!DOCTYPE html>
@@ -239,7 +245,7 @@ session_start();
   <!--Cookies-->
 <div class="cookiesBar" id="cookies">
   <img src="../Image/FreeCookies.jpg" alt="cookies Logo">
-  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.html">privacy plicy</a> and <a href="">cookie Policy</a></span>
+  <span>We use cookies in this website to give you the best experience on our site and show relevant ads. To find out more, read <a href="PrivacyPolicy.php">privacy policy</a> and <a href="">cookie Policy</a></span>
   <div onclick="HideCookie()"> <span>I understand</span></div>
 </div>
 <!--End Cookies-->

@@ -1,4 +1,10 @@
 <?php 
+    if(file_exists("../something.php")){
+    die("Error ENCOUNTER: install.php file exists. Please locate the install.php file in the web folder and delete it before restarting the webpage.");
+}
+
+?>
+<?php 
 session_start();
 ?>
 <?php $thankLink="ThankYouPage.php"; ?>
@@ -212,7 +218,7 @@ session_start();
         </div>
         <div class="button">
           <a class="Order" href="ThankYouPage.php">Order</a>
-          <a class="Continue" href="#">Continue Shopping</a>
+          <a class="Continue" href="home.php">Continue Shopping</a>
           <span class="subOrder">*VAT included</span>
         </div>
         <div class="Invoice">

@@ -1,4 +1,10 @@
 <?php 
+    if(file_exists("../something.php")){
+    die("Error ENCOUNTER: install.php file exists. Please locate the install.php file in the web folder and delete it before restarting the webpage.");
+}
+
+?>
+<?php 
 session_start();
 ?>
 <!DOCTYPE html>

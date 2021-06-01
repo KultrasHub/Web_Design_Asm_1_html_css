@@ -13,7 +13,6 @@ body{
 
 }
 /*Starter   */
-
 .content .Starter{
     position: relative;
     text-align: center;
@@ -29,13 +28,59 @@ body{
     content: '';
 position: absolute;
 height: 5px;
-width: 50px;
-background-image: linear-gradient(to right,#777,#000);
+    width: 50px;
+    background-image: linear-gradient(to right,#777,#000);
     border-radius: 30px;
     bottom:-30px;
     margin-left: auto;
     margin-right: auto;
     transform:translateX(-25px);
+}
+/* return */
+
+.content .return{
+    margin-left: 50px;
+    width: fit-content;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: rgba(255, 253, 227, 0.555);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    -webkit-box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.55); 
+box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.55);
+transition: all 300ms ease 0s;
+cursor: pointer;
+}
+.content .return:hover{
+    padding:15px 5px;
+}
+.content .return:hover .store{
+    color:#e85a4f;
+}
+.content .return:hover i{
+    color:#e85a4f;
+}
+.content .return i{
+    margin-right: 5px;
+    font-size: 25px;
+}
+.content .return .returninfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    padding-right: 5px;
+}
+.content .return .returninfo .store{
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.content .return .returninfo .normal{
+    font-size: 14px;
+    color:#e98074;
 }
 /* Letter Box */
 .content .container{

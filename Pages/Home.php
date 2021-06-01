@@ -1,5 +1,10 @@
 <?php 
 session_start();
+
+if(file_exists("../something.php")){
+    die("Error ENCOUNTER: install.php file exists. Please locate the install.php file in the web folder and delete it before restarting the webpage.");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -627,7 +632,7 @@ session_start();
                       <!--Shop/!-->
                       <!--Hover Effect/!-->
                       <div class="HoverEffect">
-                          <a href='.$link.'>
+                          <a href='.$data[0].'>
                               <div class="HoverButton"> Check Now</div>
                           </a>
                       </div>
